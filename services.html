@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Services</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        nav {
+            background-color: black;
+            padding: 15px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
+        .contact-btn {
+            background-color: #ffd700;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-btn:hover {
+            background-color: #ffed4a;
+        }
+
+        .social-icon {
+            height: 36px;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icon:hover {
+            transform: scale(1.1);
+        }
+
+        .container {
+            width: 80%;
+            margin: 50px auto;
+        }
+
+        .header {
+            border-bottom: 1px solid white;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: gold;
+            margin: 0;
+            text-align: left;
+        }
+
+        .service-box {
+            display: flex;
+            align-items: center;
+            border-top: 1px solid gold;
+            padding: 20px 0;
+        }
+
+        .service-box:first-of-type {
+            border-top: none;
+        }
+
+        .service-content {
+            flex: 1;
+            width: 50%;
+            padding: 20px;
+            text-align: left;
+            border: 2px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+
+        .service-content:hover {
+            border-color: gold; /* Light blue border on hover */
+        }
+
+        .service-content h2 {
+            font-size: 1.2em;
+            color:gold;
+        }
+
+        .service-content p {
+            font-size: 1em;
+            color: white;
+            justify-content: center;
+        }
+
+        .service-icon {
+            width: 60%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .service-icon img {
+            max-width: 80px;
+            max-height: 80px;
+            border-radius: 8px;
+            transition: border-color 0.3s ease;
+        }
+        .social-icon1s{
+        height: 100px;
+        transition: transform 0.3s ease;
+       }
+       .footer-social-icon:hover {
+    transform: scale(1.1);
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #00ffff;
+}
+
+.main-footer {
+    background-color: #333;
+    margin-top: 60px;
+    padding: 20px 0;
+    border-top: 1px solid #333;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}.footer-social-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.footer-social-icon:hover {
+    transform: scale(1.1);
+}
+@media (max-width: 768px) {
+    /* Center everything vertically and horizontally */
+    nav img.social-icon1s {
+        margin-right: 14px;
+        width: 100px;  /* Set the width to 100px */
+        height: 100px; /* Set the height to 100px */
+    }
+    nav {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Logo remains at the top */
+  
+
+    /* First two links on one row */
+    nav a:nth-child(2), nav a:nth-child(3) {
+        width: 48%; /* Two links on the same row */
+        margin-right: 4%; /* Space between them */
+    }
+
+    /* Second two links on the next row */
+    nav a:nth-child(4), nav a:nth-child(5) {
+        width: 48%;
+        margin-right: 4%;
+    }
+
+    /* Remove right margin for the last link */
+    nav a:last-child {
+        margin-right: 0;
+    }
+
+    /* Ensure the Join Button spans full width */
+    nav .contact-btn {
+        width: 100%;
+    }
+
+    /* Social media icons below the button */
+    nav .social-icon {
+        width: 25px;
+        height: 25px;
+        margin: 10px;
+    }
+    nav .lll{
+    display: flex;
+}
+}
+    </style>
+</head>
+<body>
+    <nav>
+        <img src="vyuhamain-Photoroom.jpg" alt="" class="social-icon1s">
+
+        <a href="index.html">Home</a>
+        <a href="services.html">My Courses</a>
+        <a href="contactus.html">Contact</a>
+        <a href="project apeksha.html">About Us</a>
+        <button class="contact-btn" onclick="window.location.href='joinourcommunity.html'">
+            Join our community
+        </button>
+        
+          <div class="lll"><img src="instagram.png" alt="Instagram" class="social-icon" onclick="window.location.href='https://www.instagram.com/kl_apeksha/';">
+            <img src="telegram.png" alt="Telegram" class="social-icon" >
+          <img src="linkedin.png" alt="LinkedIn" class="social-icon"></div>
+    </nav>
+    <div class="container">
+        <div class="header">
+            <h1>My Services</h1>
+        </div>
+        
+        <div class="service-box">
+            <div class="service-content" id="clanguage" onclick="window.location='opensubject.html';">
+                <h2>C Language Course
+                </h2>
+                <p>Master the basics of C programming, from syntax to key concepts. Ideal for beginners looking to build a solid programming foundation.</p>
+            </div>
+            <div class="service-icon">
+                <img src="c_logo.png" alt="C Icon">
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-content" onclick="window.location='htmlmain.html';">
+                <h2>HTML Course
+
+                </h2>
+                <p>Learn the fundamentals of HTML and how to create well-structured web pages. Perfect for beginners, this course covers everything you need to start building websites from scratch.</p>
+            </div>
+            <div class="service-icon">
+                <img src="html_logo.png" alt="Java Icon">
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-content" onclick="window.location='htmlopensubject.html';">
+                <h2>CSS Course
+
+                </h2>
+                <p>Master the basics of CSS and learn how to style and design visually appealing web pages. Ideal for beginners, this course covers everything you need to enhance the look and feel of your websites.</p>
+            </div>
+            <div class="service-icon">
+                <img src="css_png.png" alt="Python Icon">
+            </div>
+        </div>
+        
+        <div class="service-box">
+            <div class="service-content">
+                <h2>Java Course
+
+                </h2>
+                <p>Learn the essentials of Java programming, from basic syntax to object-oriented concepts. Ideal for beginners, this course will help you build a strong foundation in Java development.
+
+
+
+                </p>
+            </div>
+            <div class="service-icon">
+                <img src="java_logo.png" alt="HTML Icon">
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-content">
+                <h2>JavaScript Course
+
+                </h2>
+                <p>Dive into JavaScript and learn how to create interactive, dynamic web pages. Perfect for beginners, this course covers the fundamentals of scripting to bring your websites to life.</p>
+            </div>
+            <div class="service-icon">
+                <img src="js_logo.png" alt="CSS Icon">
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="service-content">
+                <h2>Python Course
+
+                </h2>
+                <p>Learn the basics of Python programming, from syntax to essential libraries. Ideal for beginners, this course will help you develop strong problem-solving skills and start coding with Python.</p>
+            </div>
+            <div class="service-icon" >
+                <img src="python_logo.png" alt="JavaScript Icon" >
+            </div>
+        </div>
+    </div>
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://instagram.com" target="_blank" class="social-link">
+                    <img src="instagram.png" alt="Instagram" class="footer-social-icon">
+                </a>
+            </div>
+            <div class="footer-links">
+                <a href="imprint.html">Imprint</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="cookie-settings.html">Cookie Settings</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+       
+    </script>
+</body>
+</html>

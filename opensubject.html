@@ -1,0 +1,3060 @@
+<!DOCTYPE html>
+<style>
+    body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f9ff;
+    color: #333;
+    background-color: black;
+}
+
+/* Navbar styling */
+nav {
+            background-color: black;
+            padding: 15px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
+        .contact-btn {
+            background-color: #ffd700;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-btn:hover {
+            background-color: #ffed4a;
+        }
+        .social-icon1s{
+        height: 100px;
+        transition: transform 0.3s ease;
+       }
+        .social-icon {
+            height: 36px;
+            transition: transform 0.3s ease;
+        }
+       .social-icon1s{
+        height: 100px;
+        transition: transform 0.3s ease;
+       }
+        .social-icon:hover {
+            transform: scale(1.1);
+        }
+
+.scroll-btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.scroll-btn.left {
+    border-radius: 5px 0 0 5px;
+}
+
+.scroll-btn.right {
+    border-radius: 0 5px 5px 0;
+}
+
+.scroll-btn:hover {
+    background-color: #555;
+    transform: scale(1.1);
+}
+
+
+
+/* Content Section Styling */
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px auto;
+    position: relative;
+    width: 100%;
+    max-width: 1300px;
+    padding: 10px;
+}
+
+.content {
+    overflow: hidden;
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 20px;
+    background-color: #000000;
+    border-radius: 10px;
+    width: 90%;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.card {
+    display: inline-block;
+    background-color: white;
+    /* background-color: #f4674e; */
+    color: black;
+    padding: 15px; 
+    margin: 15px; 
+    text-align: center;
+    border-radius: 20px;
+    min-width: 250px; 
+    height: 250px; 
+    font-size: 22px; 
+    font-weight: bold;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    position: relative;
+  
+}
+
+.card-image {
+    width: 100%;
+    height: 60%; 
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 10px; 
+    transition: transform 0.3s ease;
+}
+
+.card p {
+    margin: 0;
+    font-size: 18px; 
+}
+
+.card:hover .card-image {
+    transform: scale(1.05);
+}
+
+.card:hover {
+    /* background-color: #f88d82; */
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.25);
+    transform: scale(1.05) translateY(-5px);
+}@media (max-width: 768px) {
+    /* Center everything vertically and horizontally */
+    nav img.social-icon1s {
+        margin-right: 14px;
+        width: 100px;  /* Set the width to 100px */
+        height: 100px; /* Set the height to 100px */
+    }
+    nav {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+  
+    /* First two links on one row */
+    nav a:nth-child(2), nav a:nth-child(3) {
+        width: 48%; /* Two links on the same row */
+        margin-right: 4%; /* Space between them */
+    }
+
+    /* Second two links on the next row */
+    nav a:nth-child(4), nav a:nth-child(5) {
+        width: 48%;
+        margin-right: 4%;
+    }
+
+    /* Remove right margin for the last link */
+    nav a:last-child {
+        margin-right: 0;
+    }
+
+    /* Ensure the Join Button spans full width */
+    nav .contact-btn {
+        width: 100%;
+    }
+
+    /* Social media icons below the button */
+    nav .social-icon {
+        width: 25px;
+        height: 25px;
+        margin: 10px;
+    }
+    nav .lll{
+    display: flex;
+}
+}
+
+
+
+/* Scrollbar styling */
+.content::-webkit-scrollbar {
+    height: 8px;
+}
+
+.content::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+}
+
+.content::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+.display {
+            background-color: white;
+            width: 80%;
+            height: 500px;
+            margin-left: 10%;
+            margin-top: 1%;
+            overflow-y: auto; /* Enable vertical scrolling */
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Additional Styling for Scroll */
+        .display::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .display::-webkit-scrollbar-thumb {
+            background-color: #888;
+            border-radius: 4px;
+        }
+
+        .display::-webkit-scrollbar-thumb:hover {
+            background-color: #555;
+        }
+.choice{
+    color: white;
+    margin-left: 10%;
+    font-size:30px ;
+}
+.table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .box {
+            width: 500px;          /* Set the width of the box */
+            height: 200px;         /* Set the height of the box */
+            background-color: #f0f0f0; /* Background color */
+            border: 2px solid #333;   /* Border color and width */
+            padding: 10px;          /* Inner spacing */
+            text-align: left;     /* Center text */
+            margin: 20px auto;      /* Center box horizontally */
+        }
+</style>
+<body lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <img src="vyuhamain-Photoroom.jpg" alt="" class="social-icon1s">
+
+        <a href="index.html">Home</a>
+        <a href="services.html">My Courses</a>
+        <a href="contactus.html">Contact</a>
+        <a href="project apeksha.html">About Me</a>
+        <button class="contact-btn" onclick="window.location.href='joinourcommunity.html'">
+            Join our community
+          </button>
+        <div class="lll">  <img src="instagram.png" alt="Instagram" class="social-icon" onclick="window.location.href='https://www.instagram.com/kl_apeksha/';">
+            <img src="telegram.png" alt="Telegram" class="social-icon">
+          <img src="linkedin.png" alt="LinkedIn" class="social-icon"></div>
+    </nav>
+
+    <div class="content-wrapper">
+        <button class="scroll-btn left" onclick="scrollContentLeft()">&#10094;</button>
+        <div class="content">
+            <div class="card" onclick="displayContent('Number System')">Number System
+            </div>
+            <div class="card" onclick="displayContent('Structured Programming')">Structured Programming</div>
+            <div class="card" onclick="displayContent('Conditional statements')" >Conditional statements</div>
+            <div class="card" onclick="displayContent('Iterative statements')" >Iterative statements</div>
+            <div class="card" onclick="displayContent('Recursion')">Recursion</div>
+            <div class="card" onclick="displayContent('Arrays')">Arrays</div>
+            <div class="card" onclick="displayContent('String')">String</div>
+            <div class="card" onclick="displayContent('Structures')">Structures</div>
+            <div class="card" onclick="displayContent('File IO')">File IO</div>
+            <div class="card" onclick="displayContent('Stack')">Stack</div>
+            <div class="card" onclick="displayContent('Queue')">Queue</div>
+            <div class="card" onclick="displayContent('Single Linked List in C')">Single Linked List in C</div>
+
+        </div>
+        <button class="scroll-btn right" onclick="scrollContentRight()">&#10095;</button>
+    </div>
+    <h3 class="choice">Your choice:</h3>
+    <div class="display">
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+<script>
+    const navbar = document.querySelector('.navbar');
+const content = document.querySelector('.content');
+
+function displayContent(topic) {
+            let text = '';
+
+            if (topic === 'Number System') {
+                text = `
+                    <h2><center><u>Number Systems</u></center></h2>
+                <p><strong>Base 10 (Decimal)</strong> — Represent any number using 10 digits [0–9]</p>
+                <p><strong>Base 2 (Binary)</strong> — Represent any number using 2 digits [0–1]</p>
+                <p><strong>Base 8 (Octal)</strong> — Represent any number using 8 digits [0–7]</p>
+                <p><strong>Base 16 (Hexadecimal)</strong> — Represent any number using 10 digits and 6 characters [0–9, A, B, 
+C, D, E, F] </p>
+                
+                <h3><u>Decimal Numeral System - Base-10</u></h3>
+                <p>Decimal numbers uses digits from 0..9. </p>
+                <p>These are the regular numbers that we use.</p>
+ <p><strong><u>Example:</u></strong></p>
+ <p>2538<sub>10</sub> = 2×10<sup>3</sup> + 5×10<sup>2</sup> + 3×10<sup>1</sup> + 8×10<sup>0</sup></p>
+                <p>Binary Numeral System - Base-2</p>
+                <p>Binary numbers uses only 0 and 1 digits.</p>
+                <p><strong> <u>Examples:</u></strong></p>
+                <p>10101<sub>2</sub> = 10101<sub>B</sub> = 1×2<sup>4</sup> + 0×2<sup>3</sup> + 1×2<sup>2</sup> + 0×2<sup>1</sup> + 1×2<sup>0</sup> = 16 + 4 + 1=21</p>
+                <p>10101<sub>2</sub> = 10101<sub>B</sub> = 1×2<sup>4</sup> + 0×2<sup>3</sup> + 1×2<sup>2</sup> + 0×2<sup>1</sup> + 1×2<sup>0</sup> = 16 + 4 + 2 + 1 =23</p>
+                <p>10101<sub>2</sub> = 10101<sub>B</sub> = 1×2<sup>5</sup> + 0×2<sup>4</sup> + 0×2<sup>3</sup> + 0×2<sup>2</sup> + 1×2<sup>1</sup> +  1×2<sup>0</sup>  = 32 + 2 + 1 =35</p>
+
+                <p>Octal Numeral System - Base-8</p>
+                <p>Octal numbers uses digits from 0 to 7.</p>
+                <p><strong> <u>Examples:</u></strong></p>
+                <p>27<sub>8</sub> = 2×8<sup>1</sup> + 7×8<sup>0</sup> = 16 + 7 = 23</p>
+                 <p>30<sub>8</sub> = 3×8<sup>1</sup> + 0×8<sup>0</sup> = 24</p>
+                 <p>4307<sub>8</sub> = 4×8<sup>3</sup> + 3×8<sup>2</sup> + 0×8<sup>1</sup> + 7×8<sup>0</sup>= 2247</p>
+
+                <h3><u>Hexadecimal Numeral System - Base-16</u></h3>
+                <p>Hex numbers use digits 0 to 9 and A to F.</p>
+                <p><strong><u> Examples:</u></strong></p>
+                 <p>28<sub>16</sub> = 28H = 2×16<sup>1</sup> + 8×16<sup>0</sup> = 40</p>
+                 <p>2F<sub>16</sub> = 2FH = 2×16<sup>1</sup> + 15×16<sup>0</sup> = 47</p>
+                <p>BC12<sub>16</sub> = BC12H = 11×16<sup>3</sup> + 12×16<sup>2</sup>  + 1×16<sup>1</sup>  + 2×16<sup>0</sup> = 48146</p>
+                <p>Here in above examples we are converting their respective number systems into decimal</p> 
+                
+                <h3><u>Numeral Systems conversion table</u></h3>
+                <table>
+                    <tr>
+                        <th>Decimal</th>
+                        <th>Binary</th>
+                        <th>Octal</th>
+                        <th>Hexadecimal</th>
+                    </tr>
+                    <tr><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+                    <tr><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+                    <tr><td>2</td><td>10</td><td>2</td><td>2</td></tr>
+                    <tr><td>3</td><td>11</td><td>3</td><td>3</td></tr>
+                    <tr><td>4</td><td>100</td><td>4</td><td>4</td></tr>
+                    <tr><td>5</td><td>101</td><td>5</td><td>5</td></tr>
+                    <tr><td>6</td><td>110</td><td>6</td><td>6</td></tr>
+                    <tr><td>7</td><td>111</td><td>7</td><td>7</td></tr>
+                    <tr><td>8</td><td>1000</td><td>10</td><td>8</td></tr>
+                    <tr><td>9</td><td>1001</td><td>11</td><td>9</td></tr>
+                    <tr><td>10</td><td>1010</td><td>12</td><td>A</td></tr>
+                    <tr><td>11</td><td>1011</td><td>13</td><td>B</td></tr>
+                    <tr><td>12</td><td>1100</td><td>14</td><td>C</td></tr>
+                    <tr><td>13</td><td>1101</td><td>15</td><td>D</td></tr>
+                    <tr><td>14</td><td>1110</td><td>16</td><td>E</td></tr>
+                    <tr><td>15</td><td>1111</td><td>17</td><td>F</td></tr>
+                    <tr><td>16</td><td>10000</td><td>20</td><td>10</td></tr>
+                </table>
+
+                <h3><u>Octal Literals in C</u></h3>
+                <p>Octal numbers are the technique to represent the numbers which use the base-8 number; it 
+uses 7 digits 0, 1, 2, 3, 4, 5, 6, and 7 </p>
+
+               <p> In C programming language, we can use <strong>octal literals</strong> in any expressions; we can assign octal 
+numbers to the variables. To use octal literals, we use <mark>0</mark> (zero) as a prefix with the number. 
+For example: <span style="background-color: yellow;">010</span> is an octal number, which is equivalent to <mark>8</mark> in the decimal number system.</p>
+
+                <h3><u>Printing octal number in decimal format</u> </h3>
+
+                <p>To print an octal number in decimal format, we use %d format specifier. </p>
+
+                <h3><u>Printing octal number in octal format </u></h3>
+                 
+                <p>To print an octal number in decimal format, we use %o format specifier. </p>
+                <p>#include <stdio.h> </p>
+                <p>int main(){ </p>
+                <p>  //printing octal number in decimal format</p>
+                <p>   printf("%d\n", 010); </p>
+                <p> //printing octal number in octal format  </p>
+                <p>    printf("%o\n", 010); </p>
+                <p>    //printing other format number in octal format </p>
+                <p>    printf("%o\n", 8); </p>
+                <p>   return 0; </p>
+                <p>} </p>
+
+                <div class="box"><h3><u>Output</u></h3>
+                <p>8</p>
+                <p>10</p>
+                <p>10</p>
+                </div>
+
+                <h3><u>Input a number in Octal format </u></h3>
+
+                <p>To input a number in an octal format, we use %o format specifier in the scanf() function </p>
+                <p>#include <stdio.h> </p>
+                <p>int main(){ </p>
+                <p> int a; </p>
+                <p>   printf("Enter value of a in octal: "); </p>
+                <p> scanf("%o", &a); </p>
+                <p>   printf("a in octal: %o, and in decimal: %d\n", a, a); </p>
+                <p> return 0; </p>
+                <p>} </p>
+
+                 <div class="box"><h3><u>Output</u></h3>
+                <p>Enter value of a in octal: 73411 </p>
+                <p>a in octal: 73411, and in decimal: 30473 </p></div>
+
+
+                <h3><u>Hexadecimal Literals in C</u></h3>
+                <p>Hexadecimal numbers are the technique to represent the numbers which uses the base-16 
+number; it uses 16 alphanumeric digits 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A/a, B/b, C/c, D/d, E/e, F/f.  </p>
+                
+<p>In C programming language, we can use <strong>hexadecimal literals</strong> in any expressions; we can 
+assign hexadecimal numbers to the variables. To use hexadecimal literals, we use <mark>0X</mark> or <mark>0x</mark> as 
+a prefix with the number. For example <mark>0x10</mark> is a hexadecimal number, which is equivalent 
+to 16 in the decimal number system. </p>
+
+ <h3><u>Printing hexadecimal number in decimal format </u> </h3>
+
+                <p>To print a hexadecimal number in decimal format, we use <mark>%X</mark> or <mark>%x</mark> format specifier.  </p>
+
+                <h3>Printing hexadecimal number in hexadecimal format </h3>
+                 
+                <p>To print an hexadecimal number or other type of numbers in hex format, we 
+use <mark>%X</mark> or <mark>%x</mark> format specifier. </p>
+                <p>#include <stdio.h> </p>
+                <p>int main(){ </p>
+                <p>  //printing hexadecimal number in decimal format </p>
+                <p>     printf("%d\n", 0x10); </p>
+                <p>    //printing hexadecimal number in hexadecimal format    </p>
+                <p>       printf("%X\n", 0x10);  </p>
+                <p>     //printing other format number in hexadecimal format </p>
+                <p>      printf("%X\n", 16);  </p>
+                <p>   return 0; </p>
+                <p>} </p>
+
+                <div class="box"><h3><u>Output</u></h3>
+                <p>16</p>
+                <p>10</p>
+                <p>10</p></div>
+
+                  <h3><u>Input a number in hexadecimal format </u></h3>
+
+                <p>To input a number in an hexadecimal format, we use <mark>%X</mark> or <mark>%x</mark> format specifier in the 
+scanf() function </p>
+                <p>#include <stdio.h> </p>
+                <p>int main(){ </p>
+                <p> int a; </p>
+                <p>   printf("Enter value of a in hexadecimal: "); </p>
+                <p> scanf("%x", &a); </p>
+                <p>   printf("a in hex: %X, and in decimal: %d\n", a, a); </p>
+                <p> return 0; </p>
+                <p>} </p>
+
+                 <div class="box"><h3><u>Output</u></h3>
+                <p>Enter value of a in hexadecimal: 0192Af </p>
+                <p>a in hex: 192AF, and in decimal: 103087 </p></div>
+
+                <p style="color: red;">Does C have a format specifier for binary numbers?  </p>
+                  <p style="color: green;">No, the C language does not provide a format specifier for binary numbers. </p>
+                    <p>Binary-literal(base 2): 0b or 0B followed by one or more binary digits(0, 1). </p>
+                      <p><strong><u>Example: </u></strong></p>
+                        <p>0b101, 0B111 </p>
+                          <p>C doesn't have a direct binary literal representation or a specific format specifier for binary in
+ put/output like some other languages. </p>
+                `;
+            } 
+            else if(topic === 'Structured Programming') {
+                
+                text = `
+                    <h2><center><u>Structured Programming Introduction</u></center></h2>
+                    <p>Structured programming is a programming paradigm aimed at improving the clarity, 
+quality, and development time of a computer program. It relies on dividing a program into 
+small, manageable sections or modules, each performing a specific task. </p>
+
+                    <h3><u>Algorithms</u></h3>
+                    <p>An algorithm is a step-by-step process or set of instructions for solving a problem or 
+performing a task. In programming, algorithms are used to solve problems logically and 
+efficiently. Every program you write is based on an underlying algorithm. Here are the key 
+points about algorithms: </p>
+                    <ul>
+                        <li><strong>Step-by-step process:</strong> Algorithms define clear steps to perform a task.</li>
+                        <li><strong>Input and output:</strong> They often have some input (data) and produce an output (result).</li>
+                        <li><strong>Efficiency:</strong> A good algorithm solves the problem in the most efficient way possible.</li>
+                    </ul>
+                    <p><strong><u>Example:</u></strong> To find the largest of two numbers:</p>
+                    <ol>
+                        <li>Start</li>
+                        <li>Input two numbers, A and B</li>
+                        <li>If A > B, print A as the largest</li>
+                        <li>Otherwise, print B as the largest</li>
+                        <li>End</li>
+                    </ol>
+
+                      <h3><u>Flowcharts:</u></h3>
+                    <p>A <strong>flowchart</strong> is a diagram that visually represents the steps in a process or algorithm using 
+symbols. Each symbol in a flowchart has a specific meaning (e.g., oval for start/end, 
+rectangle for processes, diamond for decisions). Flowcharts help programmers and non
+programmers understand the logic of an algorithm easily. </p>
+             
+<p><strong><u>Key Points:</u></strong></p>
+ <ul>
+                        <li><strong>Graphical representation::</strong> It uses shapes like rectangles (for processes), diamonds 
+(for decisions), and arrows to show the flow of the process. </li>
+                        <li><strong>Easy to understand: </strong> They make complex logic easier to grasp visually. 
+</li>
+                        <li><strong> Helps in debugging:</strong> It’s easier to spot errors or inefficiencies in an algorithm when 
+represented visually. </ul>
+
+<p><strong><u>Example:</u></strong> A flowchart for finding the largest of two numbers would have: </p>
+
+                 <ol>
+                        <li>A "Start" oval </li>
+                        <li>A "Process" rectangle for inputting two numbers</li>
+                        <li>A "Decision" diamond to compare A and B </li>
+                        <li> Arrows leading to two possible outcomes, and</li>
+                        <li> An "End" oval.</li>
+                    </ol>
+
+                    <h3><u>Raptor Tool: </u></h3>
+
+                    <p>RAPTOR is a visual programming tool designed to help students learn to develop algorithms 
+by creating flowcharts. It allows users to build flowcharts to define their algorithms and then 
+run or test those flowcharts to see the results. RAPTOR simplifies the creation of flowcharts 
+and helps beginners visualize the process. </p>
+                     
+                   <h3><u>Key Points:</u></h3>
+                    <ul>
+                        <li><strong>Drag-and-drop interface:</strong> RAPTOR allows you to create flowcharts by dragging and 
+dropping symbols, making it very user-friendly.</li>
+                        <li><strong> Easy to understand:</strong>  The tool is designed for beginners, so it doesn’t require any prior 
+programming knowledge.</li>
+                        <li><strong>Instant feedback:</strong> You can run the flowchart directly and see the output, which helps in 
+understanding how the algorithm works.</li>
+                    </ul>
+
+                    <p><strong><u>Example:</u></strong>Using RAPTOR, you can build a flowchart to find the largest of two numbers. 
+The tool will let you run the program and see which number is larger based on the algorithm 
+steps. </p>
+
+<h3><strong><u>In summary:</u></strong> </h3>
+ <ul>
+                        <li><strong>Algorithms</strong>  help plan the solution to a problem step-by-step.</li>
+                        <li><strong>Flowcharts</strong>  visually represent the algorithm, making it easier to understand.</li>
+                        <li><strong>RAPTOR </strong>  is a tool to create and test flowcharts for visual programming. </li>
+                    </ul>
+
+                    <p>These concepts form the backbone of structured programming and help in developing 
+efficient and organized code.</p>
+
+            ` 
+            }
+
+            else if(topic === 'Conditional statements') {
+                
+                text = `<h2><u><center>CONDITIONAL STATEMENTS </center></u></h2>
+                <p><strong>Definition: </strong>It is used to determine how a program executes based on whether certain 
+conditions are met. They are useful for: Controlling program execution, Handling errors and 
+exceptions, checking program flow, managing program state, and performing complex 
+calculations. And it is also known as decision-making statements.</p>
+                
+                
+<ul>
+                        <li><strong>If statement:</strong>  It allows you to make a decision based on conditions. </li>
+                        <li><strong>If-else:</strong> To check the given condition is right or wrong and to make a new decision or 
+next step.</li>
+                        <li><strong> If else-if ladder:</strong> It is used to test a series of conditions sequentially. 
+ Nested If: It includes if else block within a if else block. </li>
+                         <li><strong> Nested If: </strong> Algorithms define clear steps to perform a task.</li>
+                          <li><strong> Switch: :</strong>  Switch case is alternate to if else if ladder. It allows you to execute one code 
+block among many alternatives. </li>
+                           <li><strong> Ternary operator: </strong>It is a conditional operator that works on three operands. It a 
+shorthand way to write an if-else statement.</li>
+                    </ul>
+
+                    <h3><u>Declaration: </u></h3>
+                        <p>In C, conditional statements do not require any special declaration, but they rely on relational 
+or logical conditions (e.g., x == 5, y > 10, etc.).</p>
+
+ <h3><u> Initialization: </u></h3>
+                        <p>Conditions for conditional statements are based on variables or expressions that are already 
+initialized. For example:(int x=5;//initialization of variables). </p>
+
+<h3><u>Syntax: </u></h3>
+
+<ul>
+                        <li><strong><u>If statement:</u></strong> 
+                          <p>f (condition) { </p> 
+                          <p>// code to execute if the condition is true </p>
+                          <p>} 
+</p>
+                          </li>
+                        <li><strong><u>If-else  statement:</u> </strong> 
+                            <p>if (condition) {</p>
+                              <p>// code to execute if the condition is true </p>
+                                <p>} else { </p>
+                                  <p> //code to execute if the condition is false </p>
+                                    <p>} </p>
+                           
+</li>
+                        <li><strong><u>Else if Ladder: </u></strong> 
+                            <p>if (condition1) {</p>
+                            <p>   // code to execute if condition1 is true </p>
+                            <p>} else if (condition2) { </p>
+                            <p>    // code to execute if condition2 is true </p>
+                            <p>} else { </p>
+                            <p>   // code to execute if none of the above conditions are true </p>
+                            <p>} </p> </li>
+
+                         <li><strong> <u>Nested If: </u></strong> 
+                           <p> if (condition1) { </p>
+   <p> // Executes if condition1 is true </p>
+    <p> if (condition2) { </p>
+       <p>  // Executes if condition1 and condition2 are both true </p>
+        <p> // Code block when both conditions are true </p>
+    <p> } else { </p>
+        <p> // Executes if condition1 is true, but condition2 is false </p>
+        <p> // Code block when condition1 is true but condition2 is false</p> 
+    <p> } </p>
+<p> } else { </p>
+    <p> // Executes if condition1 is false </p>
+    <p> // Code block when condition1 is false </p>
+<p> }</p>
+            </li>
+
+                          <li><strong> <u>Switch Case:</u></strong> 
+                            <p>switch (variable) { 
+    <p>case value1: 
+      <p>  // code to execute if variable == value1 </p>
+        <p>break;</p> 
+    <p>case value2: </p>
+       <p> // code to execute if variable == value2 </p>
+        <p>break; </p>
+    <p>default:</p> 
+       <p> // code to execute if variable doesn't match any case</p> 
+<p>} </p>
+ </li>
+
+                           <li><strong><u>Ternary operator: </u></strong>
+                            <p>condition ? expression1 : expression2;</p></li>
+                    </ul>
+
+
+                    <h3><u>Algorithm: </u></h3>
+                    <ol>
+                        <li>Start</li>
+                        <li>Declare and initialize necessary variables.</li>
+                        <li>Use a conditional statement (like if, if-else, or switch) to check a condition.</li>
+                        <li> If the condition is true, execute the code inside the block. 
+</li>
+                        <li>  If the condition is false, either skip the block or execute another block of code.</li>
+                        <li>End.</li>
+                    </ol>
+
+                    <h3><u>Program:</u></h3>
+                    <pre>
+#include <stdio.h> 
+int main() { 
+    int num1, num2, choice; 
+    // Input two numbers 
+    printf("Enter two numbers:\n"); 
+    scanf("%d %d", &num1, &num2); 
+    // Example of if statement 
+    if (num1 > num2) { 
+        printf("%d is greater than %d\n", num1, num2); 
+    } 
+    // Example of if-else statement 
+    if (num1 == num2) { 
+        printf("%d is equal to %d\n", num1, num2); 
+    } else { 
+        printf("%d is not equal to %d\n", num1, num2); 
+    } 
+    // Example of if-else-if ladder 
+    if (num1 > num2) { 
+        printf("%d is greater than %d\n", num1, num2); 
+    } else if (num1 < num2) { 
+        printf("%d is less than %d\n", num1, num2); 
+    } else { 
+        printf("Both numbers are equal\n"); 
+    } 
+    // Example of nested if 
+    if (num1 > 0) { 
+        if (num1 % 2 == 0) { 
+            printf("%d is a positive even number\n", num1); 
+        } else { 
+            printf("%d is a positive odd number\n", num1); 
+        } 
+    } else { 
+        printf("%d is not a positive number\n", num1); 
+    } 
+    // Example of switch statement 
+    printf("Enter a choice (1 for addition, 2 for subtraction, 3 for multiplication): "); 
+    scanf("%d", &choice); 
+    switch (choice) { 
+        case 1: 
+            printf("Addition: %d + %d = %d\n", num1, num2, num1 + num2); 
+            break; 
+        case 2: 
+            printf("Subtraction: %d - %d = %d\n", num1, num2, num1 - num2); 
+            break; 
+        case 3: 
+            printf("Multiplication: %d * %d = %d\n", num1, num2, num1 * num2); 
+            break; 
+        default: 
+            printf("Invalid choice\n"); 
+    } 
+    // Example of ternary operator 
+    int max = (num1 > num2) ? num1 : num2; 
+    printf("The maximum of the two numbers is: %d\n", max); 
+    return 0; 
+} 
+</pre>
+
+    <div class="box"><h3><u>Output:</u> </h3>
+    <pre>
+Enter two numbers:
+5 3
+5 is greater than 3
+5 is not equal to 3
+5 is greater than 3
+5 is a positive odd number
+Enter a choice (1 for addition, 2 for subtraction, 
+3 for multiplication):
+Addition: 543-8
+The maximum of the two numbers is: 5
+       </pre></div>
+                    
+
+
+
+                
+                
+                `}
+
+                else if(topic === 'Iterative statements') {
+                
+                text = `
+                 <h2><center><u>Iterative Statements</u></center></h2>
+
+        <p>Iterative statements are also known as ‘LOOPS’. </p>
+           <p> The word iterate means repeat.</p>
+        
+        <h3><u>LOOPS</u></h3>
+        <p>Repetition of the same set of statements a number of times until the given condition is met is called a loop.</p>
+             <p><u>There are 3 types of loops:</u></p>
+        <ol>
+            <li>While loop</li>
+            <li>Do while loop</li>
+            <li>For loop</li>
+        </ol>
+        <p>While and For loops are entry control loops, and Do while is an exit control loop.</p>
+
+        <p><u>For any type of loop, three components are common:</u></p>
+        <ul>
+            <li>Initialization/Declaration</li>
+            <li>Condition Checking</li>
+            <li>Increment/Decrement</li>
+        </ul>
+        <p>The way of using these statements is different for each type of loop.
+
+</p>
+
+
+        <h3><u>WHILE LOOP</u></h3>
+        <p>It is a looping statement it can execute the statement repeatedly until the given condition is met or is false.</p>
+        <p>It is an entry control loop, this means that it operates according to the entry point of the loop. It checks the condition at the entry of the loop.</p>
+
+        <h3><u>Syntax</u></h3>
+        <pre>
+Initialization;
+while(condition) {
+    -----
+    -----
+    Increment/Decrement;
+}
+        </pre>
+
+        <h3><u>Algorithm</u></h3>
+        <p>To print Your name 20 times:</p>
+        <ol>
+            <li>Start.</li>
+            <li>Initialize i=1.</li>
+            <li>Repeat Until i&lt;=20.</li>
+            <li>Print Name.</li>
+            <li>i=i+1.</li>
+            <li>End of Loop.</li>
+            <li>Stop.</li>
+        </ol>
+
+        <h3><u>Example Algorithm</u></h3>
+          <p>To print Your name 20 times:</p>
+        <ol>
+            <li>Start.</li>
+            <li>Initialize i=1.</li>
+            <li>Repeat Until i&lt;=20. or while(i<=20)</li>
+            <li>Print Name.</li>
+            <li>i=i+1.</li>
+            <li>End of Loop.</li>
+            <li>Stop.</li>
+        </ol>
+       
+
+            <h3><u>Program:</u></h3>
+             <pre>
+#include<stdio.h>
+main() {
+    int i=1;
+    while(i<=20) {
+        printf("Rishi ");
+        i=i+1;
+    }
+}
+        </pre>
+
+        <div class="box"><h3><u>Output</u></h3>
+        <pre>
+Rishi Rishi Rishi Rishi Rishi Rishi Rishi Rishi Rishi Rishi 
+Rishi Rishi Rishi Rishi Rishi Rishi Rishi Rishi Rishi Rishi     
+        </pre></div>
+
+        <h3><u>Explanation:</u></h3>
+        <p>For the variable ‘i’ of integer type a memory block is created and in that it stores the value of i.</p>
+        <p>Initially i =1</p>
+        <ul>
+            <li>Now entering the loop, first the condition will be checked.
+As i is less than 20 (1<20) ,the condition is true, so it enters the loop.
+Prints Rishi 1time.
+In next line i is incremented, which is i=i+1
+So, i=1+1=2, Now i value is 2.
+</li>
+
+<li>Again, it enters the loop checks if i<=20(2 is less than 20) so it goes inside the loop and prints Rishi 2nd time, again the i value is incremented(i=2+1) i=3, again it checks the condition, as( 3<20 )it prints Rishi 3rd time. This continues till i=21 and 21 is not <=20 so the loop breaks and it comes out of the loop.</li>
+            
+            
+            
+            
+            
+            </ul>
+
+
+        <h3><u>DO WHILE LOOP</u></h3>
+        <p>It is a looping statement it can execute the statement repeatedly until the given condition is met or is false.</p>
+        <p>In this looping statement, the statement will be executed first  and then the compiler will check the condition.</p>
+       
+        <p>As the condition is checked at the end of the loop, Do While loop is called as exit control loop.</p>
+        <h3><u>Syntax</u></h3>
+        <pre>
+do {
+    -----
+} while(condition);
+        </pre>
+
+        <h3><u>Differences between While and Do While</u></h3>
+    
+    <table>
+        <tr>
+            <th>While</th>
+            <th>Do While</th>
+        </tr>
+        <tr>
+            <td>while does not end with a semicolon(;)</td>
+            <td>Do while ends with a semicolon(;)</td>
+        </tr>
+        <tr>
+            <td>while loop checks the condition first and then executes the statement (enters the loop).</td>
+            <td>Do while first enters the loop (executes the statement) and then checks the condition.</td>
+        </tr>
+        <tr>
+            <td>while is a reliable looping statement.</td>
+            <td>Do while is not a reliable looping statement.</td>
+        </tr>
+    </table>
+
+         <h3><u>Algorithm</u></h3>
+        
+        <ol>
+            <li>Start.</li>
+            <li>Initialize.</li>
+            <li>Statement to be repeated.</li>
+            <li>Increment/ Decrement.</li>
+            <li>Condition</li>
+            <li>End of Loop.</li>
+            <li>Stop.</li>
+        </ol>
+
+        
+
+        <h3><u>Example Algorithm</u></h3>
+          <p>To print Your name 21 times:</p>
+        <ol>
+            <li>Start.</li>
+            <li>Initialize i=1.</li>
+            <li>Print Name.</li>
+            <li>Repeat Until i<=20 or while(i<=20)</li>
+            <li>End of Loop.</li>
+            <li>Stop.</li>
+        </ol>
+
+
+
+         <h3><u>Program:</u></h3>
+             <pre>
+#include<stdio.h>
+main (){
+int i=21;
+do{  
+printf(“%d) Rishi   ”,i);
+i=i-1;
+}while(i<=20&&i>0); // ends with semicolon
+}
+
+        </pre>
+
+        <div class="box"><h3><u>Output</u></h3>
+        <pre>
+21)Rishi 20)Rishi 19)Rishi 18)Rishi 17)Rishi 16)Rishi 15)Rishi 14)Rishi
+13)Rishi 12)Rishi 11)Rishi 10)Rishi 9)Rishi 8)Rishi 7)Rishi 6)Rishi 
+5)Rishi 4)Rishi 3)Rishi 2)Rishi 1)Rishi  
+            
+    </pre></div>
+
+        <h3><u>Explanation:</u></h3>
+        <p>For the variable ‘i’ of integer type a memory block is created and in that it stores the value of i.</p>
+        <p>Initially i =21</p>
+        <ul>
+            <li>Compiler enters the loop directly it does not check the condition at first.</li>
+
+<li>Prints Rishi and then goes to the next line, in next line I is decremented(i=i-1), so  i=20, then it checks the condition as i=20(20=20 and 20>0) the condition is satisfied /true so it again enters the loop.</li>
+<li>Continues the same process till i becomes 0(0!>0) it breaks the loop.
+Initially i =21(which is not less than 20(21!<20) still it goes inside the loop
+and executes the statement.  21 is not checked in condition, cause condition is at the end of the loop
+</li>
+
+
+<h3><u>FOR LOOP</u></h3>
+<p>It is a looping statement it can execute the statement repeatedly until the given condition is met or is false.</p>
+<p>It is an entry control loop because it checks the condition at first and then enters the loop.</p>
+
+<h3><u>Syntax</u></h3>
+        <pre>
+for(Initialization; Condition; Increment/Decrement) {
+    -----
+    -----
+}
+        </pre>
+
+
+       <h3><u>Algorithm</u></h3>
+        
+        <ol>
+            <li>Start.</li>
+            <li>Initialization</li>
+            <li>for condition</li>
+            <li>Print Statement</li>
+            <li>Increment/Decrement</li>
+            <li>End of Loop.</li>
+            <li>Stop.</li>
+        </ol>
+
+
+        <h3><u>Program</u></h3>
+        <pre>
+#include<stdio.h>
+main() {
+    int i, sum=0, n;
+    printf("Enter n\n");
+    scanf("%d", &n);
+    for(i=1; i&lt;=n; i++) {
+        sum=sum+i;
+    }
+    printf("%d", sum);
+}
+        </pre>
+
+        <div class="box"><h3><u>Output</u></h3>
+        <pre>
+Enter n
+5
+15
+            </pre></div>
+
+        <h3><u>Explanation:</u></h3>
+        <p>For the variable ‘i’ of integer type a memory block is created and in that it stores the value of i. In same way for ‘sum’ variable and for ‘n’ variable memory block is created. In sum variable it stores 0 initially, for n nothing is stored yet.</p>
+        <ul>
+            <li>After taking n value from user using scanf(let n=5), it will enter the loop, initially i=1.</li>
+            <li>Now it checks the condition. As i=1(1<5) condition is true so it enters loop.</li>
+        </ul>
+        <ul>
+            <li>Initially sum=0</li>
+            <li>After entering loop, sum=sum+i which is sum=0+1, so sum=1</li>
+            <li>Now it goes to the increment and i becomes 2(i=2)</li>
+            <li>Again, the condition is checked as (2<5) it enters loop</li>
+            <li>Before sum was 1.Now sum=1+2(as sum=1 and i=2), so sum=3.
+</li><li>It goes on like this, till i is 6 and condition fails.
+</li>
+             <p>i=1  then sum=0+1 -> sum=1</p>
+             <p>i=2 then sum=1+2 -> sum=3
+</p>
+              <p>i=3 then sum=3+3 -> sum=6</p>
+              <p>i=4 then sum=6+4    sum=10</p>  
+              <p>i=5 then sum=10+5  sum=15</p>  
+              <p>Sum up to range 5 is 1+2+3+4+5=15.
+</p>
+            
+            
+            
+            </ul>
+
+        <h3><u>Nested Loops</u></h3>
+        <p>A loop inside another loop is called a nested loop.</p>
+        <p> Mostly nested for loops are used.</p>
+
+        <h3><u>Nested For loop</u></h3>
+        <p>A for loop inside another for loop is called as nested for loop.</p>
+
+        <h3><u>Syntax:</u></h3>
+        <pre>
+for(Initialization ;Condition ; Increment/Decrement){//outer loop
+---
+---
+for(Initialization ;Condition ; Increment/Decrement){//inner loop
+---
+---
+}
+}
+We can write many loops inside one loop.
+
+            
+            
+            
+            </pre>
+
+         <h3><u>Pattern:</u></h3>
+            <pre>
+11111
+22222
+33333
+44444
+55555
+                </pre>
+
+        <pre>
+
+<h3><u>Program</u></h3>          
+#include<stdio.h>
+main() {
+    int i, j;
+    for(i=1; i&lt;=5; i++) {
+        for(j=1; j&lt;=5; j++) {
+            printf("%d ", i);
+        }
+        printf("\n");
+    }
+}
+        </pre>
+
+        <div class="box"><h3><u>Output</u></h3>
+        <pre>
+1 1 1 1 1
+2 2 2 2 2
+3 3 3 3 3
+4 4 4 4 4
+5 5 5 5 5
+        </pre></div>
+
+        <h3><u>Explanation</u></h3>
+        <p>For the variables ‘i’ and ‘j’ of integer type a memory block is created and in that it stores the value of i and value of j.</p>
+
+        <ul>
+            <li>When it enters for loop, initially i=1.</li>
+            </ul>
+
+            <ul>
+                <li>As i(1<5), the condition is true, so the compiler enters the loop.</li>
+                <li>Then it goes through the inner loop</li>
+                <li>Initially j=1, as j<5(1<5) it goes inside the loop</li>
+                <li>Prints i(i=1) so it prints 1</li>
+                <li>Next it goes to increment/decrement. As j=j+1(j++)
+j=1+1 j=2.
+</li>
+                <li>As 2<5 it goes inside the inner loop and prints i(i=1) so it prints 1</li>
+                <li>Same process continues until j=6 and the condition fails, so exits the loop.</li>
+
+                <li>Now it goes through the increment of  outer loop, i++, so i=2</li>
+                <li>Then it goes through the inner loop</li>
+                <li>Initially j=1, as j<5(1<5) it goes inside the loop</li>
+                <li>Prints i(i=2) so it prints 2</li>
+                <li>Next it goes to increment/decrement. As j=j+1(j++)
+j=1+1 j=2.
+</li>
+                <li>As 2<5 it goes inside the inner loop and prints i(i=2) so it prints 2</li>
+                <li>Same process continues until j=6 and the condition is false, so exits the loop.</li>
+
+                <p>In the same way till the outer loop condition is false it continues.</p>
+
+                <pre>
+    When i=1                       
+    j=1 prints 1
+	j=2 prints 1
+	j=3 prints 1
+	j=4 prints 1
+	j=5 prints 1
+    so it’s 1 1 1 1 1
+
+    When i=2
+    j=1 prints 2
+	j=2 prints 2
+	j=3 prints 2
+	j=4 prints 2
+	j=5 prints 2
+    so it’s 2 2 2 2 2
+
+    When i=3
+    j=1 prints 3
+	j=2 prints 3
+	j=3 prints 3
+	j=4 prints 3
+	j=5 prints 3
+    so it’s 3 3 3 3 3
+
+    When i=4
+    j=1 prints 4
+	j=2 prints 4
+	j=3 prints 4
+	j=4 prints 4
+	j=5 prints 4
+    so it’s 4 4 4 4 4 
+
+    When i=5
+    j=1 prints 5                                         
+	j=2 prints 5                                            
+	j=3 prints 5                                           
+	j=4 prints 5                                           
+	j=5 prints 5			       
+    so it’s 5 5 5 5 5                                       
+
+                    
+                    
+                    
+                    
+                    </pre>
+
+                <h3><u>Final Output</u></h3>
+                <pre>
+    11111
+    22222
+    33333
+    44444
+    55555
+                    </pre>
+
+                
+            </ul>
+
+         
+
+        
+                
+                
+                `}
+
+                else if(topic === 'Recursion') {
+                
+                text = `<h3>Recursion</h3>
+        <p>Recursion involves calling the same function repeatedly until a condition is satisfied. There are two conditions:</p>
+        <ul>
+            <li>Base condition</li>
+            <li>Recursive condition</li>
+        </ul>
+
+        <h4>Example Program</h4>
+        <pre>
+#include<stdio.h>
+int sum(int); //function declaration
+int main() {
+    int n, f;
+    printf("Enter n\n");
+    scanf("%d", &n);
+    f = sum(n);
+    printf("%d", f);
+}
+int sum(int x) {
+    if(x == 1)
+        return 1;
+    else
+        return x + sum(x-1);
+}
+        </pre>  `}
+
+                else if(topic === 'Arrays')
+                
+               {
+                
+                text = `
+                <h2>ARRAYS  </h2>
+
+                <p><strong>Definition: </strong>An array is a data structure that stores a collection of elements of 
+the same type in consecutive memory locations. Each element can be accessed 
+by its index or position in the array. </p>
+
+<h3>Explicit Initialization: </h3>
+<p>When an array is <strong>initialized at the time of declaration</strong>, then it is known as 
+<strong>explicit initialization.</strong> </p>
+<p>int x = 10; </p>
+<h4>In case of an array: </h4>
+<p>int x[5] = {1, 2, 3, 4, 5};</p>
+
+<h3>Implicit Initialization: </h3>
+<p>When an array is <strong>initialized at the time of execution</strong>, then it is known as 
+<strong>implicit  initialization.</strong> </p>
+<p>int speed; </p>
+<p>printf("Enter the value of speed"); </p>
+<pscanf("%d", &speed); ></pscanf>
+<h4>In case of an array: </h4>
+<p>int x[5]; </p>
+<p>for(int i=0; i<=4; i++){ </p>
+<p>scanf(“%d”, &x[i]);</p>
+<p>} </p>
+
+<p>Arrays are of two Types:</p>
+<ul>
+    <li>One-Dimensional Arrays </li>
+      <li> Two-Dimensional Arrays </li>
+    </ul>
+
+    <h3>One-Dimensional Arrays:</h3>
+    <p>One-Dimensional Array is a list of elements that are all of the same type and are 
+stored in consecutive memory locations. It can be visualized as a single row of 
+elements. </p>
+
+<h3>Declaring 1-D  array: </h3>
+<p><Datatype> <arrayName>[arraySize]; </p>
+
+<p>int marks[5]; </p>
+
+<h3>Initializing 1-D array: </h3>
+<p>Declaring and initializing an array named marks[] to store marks of 5 subjects </p>
+<p>int marks[5] = {80, 60, 70, 85, 75}; </p>
+<p>An array named <stfong>marks[]</strong> of <strong>Integer</strong> type has been created with 5 memory 
+<strong>locations</strong> in it.</p>
+<p>Marks of each subject can be stored in each memory location respectively. 
+The memory locations range from <strong>0-4.</strong> </p>
+<p>In arrays the initial memory location starts from 0.</p>
+
+<h3>Program: </h3>
+<pre><code>
+#include <stdio.h> 
+int main() { 
+int n; 
+// Prompt user to enter the size of the array 
+printf("Enter the number of elements in the 
+array: "); 
+scanf("%d", &n); 
+ 
+    // Declare an array of size n 
+    int array[n]; 
+ 
+    // Read elements from the user 
+    printf("Enter %d integer values:\n", n); 
+    for (int i = 0; i < n; i++) { 
+        scanf("%d", &array[i]); 
+    } 
+ 
+    // Print the elements of the array 
+    printf("Array elements are:\n"); 
+    for (int i = 0; i < n; i++) { 
+        printf("%d\n", i, array[i]); 
+    } 
+ 
+    return 0; 
+} 
+    </pre></code>
+
+    <h3>Output: </h3>
+    <pre><code>
+Enter the number of elements in the array: 5 
+Enter 5 integer values: 
+1 
+2 
+3 
+4 
+5 
+ 
+Array elements are: 
+0 
+1 
+2 
+3 
+4 
+</pre></code>
+
+<h3>Two-Dimensional Arrays: </h3>
+    <p>A <strong>two-dimensional array</strong> is an array of arrays, often visualized as a matrix or 
+table with rows and columns. Each element in a two-dimensional array is 
+accessed using two indices: one for the row and one for the column. </p>
+
+<h3>Declaring 2-D  array: </h3>
+<p> <DataType> <arrayName>[rows][columns]; </p>
+
+<p>int matrix[2][3];  </p>
+
+<h3>Initializing 2-D array: </h3>
+<p>Declaring and initializing an array named <strong>matrix[][]</strong> to store 2 rows and 3 
+columns. </p>
+<p> int matrix[2][3] = {{1, 2, 3}, {4, 5, 6}}; </p>
+<p>An array named matrix[][] of Integer type has been created to store 2x3(6 
+elements) in it. </p>
+<p>The total no.of elements that can be stored by a two-dimensional array can be 
+figured out by multiplying no.of the rows and columns of the array.</p>
+
+
+<h3>Program: </h3>
+<pre><code>
+#include <stdio.h> 
+int main() { 
+int rows, cols; 
+// Prompt user to enter the number of rows and 
+columns 
+printf("Enter the number of rows: "); 
+scanf("%d", &rows); 
+printf("Enter the number of columns: "); 
+scanf("%d", &cols); 
+// Declare a 2D array with the given number of 
+rows and columns 
+    int matrix[rows][cols]; 
+ 
+    // Read elements from the user 
+    printf("Enter %d x %d matrix elements:\n", rows, 
+cols); 
+    for (int i = 0; i < rows; i++) { 
+        for (int j = 0; j < cols; j++) { 
+            scanf("%d", &matrix[i][j]); 
+        } 
+    } 
+ 
+    // Print the elements of the 2D array 
+    printf("Matrix elements are:\n"); 
+    for (int i = 0; i < rows; i++) { 
+        for (int j = 0; j < cols; j++) { 
+            printf("%d ", matrix[i][j]); 
+        } 
+        printf("\n"); 
+    } 
+ 
+    return 0; 
+}
+} 
+    </pre></code>
+
+    <h3>Output: </h3>
+    <pre><code>
+Enter the number of rows: 2 
+Enter the number of columns: 3 
+Enter 2 x 3 matrix elements: 
+1 
+2 
+3 
+4 
+5 
+6 
+ 
+Matrix elements are: 
+1 2 3  
+4 5 6 
+</pre></code>
+`}
+
+else if(topic === 'String') {
+                
+                text = `
+                <h2>INTRODUCTION TO STRINGS</h2>
+
+                <h3>STRING:</h3>
+                <p>A string is defined as group of characters.</p>
+                <p>Usually string is represented in double quotes.</p>
+                <p>Every string ends up with “\0” called the null character.</p>
+
+                <h3>Declarartion:</h3>
+                <p>char str[];</p>
+                <p>So,it stores 5 characters including null character like{‘s’, ‘i’, ‘v’, ‘a’, ‘\0’}.</p>
+
+                <h3>Initialization:</h3>
+                <p>3.char str= “siva”</p>
+                <p>char str[10]= “hello”</p>
+                <p>We can also give the size of array so it takes only characters up to the size.</p>
+
+                <h3>To read a string through scanf</h3>
+                <h2>Program:<h2>
+                    <pre><code>
+                        #include<stdio.h>
+main()
+{
+char str[10];
+printf(“Enter a string”)
+gets(str);
+puts(str);
+printf(“The new string is %s”,str) //we can also use printf
+}
+
+
+
+                        </pre></code>
+
+                        <p>gets read a line of text from standard input until a newline is entered</p>
+                        <p>puts writes a string to standard output by a newline.</p>
+                    
+                        <h3>Output:</h3>
+                        <pre><code>
+                            Enter a string
+                            hello apeksha
+
+                            The string is hello apeksha
+                        </pre></code>
+
+                        <h3>Program to Reverse a string:</h3>
+                        <pre><code>
+#include<stdio.h>
+main()
+{
+char str[100];
+int i,count=0;
+puts("Enter a string");
+gets(str);
+//the string reading is completed.
+for(i=0;str[i]!='\0';i++) //read string character by character                                                           //and increment the count.
+{
+count++;              
+  //so,the count will be at the last letter.
+}
+for(i=count;i>=0;i--)   //to reverse the string start from the count(as it is in   //lastletter)
+{
+printf("%c",str[i]);
+}
+}
+
+                        </pre></code>
+
+                        <h3>Outut:</h3>
+                        <pre><code>
+Enter a string
+hello apeksha
+ahskepa olleh
+                        </pre></code>
+
+                        <h3>Program to convert Capital to small:</h3>
+                        <pre><code>
+                          #include<stdio.h>
+#include<string.h>
+main()
+{
+char str[100];
+int i,count=0;
+puts("Enter a string");
+gets(str);
+//the string reading is completed.
+for(i=0;str[i]!='\0';i++)     //iterating string character by character.
+{
+if(str[i]>='A'&&str[i]<='Z')   //checking if any capital letters are present.
+{
+str[i]=str[i]+32;   //The logic is if suppose our first character is A(askee value is                                                // 65 and it need to converts to small a(askee value is 97) so we need to add 32 //to Capital A(askee value) so we get the value of small a).
+//like that for every letter.
+}
+}
+for(i=0;str[i]!='\0';i++)
+{
+printf("%c",str[i]);
+}
+}  
+                        </pre></code>
+
+                        <h3>Output:</h3>
+                        <pre><code>
+                            Enter a string
+                            HELLO APEKSHA
+                            hello apeksha 
+                        </pre></code>
+
+                         <h3>Program to convert small to Capital:</h3>
+                        <pre><code>
+                         #include<stdio.h>
+#include<string.h>
+main()
+{
+char str[100];
+int i,count=0;
+puts("Enter a string");
+gets(str);
+//the string reading is completed.
+for(i=0;str[i]!='\0';i++)     //iterating string character by character.
+{
+if(str[i]>='a'&&str[i]<='z')   //checking if any capital letters are present.
+{
+str[i]=str[i]-32;   //The logic is if suppose our first character is a(askee value is                                                // 97 and it need to converts to Capital a(askee value is 65) so we need to subtract 32 //to small a(askee value) so we get the value of Capital a).
+//like that for every letter.
+}
+}
+for(i=0;str[i]!='\0';i++)
+{
+printf("%c",str[i]);
+}
+}
+
+                        </pre></code>
+
+                        <h3>Output:</h3>
+                        <pre><code>
+                            Enter a string
+                            hello apeksha
+                            HELLO APEKSHA
+                    
+                        </pre></code>
+
+
+                      <h3>Program to Count Number of Words:</h3>
+    <pre>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+main() {
+    char str[100];
+    int i, count = 1, len;
+    puts("Enter a string");
+    gets(str);
+
+    len = strlen(str);
+    for (i = 0; str[i] != '\0'; i++) {
+        if (str[i] == 32) {
+            count++;
+        }
+    }
+    printf("%d", count);
+}
+    </pre>
+
+    <h2>Pre-defined Functions in Strings:</h2>
+    <ul>
+        <li>strlen()</li>
+        <li>strrev()</li>
+        <li>strcpy()</li>
+        <li>strncpy()</li>
+        <li>strcat()</li>
+        <li>strncat()</li>
+        <li>strcmp()</li>
+        <li>strcmpi()</li>
+    </ul>
+
+    <h3>strlen():</h3>
+    <p>It is used to find the length of the given string.</p>
+
+    <h2>Syntax:</h2>
+    <p>strlen(arrayname)</p>
+    <pre>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+main() {
+    char str[50];
+    int length;
+    puts("Enter string:");
+    gets(str);
+    length = strlen(str);
+    printf("The length of the string is %d", length);
+}
+    </pre>
+
+    <h3>strrev():</h3>
+    <p>It is Used to reverse the given string.</p>
+     <h2>Syntax:</h2>
+    <p>strrev(arrayname)</p>
+
+    <pre>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+main() {
+    char str[50];
+    puts("Enter string:");
+    gets(str);
+    printf("The reverse of the string is %s", strrev(str));
+}
+    </pre>
+
+    <h3>strcpy():</h3>
+      <h2>Syntax:</h2>
+    <p>strcpy(destination,source)</p>
+
+    <pre>
+
+
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+main() {
+    char str[50], str1[50];
+    puts("Enter string: ");
+    gets(str);
+    puts(strcpy(str1, str));
+}
+    </pre>
+
+    <h3>strncpy():</h3>
+    <h2>Syntax:</h2>
+    <p>strncpy(destination,source)</p>
+    <pre>
+
+
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+main() {
+    int n;
+    char str[50], str1[50];
+    puts("Enter string: ");
+    gets(str);
+    printf("Enter how many characters you want to print");
+    scanf("%d", &n);
+    puts(strncpy(str1, str, n));
+}
+    </pre>
+
+    <h3>strcat():</h3>
+    <p>It is Used to concatenate two strings.</p>
+
+      <h2>Syntax:</h2>
+    <p>strcat(str,str1)</p>
+
+    <pre>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+main() {
+    char str[50], str1[50];
+    puts("Enter string str: ");
+    gets(str);
+    puts("Enter string str1: ");
+    gets(str1);
+    puts(strcat(str, str1));
+}
+    </pre>
+
+    <h3>strncat():</h3>
+     <h2>Syntax:</h2>
+    <p>strncat(str,str1,n)</p>
+
+    <pre>
+
+
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+main() {
+    int n;
+    char str[50], str1[50];
+    puts("Enter string str: ");
+    gets(str);
+    puts("Enter string str1: ");
+    gets(str1);
+    printf("Enter how many characters you want to join");
+    scanf("%d", &n);
+    puts(strncat(str, str1, n));
+}
+    </pre>
+
+    <h3>strcmp()</h3>
+    </h3>Syntax: </h3>
+    <p>strcmp(str, str1); //This checks the letter-case</p>
+    <pre>
+
+
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+main() {
+    int d;
+    char str[50], str1[50];
+    puts("Enter string str: ");
+    gets(str);
+    puts("Enter string str1: ");
+    gets(str1);
+    d = strcmp(str, str1);
+
+    if (d == 0) {
+        printf("Both are equal");
+    } else {
+        printf("Both are not equal");
+    }
+}
+    </pre>
+
+    <h3>strcmpi()</h3>
+    <h3>Syntax:</h3>
+    <p>strcmpi(str, str1);</p>
+    <pre>
+
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+main() {
+    int d;
+    char str[50], str1[50];
+    puts("Enter string str: ");
+    gets(str);
+    puts("Enter string str1: ");
+    gets(str1);
+    d = strcmpi(str, str1);
+
+    if (d == 0) {
+        printf("Both are equal");
+    } else {
+        printf("Both are not equal");
+    }
+}
+    </pre>
+                        
+
+                
+                
+                
+                
+                `}
+                else if(topic === 'Structures') {
+                
+                text = `<h1>Structures</h1>
+    <p>Structures are defined as a collection of elements of different data types.</p>
+
+    <h2>Syntax:</h2>
+    <pre>
+struct structure_name {
+    -------- 
+    structure members
+     --------
+} tag; // structure variable
+    </pre>
+
+    <h2>Explanation:</h2>
+    <ul>
+        <li>Under the structure name, we define structure members with variables of different data types.</li>
+        <li>The tag is used at the end of the structure to access the 
+elements easily. </li>
+        <li>In order to access structure members using structure 
+variable,we use dot operator(.) </li>
+    </ul>
+
+    <h2>Declaration:</h2>
+    <p>An example of a structure declaration with the tag:</p>
+    <pre>
+struct student {
+    int id;
+    float marks;
+    char name[10];
+} a;
+    </pre>
+
+     <ul>
+        <li>So I declared at structure <strong>student</strong> inside of that the 
+structure members I provided as shown in the image 
+above and a tag <strong>a</strong>. </li>
+        <li> Now lets see how we can access those structure 
+members.  </li>
+       
+    </ul>
+
+
+
+    <h2>Program:</h2>
+    <pre>
+#include &lt;stdio.h&gt;
+
+struct student {
+    int id;
+    float marks;
+    char name[10];
+} a;
+
+int main() {
+    printf("Enter the id, marks, name\n");
+    scanf("%d %f %s", &a.id, &a.marks, a.name);
+    printf("%d %f %s", a.id, a.marks, a.name);
+}
+    </pre>
+
+    <h3>Explanation:</h3>
+    <ul>
+        <li> A structure student is created and it can be any 
+name of our choice.</li>
+        <li> The structure members present are id,marks,name 
+of data type int,float,char array.</li>
+          <li>And enclosing tag a at the end of structure.</li>
+            <li> To access them inside main we follow these steps:</li>
+              <li>Asusual we read those 3 structure members using 
+scanf. </li>
+                <li> We read the elements by using dot operator 
+<strong>(tag.structuremember)</strong> </li>
+    </ul>
+
+     <p>To read more students information we use array of 
+structures: </p>
+     <h2>Program:</h2>
+    <pre>
+#include <stdio.h> 
+struct student { 
+int id; 
+char name[20]; 
+int marks; 
+}s[2]; 
+int main() { 
+int i; 
+for(i=0;i<2;i++) { 
+printf("Enter the id,name,marks\n"); 
+scanf("%d%s%d",&s[i].id,s[i].name,&s[i].marks); 
+} 
+for(i=0;i<2;i++) { 
+printf("student id : %d\n student name : %s\n 
+student marks : %d\n",s[i].id,s[i].name,s[i].marks); 
+} 
+} 
+    </pre>
+
+    <ul>
+        <li> The difference between previous program and this 
+one. </li>
+        <li>In previous program if we need to note the data of 
+more students it is possible but very time taking to 
+write scanf and printf many number of times. </li>
+        <li>So,the array of structures came into picture. </li>
+        </ul>
+
+        <h3>Explanation:</h3>
+         <ul>
+                <li> After enclosing tag at the end of structure we 
+need to mention the number of details we are 
+going to add. </li>
+               <li>We can access them using for loop for going to 
+next details of a student. </li>
+</ul>
+            
+           
+               
+    
+
+ 
+    <h2>Pointer to a Structure:</h2>
+    <p> Instead directly assigning the structure 
+members if we assign them through pointers it 
+will be more efficient. </p>
+    <pre>
+#include &lt;stdio.h&gt;
+
+struct student {
+    int rn;
+    char name[20];
+    int marks;
+};
+
+int main() {
+    struct student s;
+    struct student *ptr;
+    ptr = &s;
+    printf("Enter rn, name, marks");
+    scanf("%d %s %d", &ptr->rn, ptr->name, &ptr->marks);
+    printf("%d %s %d", ptr->rn, ptr->name, ptr->marks);
+}
+    </pre>
+
+    <h3>Explanation:</h3>
+    <p>The same as above but here we define a 
+structure pointer(struct student*ptr) and 
+struct variable of the type structure 
+mentioned(struct student s) </p>
+
+    <h2>Nested Structures:</h2>
+    <p> A structure inside a structure is called nested             
+structure.</p>
+<p>Used for modeeling complex data.</p>
+    <pre>
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+
+struct details {
+    int age;
+    long long int idno;
+    char name[50];
+    char gen;
+    struct DOB {
+        int date, month, year;
+    } D;
+} L;
+
+int main() {
+    int i;
+    for (i = 0; i < 3; i++) {
+        printf("Enter age: ");
+        scanf("%d", &L.age);
+        printf("Enter idno: ");
+        scanf("%lld", &L.idno);
+        fflush(stdin);
+        puts("Enter name");
+        gets(L.name);
+        puts("Enter gender: ");
+        scanf("%c", &L.gen);
+        printf("Enter date: ");
+        scanf("%d", &L.D.date);
+        printf("Enter month: ");
+        scanf("%d", &L.D.month);
+        printf("Enter year: ");
+        scanf("%d", &L.D.year);
+    }
+    for (i = 0; i < 3; i++) {
+        printf("%d\n", L.age);
+        printf("%lld\n", L.idno);
+        puts(L.name);
+        printf("%c", L.gen);
+        printf("%d/%d/%d", L.D.date, L.D.month, L.D.year);
+    }
+}
+    </pre>
+
+    <h3>Explanation:</h3>
+    <ul>
+        <li> We declare a structure asusual but here we declare 
+another structure inside that. </li>
+         <li>Closing tags also we declare at the end of both 
+structures. </li>
+          <li>We access the inside structure using outside.inside 
+tag name.structurenumber. </li>
+        </ul>
+
+    <h2>Array of Structure Pointers:</h2>
+
+    <h3>Program:*</h3>
+    <pre>
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+
+struct details {
+    int age;
+    long long int idno;
+    char name[50];
+    char gen;
+} L[3], *p;
+
+int main() {
+    p = L;
+    int i;
+    for (i = 0; i < 2; i++) {
+        printf("Enter age: ");
+        scanf("%d", &p->age);
+        printf("Enter idno: ");
+        scanf("%lld", &p->idno);
+        fflush(stdin);
+        puts("Enter name");
+        gets(p->name);
+        puts("Enter gender: ");
+        scanf("%c", &p->gen);
+        p++;
+    }
+    p = L;
+    for (i = 0; i < 2; i++) {
+        printf("%d\n", p->age);
+        printf("%lld\n", p->idno);
+        puts(p->name);
+        printf("%c", p->gen);
+    }
+}
+    </pre>
+
+    <h3>Explanation:</h3>
+    <ul>
+        <li>Asual we define structure and it’s structure members.</li>
+        <li> And enclosing tags are L[3],*p a pointer to store address 
+of that structure variable. </li>
+        <li> So,in main we assign structure variable L to a pointer 
+p.And we access them using arrow operator as it is a 
+structure. </li>
+        <li> We increment the pointer to point out and store the 
+details of next student address. </li>
+        <li> So,before printing we need to print from first member 
+details,But we have assigned pointer and incremented 
+that so the pointer is now at last details of i. </li>
+        <li> To get back to first detail,we assign p=L before printi</li>
+        </ul>
+
+           `
+    }
+    else if(topic === 'File IO') {
+                
+                text = `<h1>File I/O (Input/Output)</h1>
+    <p><strong>Definition: </strong>File I/O (Input/Output) operations in C allow you to interact with 
+files, reading data from or writing data to them. This is useful for tasks such as 
+saving program output to a file, reading large datasets from files, or logging 
+information. </p>
+
+    <p>There are 4 Basic File I/O Functions: </p>
+    <ul>
+        <li><strong>fopen()</strong>: Opens a file.</li>
+        <li><strong>fclose()</strong>: Closes an opened file.</li>
+        <li><strong>fscanf()</strong>: Reads formatted data from a file.</li>
+        <li><strong>fprintf()</strong>: Writes formatted data to a file.</li>
+    </ul>
+
+    <h2>Declaration:</h2>
+
+    <h2>Creating a File:</h2>
+    <pre>FILE *fptr;</pre>
+
+    <h2>Opening a File:</h2>
+    <p>Syntax for opening/creating a file:</p>
+    <pre>*fptr = fopen("filename", "mode");</pre>
+
+    <h3>There are 3 modes to open a file: </h3>
+    <ul>
+        <li><strong>r mode (Read)</strong>:
+            <p> Opens an existing file for reading.</p>
+            <pre>*fptr = fopen("filename.txt", "r");</pre>
+        </li>
+        <li><strong>w mode (Write)</strong>: 
+            <p>Opens a file for writing. If the file does not exist, it will be created.</p>
+            <pre>*fptr = fopen("filename.txt", "w");</pre>
+        </li>
+        <li><strong>a mode (Append)</strong>: 
+            <p>Opens a file for appending data. If the file does not exist, it will be created. </p>
+            <p>If data already exists in the file, new data will be <strong>appended</strong> to the end of the file without erasing its existing content.
+            <pre>*fptr = fopen("filename.txt", "a");</pre>
+        </li>
+    </ul>
+
+    <h2>Closing a File:</h2>
+    <p>The <code>fclose()</code> function is used to close an opened file.</p>
+    <pre>fclose(*fptr);</pre>
+
+    <h2>Scanning from a File:</h2>
+    <p>The <code>fscanf()</code> function is used to read formatted input from a file. It works similarly to <code>scanf()</code> but reads from a file instead of the standard input (keyboard).</p>
+    <pre>// Reading formatted data from the file
+fscanf(fptr, "%d %s", &num, str);</pre>
+    <p>The file will be scanned for data, and the found data will be stored in the specified variables.</p>
+
+    <h2>Printing to a File:</h2>
+    <p>The <code>fprintf()</code> function is used to write formatted data to a file. It works similarly to <code>printf()</code> but writes to a file instead of the standard output (screen).</p>
+    <pre>// Writing formatted data to the file
+fprintf(fptr, "Name: %s, Age: %d\n", name, age);</pre>
+    <p>The respective data will be printed into the file. </p>
+    <p>Upon writing fopen() function, a database file will be created in the same folder 
+in which the source code file is present. </p>
+
+    <h2>Program:</h2>
+    <pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    FILE *fptr;
+    char name[50];
+    int age;
+
+    // Writing data to a file using fprintf()
+    fptr = fopen("sample.txt", "w");  // Open file in write mode
+    if (fptr == NULL) {
+        printf("Error: Could not open file for writing.\n");
+        return 1;
+    }
+
+    // Writing formatted data to the file
+    fprintf(fptr, "Name: %s\n", "John");
+    fprintf(fptr, "Age: %d\n", 25);
+
+    fclose(fptr);  // Close the file after writing
+
+    // Reading data from the file using fscanf()
+    fptr = fopen("sample.txt", "r");  // Open file in read mode
+    if (fptr == NULL) {
+        printf("Error: Could not open file for reading.\n");
+        return 1;
+    }
+
+    // Reading formatted data from the file
+    fscanf(fptr, "Name: %s\n", name);
+    fscanf(fptr, "Age: %d\n", &age);
+
+    // Displaying the data read from the file
+    printf("Read from file:\n");
+    printf("Name: %s\n", name);
+    printf("Age: %d\n", age);
+
+    fclose(fptr);  // Close the file after reading
+
+    return 0;
+}
+    </pre>
+
+    <h2>Output:</h2>
+    <pre>
+Read from file:
+Name: John
+Age: 25
+    </pre>`}
+
+    else if(topic === 'Stack') {
+    
+                
+                text = `<h1>Stack</h1>
+    <p><strong>Definition:</strong> It is a Linear Data Structure that follows the LIFO (Last In First 
+Out) approach for data handling. The element that is inserted first into the stack 
+will be the last element to be taken out of the stack. </p>
+    <p>A stack is nothing but an array that is operated on LIFO approach. </p>
+
+    <h2>A Stack has 4 operations:</h2>
+    <ul>
+        <li>Push</li>
+        <li>Pop</li>
+        <li>Peek</li>
+        <li>Display</li>
+    </ul>
+
+    <h2>Declaration</h2>
+
+    <h3>Global Variables: </h3>
+    <pre>
+// Global variable to track the top of the stack
+int top = -1;
+
+// Array to store the elements of the stack, with a maximum size of 10
+int stack[10];
+    </pre>
+    <p><strong>top:</strong> Tracks the index of the top element in the stack. It starts at -1 to indicate that the stack is empty.</p>
+    <p><strong>stack[]:</strong> An array to store the stack elements. Here, it has a size of 10.</p>
+
+    <h2>Push Operation</h2>
+    <pre>
+void push(int element) {
+    if (top < 9) {  // Ensure stack is not full
+        stack[++top] = element;  // Increment top and add the element
+        printf("Element pushed successfully\n");
+    } else {
+        printf("Stack is full. Cannot push element\n");
+    }
+}
+    </pre>
+    <p>The <strong><code>push()</code></strong> function adds an element to the stack.</p>
+       <ul> <li>The top is incremented first (++top), and then the element is added to that 
+position in the stack[]. </li>
+       <li> If the stack is full (top == 9), it will display an error message.</li>
+</ul>
+    <h2>Pop Operation</h2>
+    <pre>
+void pop() {
+    if (top >= 0) {  // Ensure stack is not empty
+        int element = stack[top--];  // Get the top element and decrement top
+        printf("Popped element: %d\n", element);
+    } else {
+        printf("Stack is empty. Cannot pop element\n");
+    }
+}
+    </pre>
+    <p>The <code>pop()</code> function removes the top element from the stack. </p>
+       <ul><li> The element at stack[top] is stored, and then top is decremented (top--). </li>
+        <li>If the stack is empty (top == -1), it displays an error message.</li>
+        </ul>
+
+    <h2>Display Operation</h2>
+    <pre>
+void display() {
+    printf("Stack: ");
+    for (int i = 0; i <= top; i++) {  // Traverse from bottom (0) to top
+        printf("%d ", stack[i]);  // Print each element in the stack
+    }
+    printf("\n");
+}
+    </pre>
+    <p>The <code>display()</code> function prints all the elements in the stack.</p>
+    <ul>
+        <li>It prints each element from index 0 (bottom of the stack) to top (top of the 
+stack). </li>
+        </ul>
+
+    <h2>Peek Operation</h2>
+    <pre>
+void peek() {
+    if (top >= 0) {  // Ensure stack is not empty
+        printf("Top element: %d\n", stack[top]);
+    } else {
+        printf("Stack is empty. No top element\n");
+    }
+}
+    </pre>
+    <p>The <code>peek()</code> function shows the element at the top of the stack without removing it.</p>
+    <ul>
+        <li> If the stack is not empty, it prints the top element (stack[top]). </li>
+        </ul>
+
+    <h2>Display Menu</h2>
+    <pre>
+void displayMenu() {
+    printf("1. Push\n");
+    printf("2. Pop\n");
+    printf("3. Display\n");
+    printf("4. Peek\n");
+    printf("5. Exit\n");
+    printf("Enter your choice: ");
+}
+    </pre>
+    <p>The <code>displayMenu()</code> function prints the options available for the user to interact with the stack (push, pop, display, peek, exit).</p>
+
+    <h2>Main Function</h2>
+    <pre>
+int main() {
+    int choice, element;
+
+    while (1) {
+        displayMenu();  // Show menu to the user
+        scanf("%d", &choice);  // Get user choice
+
+        switch (choice) {
+            case 1:
+                printf("Enter element to push: ");
+                scanf("%d", &element);  // Get element to push
+                push(element);  // Call push function
+                break;
+            case 2:
+                pop();  // Call pop function
+                break;
+            case 3:
+                display();  // Call display function
+                break;
+            case 4:
+                peek();  // Call peek function
+                break;
+            case 5:
+                printf("Exiting...\n");
+                return 0;  // Exit the program
+            default:
+                printf("Invalid choice. Please try again\n");
+        }
+    }
+
+    return 0;
+}
+    </pre>
+    <p>The <code>main()</code> function contains a loop that keeps running until the user chooses to exit.</p>
+    <ul>
+        <li><strong>Menu display: </strong>The displayMenu() function is called to show the options 
+to the user.</li>
+        <li><strong>Switch-case:</strong> The user's input is handled using a switch-case statement to 
+call the respective function (push, pop, display, peek, or exit).</li>
+        </ul> 
+
+
+        <h3>Program</h3> 
+        <pre>
+            #include <stdio.h> 
+ 
+int top = -1; 
+int stack[10]; 
+ 
+void push(int element) { 
+    if (top < 9) { 
+        stack[++top] = element; 
+        printf("Element pushed successfully\n"); 
+    } else { 
+        printf("Stack is full. Cannot push 
+element\n"); 
+    } 
+} 
+ 
+void pop() { 
+    if (top >= 0) { 
+        int element = stack[top--]; 
+        printf("Popped element: %d\n", element); 
+    } else { 
+        printf("Stack is empty. Cannot pop 
+element\n"); 
+    } 
+} 
+ 
+void display() { 
+    printf("Stack: "); 
+    for (int i = 0; i <= top; i++) { 
+        printf("%d ", stack[i]); 
+    } 
+    printf("\n"); 
+} 
+ 
+void peek() { 
+    if (top >= 0) { 
+        printf("Top element: %d\n", stack[top]); 
+    } else { 
+        printf("Stack is empty. No top element\n"); 
+    } 
+} 
+ 
+void displayMenu() { 
+    printf("1. Push\n"); 
+    printf("2. Pop\n"); 
+    printf("3. Display\n"); 
+    printf("4. Peek\n"); 
+    printf("5. Exit\n"); 
+    printf("Enter your choice: "); 
+} 
+ 
+int main() { 
+    int choice, element; 
+ 
+    while (1) { 
+        displayMenu(); 
+        scanf("%d", &choice); 
+ 
+        switch (choice) { 
+            case 1: 
+                printf("Enter element to push: "); 
+                scanf("%d", &element); 
+                push(element); 
+                break; 
+            case 2: 
+                pop(); 
+                break; 
+            case 3: 
+                display(); 
+                break; 
+            case 4: 
+                peek(); 
+                break; 
+            case 5: 
+                printf("Exiting...\n"); 
+                return 0; 
+            default: 
+                printf("Invalid choice. Please try 
+again\n"); 
+        } 
+    } 
+ 
+    return 0; 
+}
+            </pre>
+        
+
+    <h2>Program Output</h2>
+    <pre>
+1. Push
+2. Pop
+3. Display
+4. Peek
+5. Exit
+Enter your choice: 1
+Enter element to push: 10
+Element pushed successfully
+
+1. Push
+2. Pop
+3. Display
+4. Peek
+5. Exit
+Enter your choice: 4
+Top element: 10
+
+1. Push
+2. Pop
+3. Display
+4. Peek
+5. Exit
+Enter your choice: 2
+Popped element: 10
+
+1. Push
+2. Pop
+3. Display
+4. Peek
+5. Exit
+Enter your choice: 5
+Exiting...
+    </pre>`}
+
+    
+    else if(topic === 'Queue') {
+    
+                
+    text = `<h1>Queue</h1>
+
+    <h2>Definition</h2>
+    <p>It is a linear data structure that follows the FIFO (First In, First Out) principle. We can add, delete, and display the elements.</p>
+    
+    <h3>Operations:</h3>
+    <ul>
+        <li><strong>Enqueue:</strong> Elements are added at the rear.</li>
+        <li><strong>Dequeue:</strong> Elements are removed from the front.</li>
+        <li><strong>Display:</strong> To display the elements.</li>
+    </ul>
+
+    <h2>Declaration</h2>
+    <pre>
+struct Queue {
+    int a[Size];
+    int front;
+    int rear;
+};
+    </pre>
+
+    <h2>Algorithm</h2>
+    <pre>
+START
+Check if the queue is full.
+If the queue is full, produce overflow error and exit.
+If the queue is not full, increment rear pointer to point the next empty space.
+Add data elements to the queue location, where the rear is pointing.
+Return success.
+END
+    </pre>
+
+    <h2>Enqueue</h2>
+    <p>It is a term used in data structures, particularly in queue-based data structures like the FIFO (First-In-First-Out) queue. It refers to the operation of adding an element to the end or back of the queue.</p>
+    
+    <h3>Initialization</h3>
+    <pre>
+void enqueue(Queue* q, int value) {
+    if (isFull(q)) {
+        printf("Queue is full!\n");
+    } else {
+        if (q->front == -1) q->front = 0;
+        q->rear++;
+        q->items[q->rear] = value;
+        printf("Inserted %d\n", value);
+    }
+}
+    </pre>
+
+    <h2>Dequeue</h2>
+    <p>It is an operation in a queue data structure that involves removing an element from the front (or head) of the queue.</p>
+
+    <h2>Display</h2>
+    <p>The display function in a queue is used to print all the elements currently in the queue.</p>
+
+    <h2>Program</h2>
+    <pre>
+#include &lt;stdio.h&gt;
+#define size 20
+
+int a[20], front = -1, rear = -1;
+
+int main() {
+    int ch;
+    while (1) {
+        printf("Enter option 1 for enqueue\n");
+        printf("Enter option 2 for dequeue\n");
+        printf("Enter option 3 for display\n");
+        printf("Enter other option for exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &ch);
+        
+        switch (ch) {
+            case 1: enqueue(); break;
+            case 2: dequeue(); break;
+            case 3: display(); break;
+            default: exit(1);
+        }
+    }
+}
+
+void enqueue() {
+    int n;
+    printf("Enter n value: ");
+    scanf("%d", &n);
+
+    if (rear == size - 1)
+        printf("Queue is full");
+    else if (front == -1 && rear == -1) {
+        front = 0;
+        rear = 0;
+    } else {
+        rear++;
+    }
+    a[rear] = n;
+}
+
+void dequeue() {
+    if (front == -1 && rear == -1)
+        printf("Cannot delete\n");
+    else if (front == rear) {
+        front = -1;
+        rear = -1;
+    } else {
+        front++;
+    }
+}
+
+void display() {
+    if (front == -1 && rear == -1)
+        printf("Cannot display\n");
+    else {
+        for (int i = front; i <= rear; i++) {
+            printf("%d\t", a[i]);
+        }
+    }
+}
+    </pre>
+
+    <h2>Output</h2>
+    `}
+    
+    else if (topic === 'Single Linked List in C')
+    { text=`
+    <h1>Single Linked List in C</h1>
+
+    <p>A Single Linked List (SLL) is a linear data structure where elements are stored in nodes. </p>
+    <p>Each node in a Linked List points to the next node in the sequence, forming a chain-like structure.</p>
+    <p>Unlike arrays, linked lists are dynamic in size, allowing them to grow or shrink during program execution, leading to efficient memory usage.</p>
+
+   
+    
+        <ul><li><strong>Node:</strong> The basic building block of a linked list. Each node contains:</li>
+            <ul>
+                <li><strong>Data:</strong> Stores the actual information (integer, character, etc.).</li>
+                <li><strong>Pointer:</strong> A reference (or pointer) to the next node in the list.</li>
+            </ul>
+        </li>
+        <li><strong>Head:</strong> A pointer to the first node in the list. If the list is empty, the head points to NULL.</li>
+        <li><strong>NULL:</strong> A special value used in the pointer field of the last node to indicate the end of the list.</li>
+    </ul>
+
+    <h2>Structure of a Node</h2>
+    <ul>
+        <li>In C, a linked list node can be defined using a struct. Here’s how the 
+basic structure looks: </li>
+    <pre>
+struct Node {
+    int data;               // To store the data (or value)
+    struct Node* next;      // Pointer to the next node
+};
+    </pre><strong>int data: </strong>This stores the actual data (value) for the node. </li>
+    <li><strong>struct Node* next:</strong> This is a pointer that holds the address of the next 
+node in the list. </li>
+
+<p>Each time a new node is created, memory is allocated dynamically using <strong>malloc 
+().</strong></p>
+</ul>
+   
+    <h2>Operations on Single Linked List</h2>
+    <ol>
+        <li><strong>Creating a Linked List:</strong> </li>
+        <li><strong>Inserting a Node:</strong></li> <ul><li>At the beginning</li><li>At the end</li>  <li>After a given node.</li></ul>
+        <li><strong>Deleting a Node:</strong> </li><ul><li>From the beginning</li><li>From the end</li><li>A specific node by value.</li></ul>
+        <li><strong>Searching for a Node:</strong></li> 
+        <li><strong>Displaying the Linked List:</strong></li>
+    </ol>
+
+    <h3>Creating a Linked List</h3>
+    <p>Creating a node in a linked list involves allocating memory for the node 
+and initializing its data and pointer fields. </p>
+    <pre>
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+struct Node {
+    int data;
+    struct Node* next;
+};
+
+// Function to create a new node
+struct Node* createNode(int data) {
+    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
+    newNode->data = data;
+    newNode->next = NULL;
+    return newNode;
+}
+
+// Function to print the linked list
+void display(struct Node* head) {
+    struct Node* temp = head;
+    while (temp != NULL) {
+        printf("%d -> ", temp->data);
+        temp = temp->next;
+    }
+    printf("NULL\n");
+}
+
+int main() {
+    struct Node* head = createNode(10);
+    struct Node* second = createNode(20);
+    struct Node* third = createNode(30);
+
+    head->next = second;
+    second->next = third;
+
+    display(head);
+    return 0;
+}
+    </pre>
+
+    <h3>Output</h3>
+    <p>10 -> 20 -> 30 -> NULL</p>
+
+    <p>We define the struct Node which contains data (to hold the value) 
+and next (a pointer to the next node).</p>
+
+<p>The function createNode(int data): </p>
+<ul>
+    <li> Allocates memory for the new node using malloc().</li>
+    <li>Initializes the node’s data field with the given value and sets next 
+to NULL. </li>
+    <li>Returns the newly created node. </li>
+    </ul>
+
+    
+
+    <h3>Inserting a Node</h3>
+    <p>There are multiple ways to insert a node in a linked list: </p>
+
+    <h4>a. Inserting at the Beginning</h4>
+     <ul>
+        <li>Create a new node. </li>
+         <li> Set the <strong>next</strong> of the new node to point to the current head.</li> 
+          <li> Update the head to point to the new node.</li>
+        </ul>
+
+    <h3>Code:</h3>
+    <pre>
+void insertAtBeginning(struct Node** head, int newData) {
+    struct Node* newNode = createNode(newData);
+    newNode->next = *head;
+    *head = newNode;
+}
+    </pre>
+    <ul>
+        <li> We pass the <strong>head</strong> pointer by reference <strong>(struct Node** head)</strong>
+because we need to modify the head.</li>
+        <li>The <strong>newNode's next</strong> pointer is set to point to the current head. </li>
+        <li>The head is updated to point to the new node, making it the first 
+node.</li>
+        
+        
+        
+        </ul>
+
+
+
+
+    <h4>b. Inserting at the End</h4>
+    <p>To insert a node at the end: </p>
+    <ul>
+        <li>Create a new node. </li>
+         <li>Traverse the list to find the last node.</li> 
+          <li> Set the last node’s <strong>next</strong> pointer to point to the new node.</li>
+        </ul>
+
+    <h3>Code:</h3>
+
+    <pre>
+void insertAtEnd(struct Node** head, int newData) {
+    struct Node* newNode = createNode(newData);
+    if (*head == NULL) {
+        *head = newNode;
+        return;
+    }
+    struct Node* temp = *head;
+    while (temp->next != NULL) {
+        temp = temp->next;
+    }
+    temp->next = newNode;
+}
+    </pre>
+    <ul>
+        <li> If the list is empty  <strong>(*head == NULL)</strong> , the new node becomes 
+the head.</li>
+        <li> If not, we traverse the list using temp until the last node is 
+reached<strong> (temp->next != NULL). </strong></li>
+        <li>The last node’s<strong>next </strong>pointer is updated to point to the new 
+node.</li>
+
+
+
+    <h4>c. Insert After a Given Node</h4>
+    <pre>
+void insertAfter(struct Node* prevNode, int newData) {
+    if (prevNode == NULL) {
+        printf("Previous node cannot be NULL\n");
+        return;
+    }
+    struct Node* newNode = createNode(newData);
+    newNode->next = prevNode->next;
+    prevNode->next = newNode;
+}
+    </pre>
+
+    <h3>Example Usage: </h3>
+    <pre>
+        int main() { 
+struct Node* head = createNode(10); 
+insertAtBeginning(&head, 5);     // Insert 5 at the beginning 
+insertAtEnd(&head, 30);          
+insertAfter(head, 15);           
+display(head); 
+return 0; 
+}
+        
+        
+        </pre>
+
+
+        <h3>Output:</h3>
+        <p>
+            5 -> 10 -> 15 -> 30 -> NULL 
+            </p>
+
+    <h3>Deleting a Node</h3>
+    <h4>a. Delete from the Beginning</h4>
+    <p>To delete the first node: </p>
+
+<ol><li> Store the current head in a temporary variable.</li>
+    <li> Move the head to the next node.</li>
+    <li>Free the memory of the original head. </li>
+    
+    
+    
+    
+    </ol>
+
+    <h3>Code:  </h3>
+    <pre>
+void deleteFromBeginning(struct Node** head) {
+    if (*head == NULL) {
+        printf("List is empty\n");
+        return;
+    }
+    struct Node* temp = *head;
+    *head = (*head)->next;
+    free(temp);
+}
+    </pre>
+
+    <ul>
+    <li> If the list is empty, print a message.</li>
+    <li>Otherwise, store the current head, move the head to the next node, and 
+free the memory of the old head. </li>
+        </ul>
+
+    <h4>b. Delete from the End</h4>
+    <h3>To delete the last node:  </h3>
+    <ol>
+        <li>Traverse to the second-last node. </li>
+        <li>Set the second-last node’s <strong>next</strong> pointer to <strong>NULL.</strong></li>
+        <li>Free the memory of the last node </li>
+        
+        </ol>
+
+    <pre>
+void deleteFromEnd(struct Node** head) {
+    if (*head == NULL) {
+        printf("List is empty\n");
+        return;
+    }
+    if ((*head)->next == NULL) {
+        free(*head);
+        *head = NULL;
+        return;
+    }
+    struct Node* temp = *head;
+    while (temp->next->next != NULL) {
+        temp = temp->next;
+    }
+    free(temp->next);
+    temp->next = NULL;
+}
+    </pre>
+
+    <ul>
+        <li> If there is only one node, free it and set the head to <strong>NULL.</strong></li>
+         <li>Otherwise, traverse to the second-last node and set its next pointer to 
+<strong>NULL.</strong> </li>
+        
+        
+        
+        </ul>
+
+    <h4>c. Delete a Node by Value</h4>
+    <h3>Code:  </h3>
+    <pre>
+void deleteByValue(struct Node** head, int value) {
+    if (*head == NULL) {
+        printf("List is empty\n");
+        return;
+    }
+    struct Node* temp = *head;
+    if (temp != NULL && temp->data == value) {
+        *head = temp->next;
+        free(temp);
+        return;
+    }
+    struct Node* prev = NULL;
+    while (temp != NULL && temp->data != value) {
+        prev = temp;
+        temp = temp->next;
+    }
+    if (temp == NULL) {
+        printf("Value not found in the list\n");
+        return;
+    }
+    prev->next = temp->next;
+    free(temp);
+}
+    </pre>
+
+    <h3>Example Usage</h3>
+    <pre>
+int main() {
+    struct Node* head = createNode(10);
+    insertAtEnd(&head, 20);
+    insertAtEnd(&head, 30);
+    insertAtEnd(&head, 40);
+
+    display(head);
+    deleteFromBeginning(&head);
+    display(head);
+    deleteFromEnd(&head);
+    display(head);
+    deleteByValue(&head, 20);
+    display(head);
+    return 0;
+}
+    </pre>
+
+    <h3>Output</h3>
+    <p>Original List: 10 -> 20 -> 30 -> 40 -> NULL</p>
+    <p>After deleting first node: 20 -> 30 -> 40 -> NULL</p>
+    <p>After deleting last node: 20 -> 30 -> NULL</p>
+    <p>After deleting node with value 20: 30 -> NULL</p>
+
+    <h3>Searching for a Node</h3>
+    <p>o search for a node: </p>
+
+    <ul>
+        <li> Traverse the list. </li>
+         <li>Compare each node’s data with the search key.</li>
+          
+        
+        </ul>
+
+        <h3>Code:</h3>
+    <pre>
+void search(struct Node* head, int key) {
+    struct Node* temp = head;
+    while (temp != NULL) {
+        if (temp->data == key) {
+            printf("Element %d found in the list\n", key);
+            return;
+        }
+        temp = temp->next;
+    }
+    printf("Element %d not found in the list\n", key);
+}
+    </pre>
+
+    <h3>Displaying the Linked List</h3>
+    <pre>
+void display(struct Node* head) {
+    struct Node* temp = head;
+    while (temp != NULL) {
+        printf("%d -> ", temp->data);
+        temp = temp->next;
+    }
+    printf("NULL\n");
+}
+    </pre>
+
+   <ul>
+    <li>The function iterates through each node using temp. </li>
+    <li>If the node’s data matches the key, it prints that the element is 
+found. </li>
+    
+    
+    </ul>
+    
+    <h2>Displaying the Linked List </h2>
+    <pre>
+       void display(struct Node* head) { 
+struct Node* temp = head; 
+while (temp != NULL) { 
+printf("%d -> ", temp->data); 
+temp = temp->next; 
+} 
+printf("NULL\n"); 
+} 
+</pre>
+
+<ul>
+    <li>The function iterates over each node using temp and prints the 
+data. </li>
+    <li>Once the end of the list is reached, it prints NULL to indicate 
+the end. </li>
+    
+    
+    </ul>
+
+    <h2> complete example combining multiple operations:</h2>
+
+    <h3>code:  </h3>
+    <pre>
+        #include <stdio.h> 
+#include <stdlib.h> 
+struct Node { 
+int data; 
+struct Node* next; 
+}; 
+struct Node* createNode(int data) { 
+struct Node* newNode = (struct Node*)malloc(sizeof(struct Node)); 
+newNode->data = data; 
+newNode->next = NULL; 
+return newNode; 
+} 
+void insertAtBeginning(struct Node** head, int newData) { 
+struct Node* newNode = createNode(newData); 
+newNode->next = *head; 
+    *head = newNode; 
+} 
+ 
+void insertAtEnd(struct Node** head, int newData) { 
+    struct Node* newNode = createNode(newData); 
+    if (*head == NULL) { 
+        *head = newNode; 
+        return; 
+    } 
+     
+    struct Node* temp = *head; 
+    while (temp->next != NULL) { 
+        temp = temp->next; 
+    } 
+    temp->next = newNode; 
+} 
+ 
+void display(struct Node* head) { 
+    struct Node* temp = head; 
+    while (temp != NULL) { 
+        printf("%d -> ", temp->data); 
+        temp = temp->next; 
+    } 
+    printf("NULL\n"); 
+} 
+ 
+int main() { 
+struct Node* head = NULL; 
+insertAtEnd(&head, 10); 
+insertAtBeginning(&head, 5); 
+insertAtEnd(&head, 15); 
+display(head); 
+return 0; 
+}</pre>
+
+<h3>Input:</h3>
+<pre>
+Insert 10 at the end. 
+Insert 5 at the beginning. 
+Insert 15 at the end. </pre>
+
+<h3>Output:</h3>
+<pre>
+5 -> 10 -> 15 -> NULL  </pre>
+    
+<ul>
+    <li> First, the <strong>insertAtEnd(&head, 10)</strong> creates a list with one node: <strong>10 -> 
+NULL.</strong> </li>
+    <li>Next, <strong>insertAtBeginning(&head, 5)</strong> adds a node with data 5 at the 
+start:<strong> 5 -> 10 -> NULL. </strong></li>
+    <li>Finally, <strong>insertAtEnd(&head, 15)</strong> appends a node with data 15 at the 
+end:<strong> 5 -> 10 -> 15 -> NULL.</strong></li>
+    
+    
+    
+    </ul>
+    
+    
+    
+    
+    
+    
+    
+    `}
+    
+            else {
+                text = `<p>Content for ${topic} is not available yet.</p>`;
+            }
+
+            document.querySelector('.display').innerHTML = text;
+        }
+
+
+            
+               
+
+// Functions for scrolling the navbar
+function scrollLeft() {
+    navbar.scrollBy({
+        top: 0,
+        left: 100, 
+        behavior: 'smooth'
+    });
+}
+
+function scrollRight() {
+    navbar.scrollBy({
+        top: 0,
+        left: 100, 
+        behavior: 'smooth'
+    });
+}
+
+// Functions for scrolling the content section
+function scrollContentLeft() {
+    content.scrollBy({
+        top: 0,
+        left: 150, // Adjust this value for the scroll distance
+        behavior: 'smooth'
+    });
+}
+
+function scrollContentRight() {
+    content.scrollBy({
+        top: 0,
+        left: 150, // Adjust this value for the scroll distance
+        behavior: 'smooth'
+    });
+}
+
+</script>
+</body>
+</html>

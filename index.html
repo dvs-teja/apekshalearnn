@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apeksha Learn</title>
+    <style>
+     body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    background-color: black;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffd700;
+}
+
+.contact-btn {
+    background-color: #ffd700;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-btn:hover {
+    background-color: #ffed4a;
+}
+
+.social-icon {
+    height: 36px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon1s {
+    height: 100px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Media Query for Mobile Devices */
+@media screen and (max-width: 768px) {
+    nav img.social-icon1s {
+        margin-right: 14px;
+        width: 100px;  /* Set the width to 100px */
+        height: 100px; /* Set the height to 100px */
+    }
+    nav {
+        justify-content: space-between; /* Space out items */
+        padding: 10px 15px;
+    }
+
+    nav a {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    .contact-btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .social-icon {
+        height: 30px; /* Adjust social icon size */
+    }
+
+   
+}
+
+
+
+@media (max-width: 768px) {
+    /* Center everything vertically and horizontally */
+    nav {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Logo remains at the top */
+
+
+    /* First two links on one row */
+    nav a:nth-child(2), nav a:nth-child(3) {
+        width: 48%; /* Two links on the same row */
+        margin-right: 4%; /* Space between them */
+    }
+
+    /* Second two links on the next row */
+    nav a:nth-child(4), nav a:nth-child(5) {
+        width: 48%;
+        margin-right: 4%;
+    }
+
+    /* Remove right margin for the last link */
+    nav a:last-child {
+        margin-right: 0;
+    }
+
+    /* Ensure the Join Button spans full width */
+    nav .contact-btn {
+        width: 100%;
+    }
+
+    /* Social media icons below the button */
+    nav .social-icon {
+        width: 25px;
+        height: 25px;
+        margin: 10px;
+    }
+    nav .lll{
+    display: flex;
+}
+}
+        .middlediv {
+            margin-top: -40px;
+            display: flex;
+            background-color: black;
+        }
+
+        .flex1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            /* Align items to the left */
+            height: 400px;
+            margin-left: 10px;
+            width: 50%;
+            overflow: hidden;
+            position: relative;
+            /* Add some left padding */
+            padding-top: 100px;
+            /* Move down */
+        }
+
+        .flex2 {
+            height: 800px;
+            width: 800px;
+        }
+
+        .head {
+            color: rgb(111, 255, 255);
+            font-size: 36px;
+            /* Decreased font size */
+            border-right: .15em solid orange;
+            white-space: normal;
+            letter-spacing: .20em;
+            overflow: hidden;
+            animation: blink-caret .75s step-end infinite;
+            margin: 0;
+            padding: 0;
+        }
+
+        .para {
+            color: white;
+            font-size: 25px;
+            /* Decreased font size */
+            border-right: .15em solid orange;
+            white-space: normal;
+            letter-spacing: .20em;
+            overflow: hidden;
+            animation: blink-caret .75s step-end infinite;
+            margin-top: 50px;
+            /* height: 1000px; */
+        }@media screen and (max-width: 768px) {
+    .head {
+        font-size: 30px; /* Decrease font size for smaller screens */
+    }
+
+    .para {
+        font-size: 20px; /* Decrease font size for smaller screens */
+        margin-top: 30px;
+    }
+
+    .middlediv {
+        flex-direction: column; /* Stack items vertically */
+        text-align: center;
+    }
+
+    .flex1 {
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .flex2 {
+        margin-top: 20px; /* Add margin to space the image */
+    }
+}
+
+/* For mobile screens */
+@media screen and (max-width: 480px) {
+    .head {
+        font-size: 24px; /* Further decrease font size */
+    }
+
+    .para {
+        font-size: 18px; /* Decrease font size */
+        margin-top: 20px;
+    }
+
+    .middlediv {
+        padding: 10px;
+    }
+
+    .flex1 {
+        margin-right: 0;
+    }
+
+    .flex2 {
+        margin-top: 15px;
+    }
+}
+
+        @keyframes blink-caret {
+
+            from,
+            to {
+                border-color: transparent;
+            }
+
+            50% {}
+        }
+
+        .apeksha {
+            padding: 50px;
+            max-width: 60%;
+            max-height: 84%;
+   margin-top: -40px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .second {
+            display: flex;
+            align-items: center;
+            /* margin-top: 200px; */
+        }
+
+        .container {
+            /* border: 2px solid black; */
+            display: flex;
+            width: 50%;
+            overflow: hidden;
+            color: rgb(0, 0, 0);
+        }
+
+        .scroll-content {
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .scroll-button {
+            margin: 0;
+            background-color: #ff883e;
+            color: rgb(0, 0, 0);
+            padding: 10px;
+            border: 0;
+            cursor: pointer;
+            font-size: 24px;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s;
+        }
+
+
+
+        @media (max-width: 768px) {
+
+            .flex1,
+            .flex2 {
+                width: 100%;
+            }
+        }
+
+        .second {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            /* margin-top: 200px; */
+        }
+
+        .container {
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            width: 50%;
+            height: 400px;
+            overflow: hidden;
+        }
+
+
+        .scroll-button {
+            margin-left: 250px;
+            color: white;
+            padding: 90px;
+        }
+        .second, .rightbutton, .leftbutton {
+    padding: 20px;
+    background-color: #f4f9ff;
+    cursor: pointer; /* Change cursor to pointer when hovering over button */
+}
+
+
+body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background-color: #f4f4f4;
+    }
+    
+    .main-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+        color: #333;
+        margin-bottom: 2rem;
+    }
+    
+    .service-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+        perspective: 1000px;
+        position: relative;
+    }
+    
+    .service-card {
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        min-height: 450px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .service-card.blur {
+        filter: blur(5px);
+        opacity: 0.3;
+        transform: scale(0.95);
+        background: rgba(0, 0, 0, 0.8);
+    }
+
+    .service-card.active {
+        transform: scale(1.05);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        z-index: 2;
+        filter: blur(0);
+        opacity: 1;
+        background: linear-gradient(145deg, #ffffff, #f0f0f0);
+        border: 2px;
+    }
+    
+    .service-card:hover {
+        transform: translateY(-5px);
+    }
+    
+    .service-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        flex-shrink: 0;
+        transition: all 0.3s ease;
+    }
+    
+    .service-card h2 {
+        padding: 1rem;
+        color: #333;
+        font-size: 1.5rem;
+        flex-shrink: 0;
+        transition: all 0.3s ease;
+    }
+    
+    .service-card p {
+        padding: 0 1rem 1rem;
+        color: #666;
+        flex: 1;
+        transition: all 0.3s ease;
+    }
+
+    .service-card button {
+        transition: all 0.3s ease;
+    }
+    
+    .read-more-btn {
+        display: inline-block;
+        margin: 1rem;
+        padding: 0.8rem 1.5rem;
+        background-color: #000;
+        color: white;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        align-self: flex-start;
+        margin-top: auto;
+    }
+    
+    .read-more-btn:hover {
+        background-color: #333;
+    }
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+        z-index: 0;
+    }
+
+    .overlay.active {
+        opacity: 0.9;
+    }
+
+    .service-card.active p {
+        color: #666;
+        font-weight: 500;
+    }
+
+    .service-card.active h2 {
+        color: #333;
+        font-weight: bold;
+    }
+
+    /* Ensure the container transitions smoothly */
+    .main-container {
+        transition: background-color 0.3s ease;
+    }
+
+    .main-container.dark-mode {
+        background-color: white;
+    }
+
+    .service-card.active button {
+        background-color: #000;
+        color: white;
+        border: 1px solid white;
+        font-weight: bold;
+    }
+
+    .service-card.active img {
+        filter: brightness(1.1); /* Slightly brighten the image */
+    }
+
+    .service-card.active button:hover {
+        background-color: white;
+        color: black;
+        transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+        .service-cards {
+            grid-template-columns: 1fr;
+        }
+        
+        .main-container {
+            padding: 1rem;
+        }
+        
+        h1 {
+            font-size: 2rem;
+        }
+    }
+    .footer-social-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.footer-social-icon:hover {
+    transform: scale(1.1);
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #00ffff;
+}
+
+.main-footer {
+    background-color: #333;
+    margin-top: 60px;
+    padding: 20px 0;
+    border-top: 1px solid #333;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}.social-links {
+    margin-bottom: 20px;
+}
+.telegramlink{
+    margin-left: 400px;
+    color: rgb(0, 0, 0);
+}
+.joinuss{
+    color: gold;
+}
+/* Base styling for the image */
+.secondvyuha {
+    border-radius: 50%;
+    width: 100%; /* Responsive width */
+    max-width: 350px; /* Maximum width */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Vision heading styling */
+.VISON {
+    font-size: 50px;
+    text-align: center; /* Center the heading */
+    margin-bottom: 20px;
+}
+
+/* Styling for the section and text container */
+/* Section container */
+.secondd {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: flex-start; /* Align items to the start */
+    align-items: center;
+    gap: 20px; /* Space between the text and image */
+    padding: 20px;
+    margin-left: 15%; /* Increase the left margin to move the section more to the right */
+}
+
+
+.firstdivv {
+    width: 100%;
+    max-width: 600px; /* Limit the width of the text container */
+}
+
+.visionpara {
+            font-size: 20px;
+    line-height: 1.6;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    /* On small screens, stack the content vertically */
+    .secondd {
+        flex-direction: column;
+        align-items: center; /* Center everything vertically */
+        text-align: center;
+        margin-left: 0; /* Remove left margin on smaller screens */
+    }
+
+    .firstdivv {
+        width: 100%; /* Take full width */
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .visionpara {
+        font-size: 18px; /* Adjust font size for smaller screens */
+        margin: 0 20px;
+    }
+
+    .secondvyuha {
+        width: 80%; /* Resize image for smaller screens */
+        max-width: 300px; /* Set a maximum size */
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .VISON {
+        font-size: 36px; /* Smaller font size on mobile */
+    }
+
+    .visionpara {
+        font-size: 16px; /* Further reduce font size for mobile */
+    }
+
+    .secondvyuha {
+        width: 100%; /* Full width image on very small screens */
+        max-width: 250px;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+    <div>
+        <nav>
+            <img src="vyuhamain-Photoroom.jpg" alt="" class="social-icon1s">
+
+            <a href="index.html">Home</a>
+            <a href="services.html">My Courses</a>
+            <a href="contactus.html">Contact</a>
+            <a href="project apeksha.html">About Us</a>
+            <button class="contact-btn" onclick="window.location.href='joinourcommunity.html'">
+                Join our community
+            </button>
+            
+              <div class="lll"><img src="instagram.png" alt="Instagram" class="social-icon" onclick="window.location.href='https://www.instagram.com/kl_apeksha/';">
+                <img src="telegram.png" alt="Telegram" class="social-icon" >
+              <img src="linkedin.png" alt="LinkedIn" class="social-icon"></div>
+        </nav>
+    </div>
+
+    <section class="middlediv">
+        <div class="flex1">
+            <h1 class="head"></h1>
+            <h4 class="para"></h4>
+        </div>
+        <div class="flex2">
+            <img src="main_logo.jpg" alt="Apeksha Logo" class="apeksha">
+        </div>
+    </section>
+
+   <section>
+    <div class="secondd">
+        <div class="firstdivv"> 
+            <H2 class="VISON">Our Vision</H2>
+
+            <p class="visionpara">Empowering Students for Self-Awareness, Fearlessness, Joyful Learning, and Purposeful Research Our vision is to create an educational environment that empowers students to become self-aware, free from fear of questioning, and purpose-driven individuals engaged in research fields, by making youth enjoy learning process. We are committed to providing a transformative educational 
+                experience that cultivates holistic development and prepares students for success in an ever changing world.</p>
+        </div>
+<br>
+        <img src="vyuhamain-Photoroom.jpg" alt="" class="secondvyuha">
+    </div>
+   </section>
+    <div class="main-container">
+        <h1>Apeksha</h1>
+        
+        <div class="service-cards">
+            <div class="service-card">
+                <img src="ourresources.webp" alt="Team working together">
+                <h2>Our Services</h2>
+                <p class="hidden-content">We offer a wide range of resources to support your learning journey.
+                     From study materials and video tutorials to practice exercises and helpful articles, our resources are designed to make learning easier and more effective. Whether you're preparing for exams, improving a skill, or exploring new topics, you'll find the tools you need to succeed. 
+                    Start exploring our resources today and take the next step in your education.</p>
+                <button class="read-more-btn">Read More</button>
+            </div>
+            <div class="service-card">
+                <img src="ourvalues.webp" alt="Blueprint with pen">
+                <h2>Our Values</h2>
+                <p class="hidden-content">At Apeksha, teaching programming is our mission, not just a job. 
+                    We are guided by core values that shape everything we do. With integrity, we provide clear and honest guidance throughout your learning journey. Our commitment is to your success, ensuring you master programming concepts at your own pace. We embrace innovation by using creative and engaging methods to make coding both fun and effective. Most importantly, we show empathy, understanding each learner’s needs and offering personalized support to help you grow as a programmer.
+                    These values drive our dedication to delivering the best learning experience.</p>
+                <button class="read-more-btn">Read More</button>
+            </div>
+            <div class="service-card">
+                <img src="ourproject.webp" alt="Open book pages">
+                <h2>Our Project</h2>
+                <p class="hidden-content">At Apeksha, we're constantly working on projects that help students improve their programming skills. 
+                    From creating new learning materials and coding exercises to exploring the latest tech trends, we focus on making learning practical and enjoyable. Our goal is to provide students with real-world knowledge that they can use in their own projects,
+                     helping them build the skills they need to succeed in the tech world.</p>
+
+                     
+                <button class="read-more-btn">Join Us</button>
+            </div>
+            <div class="service-card">
+                <img src="teaching.webp" alt="Motivated person">
+                <h2>Our Passion for Teaching
+                </h2>
+                <p class="hidden-content">We love teaching and helping students grow. Each day, we work hard to help you unlock your potential and become more confident in programming. 
+                    Watching our students succeed inspires us to keep improving and make learning even better.</p>
+                <button class="read-more-btn">Read More</button>
+            </div>
+        </div>
+    </div>
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://instagram.com" target="_blank" class="social-link">
+                    <img src="instagram.png" alt="Instagram" class="footer-social-icon">
+                </a>
+            </div>
+            <div class="footer-links">
+                <a href="imprint.html">Imprint</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="cookie-settings.html">Cookie Settings</a>
+            </div>
+        </div>
+    </footer>
+
+    </section>
+
+    <script>
+        function scrollContainerLeft() {
+            const container = document.querySelector('.container');
+            container.scrollBy({ left: -container.clientWidth, behavior: 'smooth' });
+        }
+
+        function scrollRight() {
+            const container = document.querySelector('.container');
+            container.scrollBy({ left: container.clientWidth, behavior: 'smooth' });
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const headElement = document.querySelector('.head');
+            const paraElement = document.querySelector('.para');
+            const headText = '"Unlock Your Potential—';
+            const paraText = 'With Every Lesson, You Rise Higher! At Apeksha Learn, we believe that every new skill is a stepping stone to greatness. Ready to elevate your journey?';
+
+            function typeWriter(element, text, delay, callback) {
+                let i = 0;
+                function type() {
+                    if (i < text.length) {
+                        element.innerHTML += text.charAt(i);
+                        i++;
+                        setTimeout(type, delay);
+                    } else if (callback) {
+                        callback();
+                    }
+                }
+                type();
+            }
+
+            typeWriter(headElement, headText, 100, () => {
+                paraElement.innerHTML = "";
+                typeWriter(paraElement, paraText, 10);
+            });
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            const scrollContents = document.querySelectorAll('.scroll-content');
+            const section = document.getElementById('second-section');
+
+            function displayContentsSequentially() {
+                scrollContents.forEach((content, index) => {
+                    setTimeout(() => {
+                        content.style.display = 'block'; // Show content
+                        content.style.opacity = '1'; 
+                    }, index * 5000); 
+                });
+            }
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        displayContentsSequentially(); 
+                        observer.unobserve(entry.target); 
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            observer.observe(section); 
+        });
+
+
+    </script>
+</body>
+
+</html> 

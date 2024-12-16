@@ -1,0 +1,682 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function() {
+                emailjs.init("4N6NQo2eEQFzNXJ_v");  // Initialize the EmailJS service with your public key
+            })();
+        
+            // Function to send the email
+            function sentmail(event, sendToSecondService = false) {
+                event.preventDefault();  // Prevent default form submission
+        
+                // Get form data
+                var params = {
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    phone: document.getElementById('phone').value,
+                    message: document.getElementById('message').value,
+                };
+        
+                // Validate email format
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(params.email)) {
+                    alert('Please enter a valid email address.');
+                    return false;
+                }
+        
+                // Validate phone format (10 digits)
+                const phoneRegex = /^\d{10}$/;
+                if (!phoneRegex.test(params.phone)) {
+                    alert('Please enter a valid 10-digit phone number.');
+                    return false;
+                }
+        
+                // Disable the submit button and show sending message
+                const submitBtn = document.querySelector('.submit-btn');
+                submitBtn.textContent = 'Sending...';
+                submitBtn.disabled = true;
+        
+                // Email sending logic
+                const serviceid = "service_n750j2b";  // Your default EmailJS service ID
+                const templateid = "template_rnpenbc";  // Your default EmailJS template ID
+        
+                if (sendToSecondService) {
+                    // If sending to second service, change the service ID and template ID
+                    const serviceid = "service_b7jn21d";  // Second EmailJS service ID
+                    const templateid = "template_rnpenbc";  // Second EmailJS template ID
+                }
+        
+                // Send email using EmailJS
+                emailjs.send(serviceid, templateid, params)
+                    .then((res) => {
+                        console.log('Email sent:', res);
+        
+                        if (sendToSecondService) {
+                            // Send to second email if the flag is true
+                            const serviceid2 = "service_n750j2b";  // Second EmailJS service ID
+                            const templateid2 = "template_rnpenbc";  // Second EmailJS template ID
+                            return emailjs.send(serviceid2, templateid2, params);
+                        } else {
+                            return Promise.resolve();  // If no second email, resolve immediately
+                        }
+                    })
+                    .then((res) => {
+                        if (res) {
+                            console.log('Second email sent:', res);
+                        }
+                        alert("Message sent successfully!");
+                        
+                        // Reset form fields
+                        document.getElementById('contactForm').reset();
+                        submitBtn.textContent = 'Submit';  // Reset button text
+                        submitBtn.disabled = false;  // Re-enable submit button
+                    })
+                    .catch((err) => {
+                        console.error('EmailJS Error:', err);
+                        alert("Oops! Something went wrong, please try again.");
+                        
+                        submitBtn.textContent = 'Submit';  // Reset button text
+                        submitBtn.disabled = false;  // Re-enable submit button
+                    });
+            }
+        
+            // This function validates the form data before sending the email
+            function validateForm(event) {
+                event.preventDefault();
+        
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const phone = document.getElementById('phone').value;
+                const message = document.getElementById('message').value;
+        
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    alert('Please enter a valid email address');
+                    return false;
+                }
+        
+                const phoneRegex = /^\d{10}$/;
+                if (!phoneRegex.test(phone)) {
+                    alert('Please enter a valid 10-digit phone number');
+                    return false;
+                }
+        
+                // Call sentmail function, passing true for the second email
+                sentmail(event, true); // change the second argument to `false` if you don't want to send the second email.
+        
+                return false;
+            }
+        </script>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Us</title>
+        <link rel="icon" type="image/x-icon" href="apeksha.jpg">
+        <style>
+    /* Your CSS styles here */
+            /* No changes needed in styles */
+            nav{
+                background-color: black;
+                padding: 15px 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 30px;
+            }
+
+            nav a {
+                color: white;
+                text-decoration: none;
+                font-size: 18px;
+                transition: color 0.3s ease;
+            }
+
+            nav a:hover {
+                color: #ffd700;
+            }
+
+            .contact-btn {
+                background-color: #ffd700;
+                color: black;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 16px;
+                transition: background-color 0.3s ease;
+            }
+
+            .contact-btn:hover {
+                background-color: #ffed4a;
+            }
+            .social-icon {
+            height: 36px;
+            width: auto;
+            vertical-align: middle;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icon:hover {
+            transform: scale(1.1);  
+        }
+        body {
+                background-color: black;
+                color: white;
+                font-family: Arial, sans-serif;
+                padding: 20px;
+            }
+
+            .contact-heading {
+                font-size: 32px;
+                color: white;
+                border: 2px solid gold;
+                padding: 15px;
+                border-radius: 10px;
+                display: inline-block;
+                margin-bottom: 30px;
+            }
+
+            .contact-form {
+                max-width: 800px;
+                margin: 0 auto;
+            }
+
+            .form-row {
+                display: flex;
+                gap: 20px;
+                margin-bottom: 20px;
+            }
+            .form-group {
+    display: flex;        
+    }
+    @media (max-width: 768px) {
+    /* Center everything vertically and horizontally */
+     nav img.social-icon1s {
+        margin-right: 14px;
+        width: 100px;  /* Set the width to 100px */
+        height: 100px; /* Set the height to 100px */
+    }
+    nav {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+  
+    /* First two links on one row */
+    nav a:nth-child(2), nav a:nth-child(3) {
+        width: 48%; /* Two links on the same row */
+        margin-right: 4%; /* Space between them */
+    }
+
+    /* Second two links on the next row */
+    nav a:nth-child(4), nav a:nth-child(5) {
+        width: 48%;
+        margin-right: 4%;
+    }
+
+    /* Remove right margin for the last link */
+    nav a:last-child {
+        margin-right: 0;
+    }
+
+    /* Ensure the Join Button spans full width */
+    nav .contact-btn {
+        width: 100%;
+    }
+
+    /* Social media icons below the button */
+    nav .social-icon {
+        display: flex;
+        width: 25px;
+        height: 25px;
+        margin: 10px;
+    }
+    nav .lll{
+    display: flex;
+}
+}
+
+@media (max-width: 768px) {
+    /* Stacking the form elements vertically on small screens */
+    .form-row {
+        flex-direction: column; /* Change flex-direction to column to stack the fields vertically */
+        align-items: stretch;
+    }
+
+    .form-group {
+        width: 100%; /* Take full width of the container on mobile */
+        margin-bottom: 15px;
+    }
+
+    .phone-input {
+        display: flex;
+        align-items: center;
+    }
+
+    .country-code {
+        position: static;
+        margin-right: 10px; /* Space between country code and input field */
+    }
+
+    .form-footer {
+        text-align: center;
+    }
+
+    .submit-btn {
+        width: 100%; /* Full-width button on mobile */
+    }
+
+    .privacy-text {
+        font-size: 0.8rem;
+    }
+}
+            label {
+                display: block;
+                margin-bottom: 5px;
+            }
+
+            input, textarea {
+                width: 100%;
+                padding: 12px;
+                border: 1px solid #333;
+                border-radius: 25px;
+                background-color: black;
+                color: white;
+                font-size: 16px;
+            }
+
+            textarea {
+                height: 150px;
+                resize: vertical;
+            }
+
+            .phone-input {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+            }
+            .country-code {
+                border: 1px solid #FFD700;
+
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                padding: 12px;
+                border-radius: 25px;
+                background-color: black;
+                color: white;
+            }
+
+            .country-code img {
+                width: 20px;
+                height: auto;
+            }
+
+            .required {
+                color: #666;
+                font-size: 14px;
+                margin-left: 5px;
+            }
+    .form-footer {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .privacy-text {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 20px;
+    }
+
+    .privacy-link {
+        color: white;
+        text-decoration: underline;
+    }
+
+    .submit-btn {
+        background-color: #00ffff;
+        color: black;
+        padding: 12px 40px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .submit-btn:hover {
+        background-color: #00cccc;
+    }
+
+
+    .main-footer {
+    
+        color: white;
+        margin-top: 60px;
+        padding: 20px 0;
+        border-top: 1px solid #333;
+    }
+
+    .footer-content {
+        max-width: 800px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .social-links {
+        margin-bottom: 20px;
+    }
+
+    .footer-social-icon {
+        width: 24px;
+        height: 24px;
+        transition: transform 0.3s ease;
+    }
+
+    .footer-social-icon:hover {
+        transform: scale(1.1);
+    }
+
+    .footer-links {
+        display: flex;
+        gap: 20px;
+    }
+
+    .footer-links a {
+        color: white;
+        text-decoration: none;
+        font-size: 14px;
+        transition: color 0.3s ease;
+    }
+
+    .footer-links a:hover {
+        color: #00ffff;
+    }
+    .form-row{
+        /* background-color: red; */
+        height: 100px;
+    }
+    .form-group{
+        margin-left: 80px;
+        width: 700px;
+        height: 50px;
+        
+    }
+    .form-group1{
+        
+        width: 700px;
+        height: 50%;
+        margin-left: 500px;
+    }
+    .form-group2{
+        width: 700px;
+        margin-top: 100px;
+        margin-left: 550px;
+
+    }
+    .inputt,.inputtt{
+        border: 1px solid #FFD700;
+
+    }
+    .social-icon1s{
+            height: 100px;
+            transition: transform 0.3s ease;
+        }
+        /* Your existing styles remain the same */
+
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    margin: 0;
+}
+
+.contact-heading {
+    font-size: 32px;
+    color: white;
+    border: 2px solid gold;
+    padding: 15px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+.contact-form {
+    max-width: 100%;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap; /* Allow elements to wrap on smaller screens */
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    flex: 1 1 calc(50% - 20px); /* 50% width with a gap between */
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.form-group1,
+.form-group2 {
+    width: 100%;  /* Ensure they take full width on smaller screens */
+    margin-left: 0;
+    margin-right: 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #333;
+    border-radius: 25px;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.phone-input {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.country-code {
+    border: 1px solid #FFD700;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px;
+    border-radius: 25px;
+    background-color: black;
+    color: white;
+}
+
+.country-code img {
+    width: 20px;
+    height: auto;
+}
+
+.required {
+    color: #666;
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+.form-footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.privacy-text {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.privacy-link {
+    color: white;
+    text-decoration: underline;
+}
+
+.submit-btn {
+    background-color: #00ffff;
+    color: black;
+    padding: 12px 40px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #00cccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column; /* Stack form fields vertically */
+    }
+
+    .form-group {
+        flex: 1 1 100%; /* 100% width for smaller screens */
+    }
+
+    .form-group1, .form-group2 {
+        width: 100%; /* Full width for smaller screens */
+        margin-left: 0;
+    }
+
+    .submit-btn {
+        width: 100%; /* Make the submit button full width on small screens */
+    }
+
+    .phone-input {
+        flex-direction: column; /* Stack country code and input field */
+    }
+
+    .country-code {
+        width: 100%;
+        margin-bottom: 10px; /* Add some spacing for small screens */
+    }
+
+    .inputt {
+        width: 100%;
+    }
+    .inputtt{
+        width: 100%;
+    }
+}
+
+/* Small screen adjustments for mobile (phones) */
+@media (max-width: 480px) {
+    .contact-heading {
+        font-size: 24px; /* Smaller heading on small screens */
+    }
+
+    .submit-btn {
+        padding: 12px 20px; /* Slightly smaller button */
+    }
+
+    .form-group label, .form-group input, .form-group1 label, .form-group1 input, .form-group2 label, .form-group2 input {
+        font-size: 14px; /* Smaller font size on mobile */
+    }
+
+    .phone-input, .country-code, .form-row {
+        flex-direction: column;
+    }
+}
+
+        </style>
+    </head>
+    <body bgcolor="black">
+        <div>
+            <nav>
+                <img src="vyuhamain-Photoroom.jpg" alt="" class="social-icon1s">
+    
+                <a href="index.html">Home</a>
+                <a href="services.html">My Courses</a>
+                <a href="contactus.html">Contact</a>
+                <a href="project apeksha.html">About Us</a>
+                <button class="contact-btn" onclick="window.location.href='joinourcommunity.html'">
+                    Join our community
+                </button>
+                
+                  <div class="lll"><img src="instagram.png" alt="Instagram" class="social-icon" onclick="window.location.href='https://www.instagram.com/kl_apeksha/';">
+                    <img src="telegram.png" alt="Telegram" class="social-icon" >
+                  <img src="linkedin.png" alt="LinkedIn" class="social-icon"></div>
+            </nav>
+        </div>
+        <div class="contact-form"></div>
+        <h1 class="contact-heading">Want to know more?</h1>
+        
+        <form id="contactForm" onsubmit="return validateForm(event)">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required class="inputt">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email address <span class="required">(Required)</span></label>
+                    <input type="email" id="email" name="email" required class="inputt">
+                </div>
+            </div>
+            <div class="form-group1">
+                <label for="phone">Phone number</label>
+                <div class="phone-input">
+                    <div class="country-code">
+                        <img src="flag.png" alt="India flag">
+                        +91
+                    </div>
+                    <input type="tel" id="phone" name="phone" required class="inputtt">
+                </div>
+            </div>
+            <div class="form-group2">
+                <label for="message">Message <span class="required">(Required)</span></label>
+                <textarea id="message" name="message" required class="inputt"></textarea>
+                <div class="form-footer">
+                    <p class="privacy-text">Our <a href="privacy-policy.html" class="privacy-link">privacy policy</a> applies.</p>
+                    <button type="submit" class="submit-btn">Submit</button>
+                </div>
+            </div>
+        </form>
+        
+        <footer class="main-footer">
+            <div class="footer-content">
+                <div class="social-links">
+                    <a href="https://instagram.com" target="_blank" class="social-link">
+                        <img src="instagram.png" alt="Instagram" class="footer-social-icon">
+                    </a>
+                </div>
+                <div class="footer-links">
+                    <a href="imprint.html">Imprint</a>
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="cookie-settings.html">Cookie Settings</a>
+                </div>
+            </div>
+        </footer>
+    </body>
+    </html>

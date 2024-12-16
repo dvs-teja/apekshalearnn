@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<style>
+    body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f9ff;
+    color: #333;
+}
+
+/* Navbar styling */
+nav {
+            background-color: black;
+            padding: 15px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
+        .contact-btn {
+            background-color: #ffd700;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-btn:hover {
+            background-color: #ffed4a;
+        }
+
+        .social-icon {
+            height: 36px;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icon:hover {
+            transform: scale(1.1);
+        }
+.scroll-btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.scroll-btn.left {
+    border-radius: 5px 0 0 5px;
+}
+
+.scroll-btn.right {
+    border-radius: 0 5px 5px 0;
+}
+
+.scroll-btn:hover {
+    background-color: #555;
+    transform: scale(1.1);
+}
+
+
+
+/* Content Section Styling */
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px auto;
+    position: relative;
+    width: 100%;
+    max-width: 1300px;
+    padding: 10px;
+}
+
+.content {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 20px;
+    background-color: #e3f2fd;
+    border-radius: 10px;
+    width: 90%;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.card {
+    display: inline-block;
+    background-color: #f4674e;
+    color: white;
+    padding: 15px; 
+    margin: 15px; 
+    text-align: center;
+    border-radius: 20px;
+    min-width: 250px; 
+    height: 250px; 
+    font-size: 22px; 
+    font-weight: bold;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    position: relative;
+}
+
+.card-image {
+    width: 100%;
+    height: 60%; 
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 10px; 
+    transition: transform 0.3s ease;
+}
+@media (max-width: 768px) {
+    /* Center everything vertically and horizontally */
+    nav img.social-icon1s {
+        margin-right: 14px;
+        width: 100px;  /* Set the width to 100px */
+        height: 100px; /* Set the height to 100px */
+    }
+    nav {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Logo remains at the top */
+    nav img.social-icon1s {
+        width: 50px; /* Adjust logo size for mobile */
+    }
+
+    /* First two links on one row */
+    nav a:nth-child(2), nav a:nth-child(3) {
+        width: 48%; /* Two links on the same row */
+        margin-right: 4%; /* Space between them */
+    }
+
+    /* Second two links on the next row */
+    nav a:nth-child(4), nav a:nth-child(5) {
+        width: 48%;
+        margin-right: 4%;
+    }
+
+    /* Remove right margin for the last link */
+    nav a:last-child {
+        margin-right: 0;
+    }
+
+    /* Ensure the Join Button spans full width */
+    nav .contact-btn {
+        width: 100%;
+    }
+
+    /* Social media icons below the button */
+    nav .social-icon {
+        width: 25px;
+        height: 25px;
+        margin: 10px;
+    }
+    nav .lll{
+    display: flex;
+}
+}
+.card p {
+    margin: 0;
+    font-size: 18px; 
+}
+
+.card:hover .card-image {
+    transform: scale(1.05);
+}
+
+.card:hover {
+    /* background-color: #f88d82; */
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.25);
+    transform: scale(1.05) translateY(-5px);
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #555;
+    padding: 12px;
+    background-color: #e3f2fd;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Scrollbar styling */
+.content::-webkit-scrollbar {
+    height: 8px;
+}
+
+.content::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+}
+
+.content::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+.display{
+    background-color: red;
+    width: 80%;
+    height: 500px;
+    margin-left: 10%;
+    margin-top: 1%;
+}
+.choice{
+    margin-left: 10%;
+    font-size:30px ;
+}
+</style>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div>
+        <nav>
+            <img src="vyuhamain-Photoroom.jpg" alt="" class="social-icon1s">
+
+            <a href="index.html">Home</a>
+            <a href="services.html">My Courses</a>
+            <a href="contactus.html">Contact</a>
+            <a href="project apeksha.html">About Us</a>
+            <button class="contact-btn" onclick="window.location.href='joinourcommunity.html'">
+                Join our community
+            </button>
+            
+              <div class="lll"><img src="instagram.png" alt="Instagram" class="social-icon" onclick="window.location.href='https://www.instagram.com/kl_apeksha/';">
+                <img src="telegram.png" alt="Telegram" class="social-icon" >
+              <img src="linkedin.png" alt="LinkedIn" class="social-icon"></div>
+        </nav>
+    </div>
+
+    <div class="content-wrapper">
+        <button class="scroll-btn left" onclick="scrollContentLeft()">&#10094;</button>
+        <div class="content">
+            <div class="card">Introduction to C</div>
+            <div class="card">Algorithms</div>
+            <div class="card">Flowcharts</div>
+            <div class="card">History</div>
+            <div class="card">History</div>
+            <div class="card">History</div>
+            <div class="card">History</div>
+
+        </div>
+        <button class="scroll-btn right" onclick="scrollContentRight()">&#10095;</button>
+    </div>
+    <h3 class="choice">Your choice:</h3>
+    <div class="display">
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+<script>
+    const navbar = document.querySelector('.navbar');
+const content = document.querySelector('.content');
+
+// Functions for scrolling the navbar
+function scrollLeft() {
+    navbar.scrollBy({
+        top: 0,
+        left: 100, 
+        behavior: 'smooth'
+    });
+}
+
+function scrollRight() {
+    navbar.scrollBy({
+        top: 0,
+        left: 100, 
+        behavior: 'smooth'
+    });
+}
+
+// Functions for scrolling the content section
+function scrollContentLeft() {
+    content.scrollBy({
+        top: 0,
+        left: 150, // Adjust this value for the scroll distance
+        behavior: 'smooth'
+    });
+}
+
+function scrollContentRight() {
+    content.scrollBy({
+        top: 0,
+        left: 150, // Adjust this value for the scroll distance
+        behavior: 'smooth'
+    });
+}
+
+</script>
+</html>

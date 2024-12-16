@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<style>
+    body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f9ff;
+    color: #333;
+    background-color: black;
+    height: 100%;
+}
+@media (max-width: 768px) {
+    /* Center everything vertically and horizontally */
+    nav img.social-icon1s {
+        margin-right: 14px;
+        width: 100px;  /* Set the width to 100px */
+        height: 100px; /* Set the height to 100px */
+    }
+    nav {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+   
+
+    /* First two links on one row */
+    nav a:nth-child(2), nav a:nth-child(3) {
+        width: 48%; /* Two links on the same row */
+        margin-right: 4%; /* Space between them */
+    }
+
+    /* Second two links on the next row */
+    nav a:nth-child(4), nav a:nth-child(5) {
+        width: 48%;
+        margin-right: 4%;
+    }
+
+    /* Remove right margin for the last link */
+    nav a:last-child {
+        margin-right: 0;
+    }
+
+    /* Ensure the Join Button spans full width */
+    nav .contact-btn {
+        width: 100%;
+    }
+
+    /* Social media icons below the button */
+    nav .social-icon {
+        width: 25px;
+        height: 25px;
+        margin: 10px;
+    }
+    nav .lll{
+    display: flex;
+}
+}
+/* Navbar styling */
+nav {
+            background-color: black;
+            padding: 15px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
+        .contact-btn {
+            background-color: #ffd700;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-btn:hover {
+            background-color: #ffed4a;
+        }
+
+        .social-icon {
+            height: 36px;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icon:hover {
+            transform: scale(1.1);
+        }
+.scroll-btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.scroll-btn.left {
+    border-radius: 5px 0 0 5px;
+}
+
+.scroll-btn.right {
+    border-radius: 0 5px 5px 0;
+}
+
+.scroll-btn:hover {
+    background-color: #555;
+    transform: scale(1.1);
+}
+
+
+
+/* Content Section Styling */
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px auto;
+    position: relative;
+    width: 100%;
+    max-width: 1300px;
+    padding: 10px;
+}
+
+.content {
+    overflow: hidden;
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 20px;
+    background-color: #000000;
+    border-radius: 10px;
+    width: 90%;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.card {
+    display: inline-block;
+    background-color: white;
+    border:3px solid gold;
+    /* background-color: #f4674e; */
+    color: black;
+    padding: 15px; 
+    margin: 15px; 
+    text-align: center;
+    border-radius: 20px;
+    min-width: 250px; 
+    height: 250px; 
+    font-size: 22px; 
+    font-weight: bold;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    position: relative;
+}
+
+.card-image {
+    width: 100%;
+    height: 60%; 
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 10px; 
+    transition: transform 0.3s ease;
+}
+
+.card p {
+    margin: 0;
+    font-size: 18px; 
+}
+
+.card:hover .card-image {
+    transform: scale(1.05);
+}
+
+.card:hover {
+    /* background-color: #f88d82; */
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.25);
+    transform: scale(1.05) translateY(-5px);
+}
+
+
+
+/* Scrollbar styling */
+.content::-webkit-scrollbar {
+    height: 8px;
+}
+
+.content::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+}
+
+.content::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+.display {
+    border:3px solid gold;
+
+            background-color: white;
+            width: 80%;
+            height: 600px;
+            margin-left: 10%;
+            margin-top: 1%;
+            overflow-y: auto; /* Enable vertical scrolling */
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Additional Styling for Scroll */
+        .display::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .display::-webkit-scrollbar-thumb {
+            background-color: #888;
+            border-radius: 4px;
+        }
+
+        .display::-webkit-scrollbar-thumb:hover {
+            background-color: #555;
+        }
+.choice{
+    color: white;
+    margin-left: 10%;
+    font-size:30px ;
+}
+.table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .box {
+            width: 500px;          /* Set the width of the box */
+            height: 200px;         /* Set the height of the box */
+            background-color: #f0f0f0; /* Background color */
+            border: 2px solid #333;   /* Border color and width */
+            padding: 10px;          /* Inner spacing */
+            text-align: left;     /* Center text */
+            margin: 20px auto;      /* Center box horizontally */
+        }
+        .social-icon1s{
+        height: 100px;
+        transition: transform 0.3s ease;
+       }
+        .social-icon {
+            height: 36px;
+            transition: transform 0.3s ease;
+        }
+       .social-icon1s{
+        height: 100px;
+        transition: transform 0.3s ease;
+       }
+</style>
+<body lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div>
+        <nav>
+            <img src="vyuhamain-Photoroom.jpg" alt="" class="social-icon1s">
+
+            <a href="index.html">Home</a>
+            <a href="services.html">My Courses</a>
+            <a href="contactus.html">Contact</a>
+            <a href="#">About Me</a>
+            <button class="contact-btn">Join Our Community</button>
+            <div class="lll"><img src="instagram.png" alt="Instagram" class="social-icon" onclick="window.location.href='https://www.instagram.com/kl_apeksha/';">
+                <img src="telegram.png" alt="Telegram" class="social-icon">
+                <img src="linkedin.png" alt="LinkedIn" class="social-icon"></div>
+        </nav>
+    </div>
+
+    <div class="content-wrapper">
+        <button class="scroll-btn left" onclick="scrollContentLeft()">&#10094;</button>
+        <div class="content">
+            <div class="card" onclick="displayContent('INTRODUCTION')">INTRODUCTION</div>
+            <div class="card" onclick="displayContent('Document structure')">Document structure</div>
+            <div class="card" onclick="displayContent('Heading')" >Headings</div>
+            <div class="card" onclick="displayContent('Text formatting')" >Text formating</div>
+            <div class="card" onclick="displayContent('lists')">Lists</div>
+            <div class="card" onclick="displayContent('links')">links</div>
+            <div class="card" onclick="displayContent('Images')">Images</div>
+            <div class="card" onclick="displayContent('Tables')">Tables</div>
+            <div class="card" onclick="displayContent('Forms and form elements')">Forms and form elements</div>
+            <div class="card" onclick="displayContent('media')">media</div>
+        </div>
+        <button class="scroll-btn right" onclick="scrollContentRight()">&#10095;</button>
+    </div>
+    <h3 class="choice">Your choice:</h3>
+    <div class="display">
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+<script>
+const navbar = document.querySelector('.navbar');
+const content = document.querySelector('.content');
+
+function displayContent(topic) {
+            let text = '';
+
+            if (topic === 'INTRODUCTION') {
+                text = `
+                   <h2><center><u>HTML: The Foundation of the Web</u></center></h2>
+<p>HTML, a shorthand for <strong>Hyper Text Markup Language</strong>, is one of the most fundamental building blocks of the Web. HTML was officially born in 1993 and since then, it has evolved into its current state, moving from simple text documents to powering rich web applications. HTML is the foundation of the marvel called the Web.</p>
+
+<h3><u>HTML Basics:</u></h3>
+<p>We had HTML version 1 in 1993. Here's the original RFC. </p>
+<p>HTML 2 followed in 1995. We got HTML 3 in January 1997, and HTML 4 in December 1997. Busy times! Over 20 years went by, we had this entire XHTML thing, and eventually we got to this HTML5 "thing", which is not really just HTML anymore. HTML5 is a term that now defines a whole set of technologies, which includes HTML but adds a lot of APIs and standards like WebGL, SVG, and more.</p>
+
+<h3><u>How HTML is Served to the Browser:</u></h3>
+<p>HTML can be served to the browser in different ways:</p>
+<ul>
+    <li>It can be generated by a server-side application that builds it depending on the request or the session data, for example, a Rails or Laravel or Django application.</li>
+    <li>It can be generated by a JavaScript client-side application that generates HTML on the fly.</li>
+    <li>In the simplest case, it can be stored in a file and served to the browser by a web server.</li>
+</ul>
+
+            ` 
+            }
+
+            else if(topic === 'Document structure') {
+                
+                text = `
+    <h2>HTML Basics</h2>
+    <p><strong>1. Doctype Declaration:</strong></p>
+    <ul>
+        <li>This declaration specifies that the document is an HTML5 document.</li>
+        <li>It’s required at the beginning of an HTML file.</li>
+        <li>It informs the browser about the document type and version.</li>
+    </ul>
+
+    <p><strong>2. HTML Tag:</strong></p>
+    <ul>
+        <li>The <code>&lt;html&gt;</code> element is the root element of an HTML page.</li>
+        <li>Everything inside an HTML document is nested within this element.</li>
+        <li>It contains the entire structure of the page.</li>
+    </ul>
+
+    <p><strong>3. Head Tag:</strong></p>
+    <ul>
+        <li>The <code>&lt;head&gt;</code> element contains meta information about the HTML page.</li>
+        <li>It includes elements like <code>&lt;title&gt;</code>, which specifies the title displayed in the browser’s title bar or tab.</li>
+    </ul>
+
+    <p><strong>4. Title Tag:</strong></p>
+    <ul>
+        <li>The <code>&lt;title&gt;</code> element sets the title of the HTML page.</li>
+        <li>The text inside it appears in the browser’s title bar or tab.</li>
+        <li>For example: <code>&lt;title&gt;My Page Title&lt;/title&gt;</code>.</li>
+    </ul>
+
+    <p>By combining all the details, we can write the following code:</p>
+    <pre>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="en"&gt;
+        &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;title&gt;Document&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            
+        &lt;/body&gt;
+        &lt;/html&gt;
+    </pre>
+
+    <p>The above code represents the basics of all HTML programming. In some apps, it may be inbuilt, while in others or online consoles, we need to write the code manually.</p>
+
+    <h3>HTML Documents:</h3>
+    <ul>
+        <li>All HTML documents must start with a document type declaration: <code>&lt;!DOCTYPE html&gt;</code>.</li>
+        <li>The HTML document itself begins with <code>&lt;html&gt;</code> and ends with <code>&lt;/html&gt;</code>.</li>
+        <li>The visible part of the HTML document is between <code>&lt;body&gt;</code> and <code>&lt;/body&gt;</code>.</li>
+    </ul>
+
+    <p><strong>Example:</strong></p>
+    <pre>
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+        &lt;body&gt;
+
+        &lt;h1&gt;My First Heading&lt;/h1&gt;
+        &lt;p&gt;My first paragraph.&lt;/p&gt;
+
+        &lt;/body&gt;
+        &lt;/html&gt;
+    </pre>
+
+    <p>The above code represents the basics of HTML programming. In some apps, it will be inbuilt, and in others or online consoles, we will need to write the code ourselves.</p>
+
+    <h3>Generated Output:</h3>
+    <p>The <code>&lt;!DOCTYPE&gt;</code> declaration represents the document type and helps browsers to display web pages correctly. It must only appear once, at the top of the page (before any HTML tags).</p>
+    <p>The <code>&lt;!DOCTYPE&gt;</code> declaration is not case-sensitive. The <code>&lt;!DOCTYPE&gt;</code> declaration for HTML5 is:</p>
+    <pre>&lt;!DOCTYPE html&gt;</pre>
+
+   
+                
+                `}
+
+                else if(topic === 'Heading') {
+                
+                text = `
+    
+    <h2>HTML Headings</h2>
+    <p><strong>Understanding HTML Headings:</strong></p>
+    <ul>
+        <li>HTML headings are used to define headings and subheadings within a web page.</li>
+        <li>They are defined using the <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> tags, with <code>&lt;h1&gt;</code> being the most important and <code>&lt;h6&gt;</code> being the least important.</li>
+        <li>Headings provide structure and hierarchy to your content, making it easier for users to read and navigate your page.</li>
+    </ul>
+
+    <p><strong>Example of Headings:</strong></p>
+    <pre>
+        &lt;h1&gt;This is heading 1&lt;/h1&gt;
+        &lt;h2&gt;This is heading 2&lt;/h2&gt;
+        &lt;h3&gt;This is heading 3&lt;/h3&gt;
+    </pre>
+
+    <p><strong>Generated Output:</strong></p>
+    <h1>This is heading 1</h1>
+    <h2>This is heading 2</h2>
+    <h3>This is heading 3</h3>
+
+    <p><strong>Note:</strong></p>
+    <ul>
+        <li>When using HTML headings, the size of the heading automatically decreases from <code>&lt;h1&gt;</code> (largest) to <code>&lt;h6&gt;</code> (smallest).</li>
+        <li>If additional heading levels are used, beyond <code>&lt;h6&gt;</code>, it will not apply any new size as the heading will default to the size of <code>&lt;h6&gt;</code>.</li>
+    </ul>
+
+    <p>Headings help organize the content of the page and can be styled to meet your design needs.</p>
+
+  
+                
+                `}
+
+                else if(topic === 'Text formatting') {
+                
+                text = `
+
+    <h2>Text formating </h2>
+
+    <!-- Paragraph Element -->
+    <p><strong>1. Paragraph Tag (&lt;p&gt;):</strong></p>
+    <ul>
+        <li>The <code>&lt;p&gt;</code> element is used to define a block of text as a paragraph.</li>
+        <li>It adds a blank space before and after the content to separate it from other elements.</li>
+    </ul>
+    <pre>&lt;p&gt;This is a paragraph of text.&lt;/p&gt;</pre>
+
+    <!-- Strong Element -->
+    <p><strong>2. Strong Tag (&lt;strong&gt;):</strong></p>
+    <ul>
+        <li>The <code>&lt;strong&gt;</code> tag is used to emphasize text, indicating strong importance.</li>
+        <li>Browsers typically render it in bold.</li>
+    </ul>
+    <pre>&lt;strong&gt;This text is important!&lt;/strong&gt;</pre>
+
+    <!-- Blockquote Element -->
+    <p><strong>3. Blockquote Tag (&lt;blockquote&gt;):</strong></p>
+    <ul>
+        <li>The <code>&lt;blockquote&gt;</code> tag is used to indicate a long quotation from another source.</li>
+        <li>It usually indents the text to distinguish it from regular content.</li>
+    </ul>
+    <pre>&lt;blockquote&gt;This is a quoted section of text.&lt;/blockquote&gt;</pre>
+
+    <!-- Q Element -->
+    <p><strong>4. Quote Tag (&lt;q&gt;):</strong></p>
+    <ul>
+        <li>The <code>&lt;q&gt;</code> tag is used for shorter inline quotations.</li>
+        <li>It often displays the quoted text with quotation marks.</li>
+    </ul>
+    <pre>&lt;q&gt;This is an inline quote.&lt;/q&gt;</pre>
+
+    <!-- Horizontal Rule -->
+    <p><strong>5. Horizontal Rule (&lt;hr&gt;):</strong></p>
+    <ul>
+        <li>The <code>&lt;hr&gt;</code> tag creates a horizontal line, often used to separate sections of content.</li>
+        <li>It does not require a closing tag.</li>
+    </ul>
+    <pre>&lt;hr&gt;</pre>
+
+    <!-- Mark Element -->
+    <p><strong>6. Mark Tag (&lt;mark&gt;):</strong></p>
+    <ul>
+        <li>The <code>&lt;mark&gt;</code> tag highlights text, indicating its relevance or importance.</li>
+        <li>It typically displays text with a yellow background.</li>
+    </ul>
+    <pre>&lt;mark&gt;This text is highlighted.&lt;/mark&gt;</pre>
+
+    <!-- Superscript Element -->
+    <p><strong>7. Superscript Tag (&lt;sup&gt;):</strong></p>
+    <ul>
+        <li>The <code>&lt;sup&gt;</code> tag is used to display text as superscript, often for exponents or footnotes.</li>
+    </ul>
+    <pre>&lt;p&gt;E = mc&lt;sup&gt;2&lt;/sup&gt;&lt;/p&gt;</pre>
+
+    <!-- Subscript Element -->
+    <p><strong>8. Subscript Tag (&lt;sub&gt;):</strong></p>
+    <ul>
+        <li>The <code>&lt;sub&gt;</code> tag is used to display text as subscript, commonly used in chemical formulas.</li>
+    </ul>
+    <pre>&lt;p&gt;H&lt;sub&gt;2&lt;/sub&gt;O&lt;/p&gt;</pre>
+
+    <!-- Italic Element -->
+    <p><strong>9. Italic Tag (&lt;i&gt;):</strong></p>
+    <ul>
+        <li>The <code>&lt;i&gt;</code> tag is used to emphasize or differentiate text, typically rendering it in italics.</li>
+        <li>It can be used for technical terms, names of publications, or foreign words.</li>
+    </ul>
+    <pre>&lt;i&gt;This is italicized text.&lt;/i&gt;</pre>
+
+    <!-- Bold Element -->
+    <p><strong>10. Bold Tag (&lt;b&gt;):</strong></p>
+    <ul>
+        <li>The <code>&lt;b&gt;</code> tag is used to draw attention to text without adding extra emphasis.</li>
+        <li>It displays the text in bold.</li>
+    </ul>
+    <pre>&lt;b&gt;This text is bold.&lt;/b&gt;</pre>
+
+    <h3>Generated Output:</h3>
+    <p><b>Paragraph:</b> <p>This is a paragraph of text.</p></p>
+    <p><b>Strong:</b> <strong>This text is important!</strong></p>
+    <blockquote>This is a quoted section of text.</blockquote>
+    <p><q>This is an inline quote.</q></p>
+    <hr>
+    <p><mark>This text is highlighted.</mark></p>
+    <p>Superscript: E = mc<sup>2</sup></p>
+    <p>Subscript: H<sub>2</sub>O</p>
+    <p><i>This is italicized text.</i></p>
+    <p><b>This text is bold.</b></p>
+
+ `}
+
+                else if(topic === 'lists')
+                
+               {
+                
+                text = `
+                  <h2>HTML Lists</h2>
+
+    <p><strong>Introduction to HTML Lists:</strong></p>
+    <ul>
+        <li>HTML lists are used to group related items, making the content easier to read and navigate.</li>
+        <li>There are three primary types of lists in HTML:</li>
+        <ul>
+            <li>Unordered Lists (<code>&lt;ul&gt;</code>)</li>
+            <li>Ordered Lists (<code>&lt;ol&gt;</code>)</li>
+            <li>Definition Lists (<code>&lt;dl&gt;</code>)</li>
+        </ul>
+    </ul>
+
+    <h3>1. Unordered List:</h3>
+    <ul>
+        <li>An unordered list displays items in a bulleted format.</li>
+        <li>Each item is wrapped in a <code>&lt;li&gt;</code> (list item) tag.</li>
+        <li>This type of list is used when the order of items is not important.</li>
+    </ul>
+
+    <p><strong>Example of Unordered List:</strong></p>
+    <pre>
+        &lt;ul&gt;
+            &lt;li&gt;Apple&lt;/li&gt;
+            &lt;li&gt;Banana&lt;/li&gt;
+            &lt;li&gt;Cherry&lt;/li&gt;
+        &lt;/ul&gt;
+    </pre>
+
+    <p><strong>Generated Output:</strong></p>
+    <ul>
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Cherry</li>
+    </ul>
+
+    <h3>2. Ordered List:</h3>
+    <ul>
+        <li>An ordered list presents items in a numbered sequence.</li>
+        <li>It uses the <code>&lt;ol&gt;</code> tag and each item is enclosed within <code>&lt;li&gt;</code> tags.</li>
+        <li>This type of list is useful when the order of items matters, like in instructions.</li>
+    </ul>
+
+    <p><strong>Example of Ordered List:</strong></p>
+    <pre>
+        &lt;ol&gt;
+            &lt;li&gt;Step 1: Open your browser&lt;/li&gt;
+            &lt;li&gt;Step 2: Go to the website&lt;/li&gt;
+            &lt;li&gt;Step 3: Login to your account&lt;/li&gt;
+        &lt;/ol&gt;
+    </pre>
+
+    <p><strong>Generated Output:</strong></p>
+    <ol>
+        <li>Step 1: Open your browser</li>
+        <li>Step 2: Go to the website</li>
+        <li>Step 3: Login to your account</li>
+    </ol>
+
+    <h3>3. Definition List:</h3>
+    <ul>
+        <li>A definition list is used to display a list of terms and their corresponding definitions.</li>
+        <li>It uses the <code>&lt;dl&gt;</code> tag for the list, <code>&lt;dt&gt;</code> for each term, and <code>&lt;dd&gt;</code> for the description.</li>
+        <li>This type of list is ideal for glossaries or explanations.</li>
+    </ul>
+
+    <p><strong>Example of Definition List:</strong></p>
+    <pre>
+        &lt;dl&gt;
+            &lt;dt&gt;HTML&lt;/dt&gt;
+            &lt;dd&gt;A markup language used to create web pages.&lt;/dd&gt;
+            &lt;dt&gt;CSS&lt;/dt&gt;
+            &lt;dd&gt;A stylesheet language used to style web pages.&lt;/dd&gt;
+            &lt;dt&gt;JavaScript&lt;/dt&gt;
+            &lt;dd&gt;A programming language for adding interactivity to web pages.&lt;/dd&gt;
+        &lt;/dl&gt;
+    </pre>
+
+    <p><strong>Generated Output:</strong></p>
+    <dl>
+        <dt>HTML</dt>
+        <dd>A markup language used to create web pages.</dd>
+        <dt>CSS</dt>
+        <dd>A stylesheet language used to style web pages.</dd>
+        <dt>JavaScript</dt>
+        <dd>A programming language for adding interactivity to web pages.</dd>
+    </dl>
+
+    <h3>Note:</h3>
+    <ul>
+        <li>HTML lists help organize content and enhance readability.</li>
+        <li>Unordered lists are great for non-sequential information, while ordered lists are useful for steps or instructions.</li>
+        <li>Definition lists are perfect for displaying terms and their definitions in a structured manner.</li>
+    </ul>
+
+`}
+
+else if(topic === 'links') {
+                
+                text = `
+   
+    <h2>HTML Anchor Tags and Attributes</h2>
+
+    <p><strong>1. Anchor Tag (<code>&lt;a&gt;</code>):</strong></p>
+    <ul>
+        <li>The <code>&lt;a&gt;</code> element, also known as an anchor tag, is used to create hyperlinks in HTML documents.</li>
+        <li>It allows users to click on the text or element and navigate to another page, section, or external resource.</li>
+        <li>The text between the opening <code>&lt;a&gt;</code> and closing <code>&lt;/a&gt;</code> tags becomes clickable.</li>
+    </ul>
+
+    <p><strong>2. <code>href</code> Attribute:</strong></p>
+    <ul>
+        <li>The <code>href</code> attribute stands for "Hypertext Reference" and specifies the URL the link should direct to.</li>
+        <li>It can link to an internal page (<code>href="page.html"</code>), an external website (<code>href="https://example.com"</code>), or an email address (<code>href="mailto:someone@example.com"</code>).</li>
+        <li>If the <code>href</code> attribute is omitted, the anchor tag will not be clickable.</li>
+    </ul>
+
+    <p><strong>3. <code>target</code> Attribute:</strong></p>
+    <ul>
+        <li>The <code>target</code> attribute specifies where to open the linked document.</li>
+        <li>Common values include:
+            <ul>
+                <li><code>_self</code> (default) – opens the link in the same tab or window.</li>
+                <li><code>_blank</code> – opens the link in a new tab or window.</li>
+                <li><code>_parent</code> – opens the link in the parent frame, if nested.</li>
+                <li><code>_top</code> – opens the link in the full body of the window, removing any frames.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <p><strong>4. <code>download</code> Attribute:</strong></p>
+    <ul>
+        <li>The <code>download</code> attribute allows users to download the linked file instead of navigating to it.</li>
+        <li>When used, the browser will download the file to the user's device rather than opening it.</li>
+        <li>For example: <code>&lt;a href="file.pdf" download&gt;Download PDF&lt;/a&gt;</code>.</li>
+        <li>You can also specify a custom filename like: <code>&lt;a href="image.png" download="myImage"&gt;Download Image&lt;/a&gt;</code>.</li>
+    </ul>
+
+    <p><strong>Example Code:</strong></p>
+    <pre>
+        &lt;a href="https://example.com" target="_blank"&gt;Visit Example&lt;/a&gt;
+        &lt;br&gt;
+        &lt;a href="file.pdf" download&gt;Download PDF&lt;/a&gt;
+    </pre>
+
+    <h3>Generated Output:</h3>
+    <p>Below is how the example code will appear in the browser:</p>
+    <a href="https://example.com" target="_blank">Visit Example</a><br>
+    <a href="file.pdf" download>Download PDF</a>
+
+    <p><strong>Note:</strong></p>
+    <ul>
+        <li>The <code>_blank</code> target opens links in a new tab, which can be useful for external links.</li>
+        <li>The <code>download</code> attribute is especially helpful for offering downloadable resources directly from your website.</li>
+    </ul>
+
+
+                        
+
+                
+                
+                
+                
+                `}
+                else if(topic === 'Images') {
+                
+                text = `
+    <h2>HTML Image Elements</h2>
+    
+    <p><strong>Understanding the <code>&lt;img&gt;</code> Tag:</strong></p>
+    <ul>
+        <li>The <code>&lt;img&gt;</code> tag is used to embed images into an HTML page.</li>
+        <li>It does not have a closing tag because it's a self-closing element.</li>
+        <li>Images enhance the visual appeal and help convey information effectively.</li>
+    </ul>
+    
+    <p><strong>Attributes of the <code>&lt;img&gt;</code> Tag:</strong></p>
+    <ul>
+        <li><code>src</code> (source): Specifies the path or URL of the image file.</li>
+        <li><code>alt</code> (alternative text): Provides a text description of the image if it fails to load.</li>
+        <li><code>width</code> and <code>height</code>: Define the dimensions of the image in pixels.</li>
+    </ul>
+
+    <p><strong>Example of Using the <code>&lt;img&gt;</code> Tag:</strong></p>
+    <pre>
+        &lt;img src="example.jpg" alt="Sample Image" width="300" height="200"&gt;
+    </pre>
+
+    <p><strong>Generated Output:</strong></p>
+    <img src="https://via.placeholder.com/300x200" alt="Sample Image" width="300" height="200">
+
+    <h3>Explanation of Attributes:</h3>
+    <ul>
+        <li><code>src</code>: This attribute specifies the location of the image file. It can be a relative path (e.g., <code>images/photo.jpg</code>) or a full URL (e.g., <code>https://example.com/photo.jpg</code>).</li>
+        <li><code>alt</code>: The alternative text is displayed if the image cannot be loaded. It’s also important for accessibility, as screen readers use this text to describe images to users with visual impairments.</li>
+        <li><code>width</code> and <code>height</code>: These attributes control the size of the image on the page. Specifying these attributes can improve page loading performance by reserving space for the image before it loads.</li>
+    </ul>
+
+    <p>By using the <code>&lt;img&gt;</code> tag with the appropriate attributes, you can display images efficiently and improve the user experience on your webpage.</p>
+
+
+
+           `
+    }
+    else if(topic === 'Tables') {
+                
+                text = `
+    <h2>HTML Tables</h2>
+    <p><strong>Understanding HTML Table Elements:</strong></p>
+    <ul>
+        <li>The <code>&lt;table&gt;</code> element is used to create a table on a webpage.</li>
+        <li>The table consists of rows, which are defined using the <code>&lt;tr&gt;</code> (table row) element.</li>
+        <li>The cells of the table are defined using the <code>&lt;td&gt;</code> (table data) element, which holds the data for each row.</li>
+        <li>The <code>&lt;th&gt;</code> (table header) element is used to define the header cells, which are typically bold and centered by default.</li>
+    </ul>
+
+    <p><strong>Example Code:</strong></p>
+    <pre>
+        &lt;table&gt;
+            &lt;tr&gt;
+                &lt;th&gt;Header 1&lt;/th&gt;
+                &lt;th&gt;Header 2&lt;/th&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Data 1&lt;/td&gt;
+                &lt;td&gt;Data 2&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Data 3&lt;/td&gt;
+                &lt;td&gt;Data 4&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;
+    </pre>
+
+    <p><strong>Generated Output:</strong></p>
+    <table border="1">
+        <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+        </tr>
+        <tr>
+            <td>Data 1</td>
+            <td>Data 2</td>
+        </tr>
+        <tr>
+            <td>Data 3</td>
+            <td>Data 4</td>
+        </tr>
+    </table>
+
+    <p><strong>Note:</strong></p>
+    <ul>
+        <li>The <code>&lt;th&gt;</code> elements are used for table headers, and they typically appear bold and centered, giving users an idea of what the column represents.</li>
+        <li>The <code>&lt;td&gt;</code> elements are used for regular table data and contain the actual values presented in the table.</li>
+        <li>The <code>&lt;tr&gt;</code> element groups a set of table rows, and each row contains a set of data cells or header cells.</li>
+        <li>The <code>&lt;table&gt;</code> element itself acts as a container for all the rows and cells.</li>
+    </ul>
+
+    <p>By combining these table elements, you can create structured tables that display data in a clear and organized way.</p>
+
+`}
+
+    else if(topic === 'Forms and form elements') {
+    
+                
+                text = `
+    <h2>HTML Form Elements</h2>
+    <p><strong>1. &lt;form&gt; Tag:</strong></p>
+    <ul>
+        <li>The <code>&lt;form&gt;</code> tag is used to create an HTML form for user input.</li>
+        <li>Forms collect user data and send it to a server for processing.</li>
+        <li>It typically includes fields like text boxes, buttons, checkboxes, and more.</li>
+        <li>Example: 
+            <pre>
+                &lt;form action="/submit" method="post"&gt;
+                    &lt;input type="text" name="username"&gt;
+                    &lt;button type="submit"&gt;Submit&lt;/button&gt;
+                &lt;/form&gt;
+            </pre>
+        </li>
+    </ul>
+
+    <p><strong>2. Text Fields:</strong></p>
+    <ul>
+        <li><code>&lt;input type="text"&gt;</code> creates a single-line text input field for users to enter text.</li>
+        <li>It’s often used for fields like name, email, or phone number.</li>
+        <li>Example: 
+            <pre>&lt;input type="text" placeholder="Enter your name"&gt;</pre>
+        </li>
+    </ul>
+
+    <p><strong>3. Buttons:</strong></p>
+    <ul>
+        <li><code>&lt;button&gt;</code> creates a clickable button to submit forms or trigger actions.</li>
+        <li>Types of buttons include <code>submit</code>, <code>reset</code>, and <code>button</code>.</li>
+        <li>Example: 
+            <pre>&lt;button type="submit"&gt;Submit&lt;/button&gt;</pre>
+        </li>
+    </ul>
+
+    <p><strong>4. Checkboxes:</strong></p>
+    <ul>
+        <li><code>&lt;input type="checkbox"&gt;</code> allows users to select multiple options independently.</li>
+        <li>Useful for selecting multiple items like preferences or interests.</li>
+        <li>Example: 
+            <pre>&lt;input type="checkbox" name="subscribe" value="newsletter"&gt; Subscribe to newsletter</pre>
+        </li>
+    </ul>
+
+    <p><strong>5. Radio Buttons:</strong></p>
+    <ul>
+        <li><code>&lt;input type="radio"&gt;</code> is used when users can select only one option from a group.</li>
+        <li>All radio buttons with the same <code>name</code> attribute are grouped together.</li>
+        <li>Example: 
+            <pre>
+                &lt;input type="radio" name="gender" value="male"&gt; Male
+                &lt;input type="radio" name="gender" value="female"&gt; Female
+            </pre>
+        </li>
+    </ul>
+
+    <p><strong>6. Select Options:</strong></p>
+    <ul>
+        <li><code>&lt;select&gt;</code> creates a dropdown list with <code>&lt;option&gt;</code> elements.</li>
+        <li>Useful for choosing a single option from a predefined list.</li>
+        <li>Example: 
+            <pre>
+                &lt;select name="country"&gt;
+                    &lt;option value="usa"&gt;USA&lt;/option&gt;
+                    &lt;option value="canada"&gt;Canada&lt;/option&gt;
+                &lt;/select&gt;
+            </pre>
+        </li>
+    </ul>
+
+    <p><strong>7. File Input:</strong></p>
+    <ul>
+        <li><code>&lt;input type="file"&gt;</code> allows users to upload files from their device.</li>
+        <li>Used for uploading documents, images, or other file types.</li>
+        <li>Example: 
+            <pre>&lt;input type="file" name="profile_picture"&gt;</pre>
+        </li>
+    </ul>
+
+    <p><strong>8. Hidden Inputs:</strong></p>
+    <ul>
+        <li><code>&lt;input type="hidden"&gt;</code> stores data that users do not see or interact with.</li>
+        <li>Useful for storing data like user IDs, session tokens, or other hidden information.</li>
+        <li>Example: 
+            <pre>&lt;input type="hidden" name="user_id" value="1234"&gt;</pre>
+        </li>
+    </ul>
+
+    <p><strong>9. Labels:</strong></p>
+    <ul>
+        <li><code>&lt;label&gt;</code> is used to define labels for input fields.</li>
+        <li>Clicking a label focuses or activates the associated input field if the <code>for</code> attribute matches the input’s <code>id</code>.</li>
+        <li>Example: 
+            <pre>
+                &lt;label for="username"&gt;Username:&lt;/label&gt;
+                &lt;input type="text" id="username" name="username"&gt;
+            </pre>
+        </li>
+    </ul>
+
+    <h3>Example Form:</h3>
+    <pre>
+        &lt;form action="/submit" method="post"&gt;
+            &lt;label for="name"&gt;Name:&lt;/label&gt;
+            &lt;input type="text" id="name" name="name"&gt;&lt;br&gt;
+            
+            &lt;label for="email"&gt;Email:&lt;/label&gt;
+            &lt;input type="email" id="email" name="email"&gt;&lt;br&gt;
+            
+            &lt;input type="checkbox" id="subscribe" name="subscribe" value="yes"&gt;
+            &lt;label for="subscribe"&gt;Subscribe to newsletter&lt;/label&gt;&lt;br&gt;
+            
+            &lt;input type="radio" id="male" name="gender" value="male"&gt;
+            &lt;label for="male"&gt;Male&lt;/label&gt;
+            
+            &lt;input type="radio" id="female" name="gender" value="female"&gt;
+            &lt;label for="female"&gt;Female&lt;/label&gt;&lt;br&gt;
+            
+            &lt;button type="submit"&gt;Submit&lt;/button&gt;
+        &lt;/form&gt;
+    </pre>
+
+`}
+
+    
+    else if(topic === 'media') {
+    
+                
+    text = `
+    <h2>HTML Multimedia Elements</h2>
+
+    <p><strong>1. The <code>&lt;audio&gt;</code> Element:</strong></p>
+    <ul>
+        <li>The <code>&lt;audio&gt;</code> element allows you to embed sound content, such as music or other audio files, directly into your web pages.</li>
+        <li>It supports various audio formats, including MP3, WAV, and OGG.</li>
+        <li>You can provide controls like play, pause, and volume by using the <code>controls</code> attribute.</li>
+    </ul>
+
+    <p><strong>Example of the <code>&lt;audio&gt;</code> element:</strong></p>
+    <pre>
+        &lt;audio controls&gt;
+            &lt;source src="example.mp3" type="audio/mpeg"&gt;
+            Your browser does not support the audio element.
+        &lt;/audio&gt;
+    </pre>
+
+    <p><strong>Generated Output:</strong></p>
+    <audio controls>
+        <source src="example.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <p><strong>2. The <code>&lt;video&gt;</code> Element:</strong></p>
+    <ul>
+        <li>The <code>&lt;video&gt;</code> element is used to embed video content on a web page.</li>
+        <li>It supports popular video formats like MP4, WebM, and OGG.</li>
+        <li>Similar to the audio element, it comes with controls for play, pause, volume adjustment, and fullscreen view.</li>
+    </ul>
+
+    <p><strong>Example of the <code>&lt;video&gt;</code> element:</strong></p>
+    <pre>
+        &lt;video controls width="400"&gt;
+            &lt;source src="example.mp4" type="video/mp4"&gt;
+            Your browser does not support the video element.
+        &lt;/video&gt;
+    </pre>
+
+    <p><strong>Generated Output:</strong></p>
+    <video controls width="400">
+        <source src="example.mp4" type="video/mp4">
+        Your browser does not support the video element.
+    </video>
+
+    <h3>Additional Multimedia Elements:</h3>
+
+    <p><strong>3. The <code>&lt;embed&gt;</code> Element:</strong></p>
+    <ul>
+        <li>The <code>&lt;embed&gt;</code> tag is used to embed external content, such as PDFs, Flash animations, or other multimedia files.</li>
+        <li>This element can include attributes like <code>src</code>, <code>width</code>, and <code>height</code> to specify the content source and dimensions.</li>
+    </ul>
+
+    <p><strong>Example of the <code>&lt;embed&gt;</code> element:</strong></p>
+    <pre>
+        &lt;embed src="example.pdf" width="600" height="400"&gt;
+    </pre>
+
+    <p><strong>4. The <code>&lt;iframe&gt;</code> Element:</strong></p>
+    <ul>
+        <li>The <code>&lt;iframe&gt;</code> tag is used to embed another HTML page within the current page.</li>
+        <li>Commonly used for embedding videos, maps, or external websites.</li>
+    </ul>
+
+    <p><strong>Example of the <code>&lt;iframe&gt;</code> element:</strong></p>
+    <pre>
+        &lt;iframe src="https://www.example.com" width="600" height="400"&gt;
+        &lt;/iframe&gt;
+    </pre>
+
+    <p><strong>Note:</strong> Using multimedia elements like audio, video, and embed tags improves user engagement by making your content more interactive.</p>
+
+
+    
+    
+    `}
+    
+            else {
+                text = `<p>Content for ${topic} is not available yet.</p>`;
+            }
+
+            document.querySelector('.display').innerHTML = text;
+        }
+
+
+            
+               
+
+// Functions for scrolling the navbar
+function scrollContentLeft() {
+    console.log("saite");
+    navbar.scrollBy({
+        top: 0,
+        left: -100, 
+        behavior: 'smooth'
+    });
+}
+
+
+
+
+function scrollContentRight() {
+    content.scrollBy({
+        top: 0,
+        left: 150, // Adjust this value for the scroll distance
+        behavior: 'smooth'
+    });
+}
+
+</script>
+</body>
+</html>

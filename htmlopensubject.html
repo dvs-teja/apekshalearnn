@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<style>
+    body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f9ff;
+    color: #333;
+    background-color: black;
+    height: 100%;
+}
+
+/* Navbar styling */
+nav {
+            background-color: black;
+            padding: 15px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
+        .contact-btn {
+            background-color: #ffd700;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-btn:hover {
+            background-color: #ffed4a;
+        }
+
+        .social-icon {
+            height: 36px;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icon:hover {
+            transform: scale(1.1);
+        }
+.scroll-btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.scroll-btn.left {
+    border-radius: 5px 0 0 5px;
+}
+
+.scroll-btn.right {
+    border-radius: 0 5px 5px 0;
+}
+
+.scroll-btn:hover {
+    background-color: #555;
+    transform: scale(1.1);
+}
+
+
+
+/* Content Section Styling */
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px auto;
+    position: relative;
+    width: 100%;
+    max-width: 1300px;
+    padding: 10px;
+}
+
+.content {
+    overflow: hidden;
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 20px;
+    background-color: #000000;
+    border-radius: 10px;
+    width: 90%;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.card {
+    display: inline-block;
+    background-color: white;
+    border:3px solid gold;
+    /* background-color: #f4674e; */
+    color: black;
+    padding: 15px; 
+    margin: 15px; 
+    text-align: center;
+    border-radius: 20px;
+    min-width: 250px; 
+    height: 250px; 
+    font-size: 22px; 
+    font-weight: bold;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    position: relative;
+}
+
+.card-image {
+    width: 100%;
+    height: 60%; 
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 10px; 
+    transition: transform 0.3s ease;
+}
+
+.card p {
+    margin: 0;
+    font-size: 18px; 
+}
+
+.card:hover .card-image {
+    transform: scale(1.05);
+}
+
+.card:hover {
+    /* background-color: #f88d82; */
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.25);
+    transform: scale(1.05) translateY(-5px);
+}
+
+
+
+/* Scrollbar styling */
+.content::-webkit-scrollbar {
+    height: 8px;
+}
+
+.content::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+}
+
+.content::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+.display {
+    border:3px solid gold;
+
+            background-color: white;
+            width: 80%;
+            height: 600px;
+            margin-left: 10%;
+            margin-top: 1%;
+            overflow-y: auto; /* Enable vertical scrolling */
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Additional Styling for Scroll */
+        .display::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .display::-webkit-scrollbar-thumb {
+            background-color: #888;
+            border-radius: 4px;
+        }
+
+        .display::-webkit-scrollbar-thumb:hover {
+            background-color: #555;
+        }
+.choice{
+    color: white;
+    margin-left: 10%;
+    font-size:30px ;
+}
+.table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .box {
+            width: 500px;          /* Set the width of the box */
+            height: 200px;         /* Set the height of the box */
+            background-color: #f0f0f0; /* Background color */
+            border: 2px solid #333;   /* Border color and width */
+            padding: 10px;          /* Inner spacing */
+            text-align: left;     /* Center text */
+            margin: 20px auto;      /* Center box horizontally */
+        }
+        .social-icon1s{
+        height: 100px;
+        transition: transform 0.3s ease;
+       }
+        .social-icon {
+            height: 36px;
+            transition: transform 0.3s ease;
+        }
+       .social-icon1s{
+        height: 100px;
+        transition: transform 0.3s ease;
+       }
+       @media (max-width: 768px) {
+        nav img.social-icon1s {
+        margin-right: 14px;
+        width: 100px;  /* Set the width to 100px */
+        height: 100px; /* Set the height to 100px */
+    }
+    /* Center everything vertically and horizontally */
+    nav {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    
+
+    /* First two links on one row */
+    nav a:nth-child(2), nav a:nth-child(3) {
+        width: 48%; /* Two links on the same row */
+        margin-right: 4%; /* Space between them */
+    }
+
+    /* Second two links on the next row */
+    nav a:nth-child(4), nav a:nth-child(5) {
+        width: 48%;
+        margin-right: 4%;
+    }
+
+    /* Remove right margin for the last link */
+    nav a:last-child {
+        margin-right: 0;
+    }
+
+    /* Ensure the Join Button spans full width */
+    nav .contact-btn {
+        width: 100%;
+    }
+
+    /* Social media icons below the button */
+    nav .social-icon {
+        width: 25px;
+        height: 25px;
+        margin: 10px;
+    }
+    nav .lll{
+    display: flex;
+}
+}
+</style>
+<body lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div>
+        <nav>
+            <img src="vyuhamain-Photoroom.jpg" alt="" class="social-icon1s">
+
+            <a href="index.html">Home</a>
+            <a href="services.html">My Courses</a>
+            <a href="contactus.html">Contact</a>
+            <a href="project apeksha.html">About Us</a>
+            <button class="contact-btn" onclick="window.location.href='joinourcommunity.html'">
+                Join our community
+            </button>
+            
+              <div class="lll"><img src="instagram.png" alt="Instagram" class="social-icon" onclick="window.location.href='https://www.instagram.com/kl_apeksha/';">
+                <img src="telegram.png" alt="Telegram" class="social-icon" >
+              <img src="linkedin.png" alt="LinkedIn" class="social-icon"></div>
+        </nav>
+    </div>
+
+    <div class="content-wrapper">
+        <button class="scroll-btn left" onclick="scrollContentLeft()">&#10094;</button>
+        <div class="content">
+            <div class="card" onclick="displayContent('INTRODUCTION')">INTRODUCTION</div>
+            <div class="card" onclick="displayContent('Document structure')">TYPES OF CSS</div>
+            <div class="card" onclick="displayContent('Heading')" >Headings</div>
+            <div class="card" onclick="displayContent('Text formatting')" >Text formating</div>
+            <div class="card" onclick="displayContent('lists')">Lists</div>
+            <div class="card" onclick="displayContent('links')">links</div>
+            <div class="card" onclick="displayContent('Images')">Images</div>
+            <div class="card" onclick="displayContent('Tables')">Tables</div>
+            <div class="card" onclick="displayContent('Forms and form elements')">Forms and form elements</div>
+            <div class="card" onclick="displayContent('media')">media</div>
+        </div>
+        <button class="scroll-btn right" onclick="scrollContentRight()">&#10095;</button>
+    </div>
+    <h3 class="choice">Your choice:</h3>
+    <div class="display">
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+<script>
+const navbar = document.querySelector('.navbar');
+const content = document.querySelector('.content');
+
+function displayContent(topic) {
+            let text = '';
+
+            if (topic === 'INTRODUCTION') {
+                text = `
+                   <h2><center><u>Cascading Style Sheets (CSS)</u></center></h2>
+<p><strong>Cascading Style Sheets (CSS)</strong> is a powerful language that brings life to web pages by managing their visual presentation. CSS controls layout, colors, fonts, and other stylistic aspects, creating aesthetically pleasing designs while separating structure (HTML) from design. Since its inception, CSS has been pivotal in making websites more engaging, responsive, and accessible.</p>
+
+<h3><u>CSS Parts:</u></h3>
+<p>CSS works through three key components that collaborate to define a web page’s style:</p>
+<ul>
+    <li><strong>Selector:</strong> The part of CSS that targets specific HTML elements. For example, <code>p</code> targets all paragraph elements.</li>
+    <li><strong>Property:</strong> Specifies the stylistic feature you want to modify, such as <code>color</code> or <code>font-size</code>.</li>
+    <li><strong>Value:</strong> Determines the setting for the chosen property, such as <code>blue</code> for color or <code>20px</code> for font size.</li>
+</ul>
+<p>By combining these three elements, CSS can effectively style HTML content.</p>
+
+<h3><u>Advantages of CSS:</u></h3>
+<p>CSS provides numerous advantages, making it indispensable for modern web development:</p>
+<ul>
+    <li><strong>Separation of Content and Design:</strong> CSS keeps HTML clean by focusing solely on structure, while all design rules are managed in CSS files.</li>
+    <li><strong>Improved Website Performance:</strong> External stylesheets allow the reuse of CSS across multiple pages, reducing redundancy and load times.</li>
+    <li><strong>Consistency and Maintainability:</strong> A single CSS file can apply uniform styles to multiple pages. Any changes to the design require updates only to the stylesheet.</li>
+    <li><strong>Responsive Web Design:</strong> CSS enables websites to adapt seamlessly to different screen sizes and devices using media queries and flexible grids.</li>
+    <li><strong>Accessibility:</strong> CSS ensures clear and readable designs, enhancing user experience for everyone, including individuals with visual impairments or other disabilities.</li>
+    <li><strong>Rich Visual Effects:</strong> CSS allows the creation of animations, transitions, gradients, and other dynamic effects without relying on heavy images or JavaScript.</li>
+    <li><strong>Cross-Browser Compatibility:</strong> CSS ensures consistent appearance across different browsers with standardized rules and fallbacks for older versions.</li>
+    <li><strong>Scalability:</strong> CSS is highly scalable, making it ideal for projects of any size, from single-page websites to large web applications.</li>
+</ul>
+
+            ` 
+            }
+
+            else if(topic === 'TYPES OF CSS') {
+                
+                text = `
+   <h2><center><u>Types of CSS</u></center></h2>
+<p>CSS can be implemented in three primary ways, each serving different purposes and scenarios.</p>
+
+<h3><u>Inline CSS:</u></h3>
+<p><strong>Introduction:</strong> Inline CSS is applied directly to individual HTML elements using the <code>style</code> attribute. It is often used for quick styling of specific elements.</p>
+<p><strong>Syntax:</strong></p>
+<pre>
+<code>
+<tag style="property: value;">
+</code>
+</pre>
+<p><strong>Example:</strong></p>
+<pre>
+<code>
+<p style="color: blue;">This text is blue.</p>
+</code>
+</pre>
+
+<h3><u>Internal CSS:</u></h3>
+<p><strong>Introduction:</strong> Internal CSS is written within a <code>&lt;style&gt;</code> tag in the <code>&lt;head&gt;</code> section of the HTML document. It is used to style the entire document.</p>
+<p><strong>Syntax:</strong></p>
+<pre>
+<code>
+<style>
+selector {
+    property: value;
+}
+</style>
+</code>
+</pre>
+<p><strong>Example:</strong></p>
+<pre>
+<code>
+<style>
+p {
+    color: green;
+}
+</style>
+<p>This text is green.</p>
+</code>
+</pre>
+
+<h3><u>External CSS:</u></h3>
+<p><strong>Introduction:</strong> External CSS is defined in a separate file with a <code>.css</code> extension and linked to the HTML document using the <code>&lt;link&gt;</code> tag. It is ideal for applying consistent styles across multiple pages.</p>
+<p><strong>How it Works:</strong> The <code>&lt;link&gt;</code> element in the <code>&lt;head&gt;</code> section of the HTML file references the external CSS file.</p>
+<p><strong>Syntax:</strong></p>
+<pre>
+<code>
+<link rel="stylesheet" href="styles.css">
+</code>
+</pre>
+<p><strong>Example:</strong></p>
+<pre>
+<code>
+// In styles.css
+p {
+    color: red;
+}
+</code>
+</pre>
+<p>Linked to an HTML file:</p>
+<pre>
+<code>
+<link rel="stylesheet" href="styles.css">
+<p>This text is red.</p>
+</code>
+</pre>
+
+   
+                
+                `}
+
+                else if(topic === 'Heading') {
+                
+                text = `
+    
+   <h2><center><u>Order of CSS</u></center></h2>
+<p>The term <strong>Cascading</strong> in Cascading Style Sheets (CSS) refers to the way styles are applied to elements when there are multiple conflicting rules. The priority of these rules is determined by their type and specificity. The order of precedence for CSS is as follows:</p>
+
+<h3><u>Priority Levels:</u></h3>
+<ul>
+    <li><strong>Inline CSS:</strong> 
+        <p>Inline CSS is written directly inside the HTML element using the <code>style</code> attribute. It has the highest priority because it is closest to the element being styled, making it ideal for overriding other CSS rules in specific scenarios.</p>
+        <p><strong>Example:</strong></p>
+        <pre>
+<code>
+<p style="color: red;">This text will always be red, overriding any other CSS rules.</p>
+</code>
+        </pre>
+    </li>
+    <li><strong>Internal CSS:</strong>
+        <p>Internal CSS is defined within a <code>&lt;style&gt;</code> tag in the <code>&lt;head&gt;</code> section of the HTML document. It is applied to the entire document and overrides External CSS unless overridden by Inline CSS.</p>
+        <p><strong>Example:</strong></p>
+        <pre>
+<code>
+<style>
+    p {
+        color: blue;
+    }
+</style>
+<p>This text will be blue unless overridden by Inline CSS.</p>
+</code>
+        </pre>
+    </li>
+    <li><strong>External CSS:</strong>
+        <p>External CSS is defined in a separate stylesheet file and linked to the HTML document using a <code>&lt;link&gt;</code> tag. It is the most commonly used type of CSS for maintaining consistency across multiple web pages. However, it has the lowest priority and can be overridden by Internal or Inline CSS.</p>
+        <p><strong>Example:</strong></p>
+        <pre>
+<code>
+// In styles.css
+p {
+    color: green;
+}
+</code>
+        </pre>
+        <p>Linked to an HTML file:</p>
+        <pre>
+<code>
+<link rel="stylesheet" href="styles.css">
+<p>This text will be green unless overridden by Internal or Inline CSS.</p>
+</code>
+        </pre>
+    </li>
+</ul>
+
+<h3><u>Order of Precedence:</u></h3>
+<p>When multiple CSS rules apply to the same element, the following order determines which rule is applied:</p>
+<p><strong><code>Inline CSS > Internal CSS > External CSS</code></strong></p>
+
+<h3><u>Conclusion:</u></h3>
+<p>Understanding the order of CSS helps developers write efficient stylesheets and manage conflicts effectively. While Inline CSS is useful for quick fixes, it is best practice to rely on External and Internal CSS for maintainable and scalable designs.</p>
+
+
+  
+                
+                `}
+
+                else if(topic === 'Text formatting') {
+                
+                text = `
+
+    <h2><center><u>Background Settings</u></center></h2>
+<p>CSS provides a variety of properties to control the background appearance of elements on a web page. You can customize the background color, image, positioning, repeating behavior, and attachment. These settings offer flexibility in creating visually appealing designs.</p>
+
+<h3><u>1. Background Color:</u></h3>
+<p>The <strong>background-color</strong> property is used to set the background color of an element. You can specify a color using color names, hex codes, RGB values, or other color models.</p>
+<p><strong>Syntax:</strong></p>
+<pre><code>background-color: color;</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code>
+<body style="background-color: lightblue;">
+  This page has a light blue background.
+</code></pre>
+
+<h3><u>2. Background Image:</u></u></h3>
+<p>The <strong>background-image</strong> property allows you to set an image as the background of an element. You can use an image URL or file path as the value.</p>
+<p><strong>Syntax:</strong></p>
+<pre><code>background-image: url('image.jpg');</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code>
+<body style="background-image: url('background.jpg');">
+  This page has a background image.
+</code></pre>
+
+<h3><u>3. Background Repeat:</u></h3>
+<p>The <strong>background-repeat</strong> property controls whether the background image repeats horizontally, vertically, or does not repeat at all. The options are <code>repeat</code>, <code>no-repeat</code>, <code>repeat-x</code> (horizontal repeat), and <code>repeat-y</code> (vertical repeat).</p>
+<p><strong>Syntax:</strong></p>
+<pre><code>background-repeat: repeat | no-repeat | repeat-x | repeat-y;</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code>
+<body style="background-image: url('pattern.png'); background-repeat: repeat;">
+  This background image will repeat both horizontally and vertically.
+</code></pre>
+
+<h3><u>4. Background Position:</u></h3>
+<p>The <strong>background-position</strong> property sets the position of the background image within an element. You can use keywords like <code>top</code>, <code>bottom</code>, <code>left</code>, <code>right</code>, or use specific lengths and percentages to define the position.</p>
+<p><strong>Syntax:</strong></p>
+<pre><code>background-position: x-position y-position;</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code>
+<body style="background-image: url('pattern.jpg'); background-position: center;">
+  This background image will be positioned at the center.
+</code></pre>
+<p>You can also specify more precise positions, like <code>background-position: 50% 50%</code> for centering the image, or use pixel values like <code>background-position: 20px 50px;</code>.</p>
+
+<h3><u>5. Background Attachment:</u></h3>
+<p>The <strong>background-attachment</strong> property determines whether the background image scrolls with the content or stays fixed when the page is scrolled. The options are <code>scroll</code> (default) and <code>fixed</code>.</p>
+<p><strong>Syntax:</strong></p>
+<pre><code>background-attachment: scroll | fixed;</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code>
+<body style="background-image: url('scenery.jpg'); background-attachment: fixed;">
+  The background image will stay fixed when you scroll down the page.
+</code></pre>
+
+<h3><u>Conclusion:</u></h3>
+<p>By combining these background properties, you can create dynamic and visually interesting designs. Whether you're using solid colors, images, or gradients, CSS allows for complete control over the background styling of elements on your page.</p>
+
+
+ `}
+
+                else if(topic === 'lists')
+                
+               {
+                
+                text = `
+                  
+<h2><center><u>Font Settings</u></center></h2>
+<p>CSS offers several properties to control the font styling of text elements. You can modify the font family, style, variant, weight, and size to create a visually appealing and consistent typography throughout the website.</p>
+
+<h3><u>1. Font Name:</u></h3>
+<p>The <strong>font-family</strong> property specifies the font used for text within an element. You can specify a generic font family (such as <code>serif</code>, <code>sans-serif</code>, etc.) or a specific font (like <code>Arial</code>, <code>Times New Roman</code>, etc.). It’s recommended to use a fallback font to ensure proper rendering if the desired font is unavailable.</p>
+<p><strong>Syntax:</strong></p>
+<pre><code>font-family: "font-name", generic-font;</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code>
+p {
+    font-family: "Arial", sans-serif;
+}
+</code></pre>
+
+<h3><u>2. Font Style:</u></h3>
+<p>The <strong>font-style</strong> property allows you to set the style of the text. You can apply styles like <code>normal</code>, <code>italic</code>, or <code>oblique</code> to modify the appearance of the text.</p>
+<p><strong>Syntax:</strong></p>
+<pre><code>font-style: normal | italic | oblique;</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code>
+p {
+    font-style: italic;
+}
+</code></pre>
+
+<h3><u>3. Font Variant:</u></h3>
+<p>The <strong>font-variant</strong> property is used to enable alternate forms of letters (such as small-caps). It’s primarily used to change the appearance of the text without changing its case or size.</p>
+<p><strong>Syntax:</strong></p>
+<pre><code>font-variant: normal | small-caps;</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code>
+p {
+    font-variant: small-caps;
+}
+</code></pre>
+
+<h3><u>4. Font Weight:</u></h3>
+<p>The <strong>font-weight</strong> property specifies the thickness of the characters in the text. It can be set to <code>normal</code>, <code>bold</code>, or any value in numeric form from <code>100</code> to <code>900</code> (where 400 is equivalent to normal, and 700 is equivalent to bold).</p>
+<p><strong>Syntax:</strong></p>
+<pre><code>font-weight: normal | bold | lighter | bolder | number;</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code>
+p {
+    font-weight: bold;
+}
+</code></pre>
+
+<h3><u>5. Font Size:</u></h3>
+<p>The <strong>font-size</strong> property defines the size of the text. You can set it in different units, such as <code>px</code> (pixels), <code>em</code> (relative to the font size of the parent element), <code>rem</code> (relative to the root element), <code>pt</code> (points), or other units.</p>
+<p><strong>Syntax:</strong></p>
+<pre><code>font-size: value;</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code>
+p {
+    font-size: 16px;
+}
+</code></pre>
+<p>You can also use relative units like <code>em</code> for more flexible designs. For instance, <code>font-size: 1.5em;</code> will make the text 1.5 times the size of the parent element’s font size.</p>
+
+<h3><u>Conclusion:</u></h3>
+<p>Font settings are essential for creating a readable and visually consistent design. By combining the <strong>font-family</strong>, <strong>font-style</strong>, <strong>font-variant</strong>, <strong>font-weight</strong>, and <strong>font-size</strong> properties, you can enhance the typography of your website, making it more appealing and user-friendly.</p>
+
+    
+
+`}
+
+else if(topic === 'links') {
+                
+                text = `
+   
+    <<h2><center><u>Text Settings</u></center></h2>
+<p>CSS provides a rich set of properties to control the presentation of text, enabling designers to refine the appearance, alignment, spacing, and decoration. By adjusting these settings, you can create visually appealing, readable, and accessible content on your web pages.</p>
+
+<h3><u>1. Direction:</u></h3>
+<p>The <strong>direction</strong> property specifies the direction in which the text flows. This is essential for languages that are read from right to left (such as Arabic or Hebrew). By default, text flows from left to right (<code>ltr</code>).</p>
+<p><strong>Syntax:</strong></p>
+<pre><code>direction: ltr | rtl;</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code>
+p {
+    direction: rtl; /* Right-to-left text direction */
+}
+</code></pre>
+<p>In this example, the text inside the paragraph will be aligned from right to left, which is typical for languages like Arabic.</p>
+
+<h3><u>2. Letter Spacing:</u></h3>
+<p>The <strong>letter-spacing</strong> property controls the space between individual characters in the text. Adjusting letter spacing can improve readability or create a particular visual effect for titles or headlines.</p>
+<p><strong>Syntax:</strong></p>
+<pre><code>letter-spacing: value;</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code>
+h1 {
+    letter-spacing: 1.5px; /* Increased space between letters */
+}
+</code></pre>
+<p>This example increases the space between letters in a heading, making it more spaced out and visually striking.</p>
+
+<h3><u>3. Word Spacing:</u></h3>
+<p>The <strong>word-spacing</strong> property defines the space between words in a block of text. This property can be adjusted to increase or decrease the white space between words for better readability or aesthetic purposes.</p>
+<p><strong>Syntax:</strong></p>
+<pre><code>word-spacing: value;</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code>
+p {
+    word-spacing: 4px; /* Increased space between words */
+}
+</code></pre>
+<p>This example increases the space between words within a paragraph to make the text easier to read.</p>
+
+<h3><u>4. Text Indent:</u></u></h3>
+<p>The <strong>text-indent</strong> property controls the indentation of the first line of a block of text, commonly used in paragraphs to improve the structure and presentation of content.</p>
+<p><strong>Syntax:</strong></p>
+<pre><code>text-indent: value;</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code>
+p {
+    text-indent: 30px; /* Indentation of the first line of the paragraph */
+}
+</code></pre>
+<p>This example creates a 30px indent for the first line of each paragraph, which is a common typographic practice for better readability.</p>
+
+<h3><u>5. Text Align:</u></h3>
+<p>The <strong>text-align</strong> property controls the horizontal alignment of text within its container. This property is commonly used for headings, paragraphs, and other block-level elements.</p>
+<p><strong>Syntax:</strong></p>
+<pre><code>text-align: left | right | center | justify;</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code>
+h2 {
+    text-align: center; /* Centers the heading */
+}
+</code></pre>
+<p>This example centers the text of an <code>&lt;h2&gt;</code> element, making it ideal for page titles or key headings.</p>
+
+<h3><u>6. Text Decoration:</u></h3>
+<p>The <strong>text-decoration</strong> property adds decoration to text such as <code>underline</code>, <code>overline</code>, <code>line-through</code>, or removing decoration with <code>none</code>. It’s useful for links or to visually distinguish important text.</p>
+<p><strong>Syntax:</strong></p>
+<pre><code>text-decoration: none | underline | overline | line-through;</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code>
+a {
+    text-decoration: underline; /* Underlines hyperlinks */
+}
+</code></pre>
+<p>This example underlines hyperlinks, which is a common visual cue for links on websites.</p>
+
+<h3><u>7. Text Transform:</u></h3>
+<p>The <strong>text-transform</strong> property controls the capitalization of text. You can use <code>uppercase</code> to convert text to all uppercase letters, <code>lowercase</code> for all lowercase letters, or <code>capitalize</code> to capitalize the first letter of each word.</p>
+<p><strong>Syntax:</strong></p>
+<pre><code>text-transform: uppercase | lowercase | capitalize;</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code>
+h1 {
+    text-transform: uppercase; /* Converts text to uppercase */
+}
+</code></pre>
+<p>This example converts all text in an <code>&lt;h1&gt;</code> element to uppercase, often used for headings or emphasis.</p>
+
+<h3><u>8. White Space:</u></h3>
+<p>The <strong>white-space</strong> property controls how whitespace inside an element is handled. It can prevent text from wrapping, keep multiple spaces, or preserve newlines, depending on the value used.</p>
+<p><strong>Syntax:</strong></p>
+<pre><code>white-space: normal | nowrap | pre | pre-wrap | pre-line;</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code>
+pre {
+    white-space: pre; /* Preserves all spaces and newlines */
+}
+</code></pre>
+<p>This example ensures that all whitespace, including newlines and spaces, is preserved within a <code>&lt;pre&gt;</code> element, which is commonly used for preformatted text.</p>
+
+<h3><u>9. Text Shadow:</u></h3>
+<p>The <strong>text-shadow</strong> property allows you to add shadow effects to text. It is defined by specifying the horizontal and vertical offsets, the blur radius, and the color of the shadow.</p>
+<p><strong>Syntax:</strong></p>
+<pre><code>text-shadow: h-shadow v-shadow blur-radius color;</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code>
+h2 {
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow to the text */
+}
+</code></pre>
+<p>This example adds a soft shadow to the text in an <code>&lt;h2&gt;</code> element, making it more prominent and visually appealing against the background.</p>
+
+<h3><u>Conclusion:</u></h3>
+<p>Text settings in CSS provide powerful tools to manipulate text presentation. By adjusting properties like <strong>letter-spacing</strong>, <strong>word-spacing</strong>, <strong>text-align</strong>, and others, you can enhance the readability, structure, and visual aesthetics of your content. Mastering these properties will allow you to create better, more dynamic web designs that provide a great user experience.</p>
+
+
+                        
+
+                
+                
+                
+                
+                `}
+                else if(topic === 'Images') {
+                
+                text = `
+   <h2><center><u>Links</u></center></h2>
+<p>In CSS, links can be styled in different states to indicate their interactivity. These states include the normal (unvisited) state, the active state (when clicked), and the visited state (after being clicked). Properly styling these states can significantly improve user experience and interface clarity.</p>
+
+<h3><u>1. Link:</u></h3>
+<p>The <strong>:link</strong> pseudo-class targets links in their default, unvisited state. It's important to set the base styling of links to ensure consistency across the website, such as color, text decoration, and hover effects.</p>
+<p><strong>Syntax:</strong></p>
+<pre><code>a:link {
+    /* Styling properties */
+}
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code>
+a:link {
+    color: #007BFF; /* Set the color of unvisited links */
+    text-decoration: none; /* Remove the underline from the link */
+}
+</code></pre>
+<p>This example removes the underline from the links and sets the color to a shade of blue. This is typically used to style links in their default state before a user interacts with them.</p>
+
+<h3><u>2. Active Link:</u></u></h3>
+<p>The <strong>:active</strong> pseudo-class is used to style a link at the moment it's being clicked by the user. This is often used to provide immediate feedback, such as changing the link color or adding effects like underlining or bold text during interaction.</p>
+<p><strong>Syntax:</strong></p>
+<pre><code>a:active {
+    /* Styling properties */
+}
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code>
+a:active {
+    color: red; /* Changes the color of the link when clicked */
+    text-decoration: underline; /* Underline link when active */
+}
+</code></pre>
+<p>In this example, when the user clicks the link, it turns red, and the underline is added. This gives immediate feedback to the user and emphasizes that the link is being activated.</p>
+
+<h3><u>3. Visited Link:</u></h3>
+<p>The <strong>:visited</strong> pseudo-class applies to links that the user has already clicked and visited. It’s used to style links that have already been interacted with, giving users a visual indication of which links they have already visited.</p>
+<p><strong>Syntax:</strong></p>
+<pre><code>a:visited {
+    /* Styling properties */
+}
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code>
+a:visited {
+    color: #800080; /* Purple color for visited links */
+}
+</code></pre>
+<p>This example changes the color of visited links to purple, helping users visually track which links they have already explored. This style creates a sense of progress or completion for users.</p>
+
+<h3><u>Styling All Link States Together:</u></h3>
+<p>It’s common practice to style all link states together, so the links look consistent and responsive to user interactions. A typical set of styles includes defining colors for <code>:link</code>, <code>:visited</code>, <code>:hover</code>, and <code>:active</code>.</p>
+<p><strong>Best Practice: Styling All Link States:</strong> It’s important to consider all the states a link can have, from its unvisited state to its hover and active states. This ensures that users have a seamless, interactive experience with clear visual feedback.</p>
+<p><strong>Syntax:</strong></p>
+<pre><code>
+a:link {
+    color: blue; /* Default link color */
+    text-decoration: none; /* Remove underline */
+}
+
+a:visited {
+    color: purple; /* Visited links appear purple */
+}
+
+a:hover {
+    color: darkblue; /* Change color on hover */
+}
+
+a:active {
+    color: red; /* Change color when link is clicked */
+    text-decoration: underline; /* Underline active link */
+}
+</code></pre>
+
+<p><strong>Example:</strong></p>
+<pre><code>
+a:link {
+    color: blue;
+    text-decoration: none; /* Remove default underline */
+}
+
+a:visited {
+    color: purple; /* Visited links turn purple */
+}
+
+a:hover {
+    color: darkblue; /* Dark blue color when hovered over */
+}
+
+a:active {
+    color: red; /* Red color when clicked */
+    text-decoration: underline; /* Underline when active */
+}
+</code></pre>
+<p>This combined set of styles provides a comprehensive styling guide for links. When the user hovers over a link, it will change color to dark blue. When clicked, it will appear red and underlined. Once visited, the link will turn purple, indicating it’s been accessed.</p>
+
+<h3><u>Additional Link Styling Tips:</u></h3>
+<ul>
+    <li><strong>Consistent Styling:</strong> Always ensure consistency in your link styling across all link states. For example, don't make links hard to distinguish from regular text. Use color and underline effectively.</li>
+    <li><strong>Focus State:</strong> It’s a good practice to style the <code>:focus</code> state as well, especially for accessibility. This helps keyboard and screen reader users navigate your site more easily.</li>
+    <li><strong>Text Decorations:</strong> Consider how you use <code>text-decoration</code> for hover or active states to maintain a clear, interactive user experience. Avoid too many text decorations, as they can clutter the design.</li>
+</ul>
+
+<h3><u>Conclusion:</u></h3>
+<p>Styling links using CSS is not just about aesthetics; it's about enhancing usability and accessibility. By properly styling <strong>:link</strong>, <strong>:visited</strong>, and <strong>:active</strong> pseudo-classes, you can create a more intuitive, engaging, and user-friendly navigation experience. Don't forget to test how your links behave in all their states to ensure a smooth, interactive user experience.</p>
+
+
+
+           `
+    }
+    else if(topic === 'Tables') {
+                
+                text = `
+<h2><center><u>Borders</u></center></h2>
+<p>CSS provides a set of properties to style the borders of elements. These properties give you full control over the border's color, width, style, and the specific sides you want to apply it to. Proper use of borders can help define the structure and separate different sections of your webpage effectively.</p>
+
+<h3><u>1. Border Color:</u></h3>
+<p>The <strong>border-color</strong> property sets the color of the border of an element. You can specify the color using color names, hex codes, RGB values, RGBA, HSL, or HSLA values.</p>
+<p><strong>Syntax:</strong></p>
+<pre><code>border-color: color;</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code>
+div {
+    border-color: #FF5733; /* Set the border color to a specific shade of red */
+}
+</code></pre>
+<p>This example sets the border color of the <code>&lt;div&gt;</code> element to a specific red color using a hex code.</p>
+
+<h3><u>2. Border Bottom Color:</u></h3>
+<p>The <strong>border-bottom-color</strong> property specifically sets the color of the bottom border of an element. This allows you to control individual sides of the border.</p>
+<p><strong>Syntax:</strong></p>
+<pre><code>border-bottom-color: color;</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code>
+div {
+    border-bottom-color: green; /* Set the bottom border color to green */
+}
+</code></pre>
+<p>This example sets the bottom border of the <code>&lt;div&gt;</code> element to green, while other borders will remain unaffected.</p>
+
+<h3><u>3. Border Top Color:</u></h3>
+<p>The <strong>border-top-color</strong> property sets the color of the top border of an element. This is useful when you want to apply different colors to specific sides of an element.</p>
+<p><strong>Syntax:</strong></p>
+<pre><code>border-top-color: color;</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code>
+div {
+    border-top-color: blue; /* Set the top border color to blue */
+}
+</code></pre>
+<p>This example applies a blue color to the top border of the <code>&lt;div&gt;</code> element.</p>
+
+<h3><u>4. Border Left Color:</u></h3>
+<p>The <strong>border-left-color</strong> property sets the color of the left border of an element. Similar to the other side-specific border properties, it allows you to apply a color only to the left side.</p>
+<p><strong>Syntax:</strong></p>
+<pre><code>border-left-color: color;</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code>
+div {
+    border-left-color: yellow; /* Set the left border color to yellow */
+}
+</code></pre>
+<p>This example sets the left border of the <code>&lt;div&gt;</code> element to yellow, leaving the other borders unaffected.</p>
+
+<h3><u>5. Border Right Color:</u></h3>
+<p>The <strong>border-right-color</strong> property sets the color of the right border of an element. This allows you to target individual sides of the element with different colors.</p>
+<p><strong>Syntax:</strong></p>
+<pre><code>border-right-color: color;</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code>
+div {
+    border-right-color: purple; /* Set the right border color to purple */
+}
+</code></pre>
+<p>This example applies a purple color to the right border of the <code>&lt;div&gt;</code> element.</p>
+
+<h3><u>6. Border Style:</u></h3>
+<p>The <strong>border-style</strong> property defines the style of the border, such as solid, dashed, dotted, double, groove, ridge, inset, or outset. This property is essential for creating different visual effects for borders.</p>
+<p><strong>Syntax:</strong></p>
+<pre><code>border-style: none | solid | dotted | dashed | double | groove | ridge | inset | outset;</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code>
+div {
+    border-style: dashed; /* Set the border to a dashed style */
+}
+</code></pre>
+<p>This example applies a dashed border to the <code>&lt;div&gt;</code> element. You can also combine different styles for each side, like <code>border-top-style</code>, <code>border-right-style</code>, etc.</p>
+
+<h3><u>7. Border Width:</u></u></h3>
+<p>The <strong>border-width</strong> property controls the thickness of the border. It can be set using specific values (e.g., <code>1px</code>, <code>0.5em</code>) or keywords like <code>thin</code>, <code>medium</code>, and <code>thick</code>.</p>
+<p><strong>Syntax:</strong></p>
+<pre><code>border-width: value;</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code>
+div {
+    border-width: 5px; /* Set the border width to 5 pixels */
+}
+</code></pre>
+<p>This example applies a border that is 5 pixels thick to all sides of the <code>&lt;div&gt;</code> element. You can also set different widths for each side using <code>border-top-width</code>, <code>border-right-width</code>, etc.</p>
+
+<h3><u>8. Combining Border Properties:</u></h3>
+<p>For more concise code, you can combine all border properties (color, style, and width) into one shorthand property:</p>
+<p><strong>Syntax:</strong></p>
+<pre><code>border: border-width border-style border-color;</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code>
+div {
+    border: 2px solid black; /* Set a 2px solid black border */
+}
+</code></pre>
+<p>This shorthand property sets all three aspects of the border (width, style, and color) in one line. It's a useful and efficient way to style borders.</p>
+
+<h3><u>Conclusion:</u></h3>
+<p>CSS provides flexible and powerful ways to style borders on any element. By combining the <strong>border-color</strong>, <strong>border-style</strong>, and <strong>border-width</strong> properties, you can create borders that enhance the design of your website. Additionally, targeting individual sides of an element with properties like <strong>border-top-color</strong>, <strong>border-right-color</strong>, and others allows for more detailed control.</p>
+
+
+`}
+
+    else if(topic === 'Forms and form elements') {
+    
+                
+                text = `
+    <h2><center><u>Tables</u></center></h2>
+<p>CSS provides specific properties to control the layout and styling of tables. These properties help to manage table borders, spacing, captions, and more, enabling better control over the presentation of data in tabular form.</p>
+
+<h3><u>1. Caption Side:</u></h3>
+<p>The <strong>caption-side</strong> property controls the position of a table's caption. By default, captions are placed above the table, but this property allows you to change their position to <code>top</code> or <code>bottom</code>.</p>
+<p><strong>Syntax:</strong></p>
+<pre><code>caption-side: top | bottom;</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code>
+table {
+    caption-side: bottom; /* Moves the caption to the bottom of the table */
+}
+</code></pre>
+<p>This example positions the caption at the bottom of the table, which can be useful for accessibility or design preferences.</p>
+
+<h3><u>2. Border Collapse:</u></h3>
+<p>The <strong>border-collapse</strong> property determines whether the borders between table cells are collapsed into a single border or separated. It helps in creating either a clean, unified border between cells or a space between them.</p>
+<p><strong>Syntax:</strong></p>
+<pre><code>border-collapse: collapse | separate;</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code>
+table {
+    border-collapse: collapse; /* Collapses the borders into a single border */
+    width: 100%;
+}
+td, th {
+    border: 1px solid black; /* Adds border to the cells */
+}
+</code></pre>
+<p>This example collapses the borders between the table cells into a single border. The border around the <code>&lt;td&gt;</code> and <code>&lt;th&gt;</code> elements is displayed as a unified border around the table.</p>
+
+<h3><u>3. Border Spacing:</u></h3>
+<p>The <strong>border-spacing</strong> property is used when the table borders are separated. It defines the space between the borders of adjacent cells. This property is only applicable when <code>border-collapse</code> is set to <code>separate</code>.</p>
+<p><strong>Syntax:</strong></p>
+<pre><code>border-spacing: value;</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code>
+table {
+    border-spacing: 10px; /* Adds space between table cells */
+    width: 100%;
+}
+td, th {
+    border: 1px solid black;
+}
+</code></pre>
+<p>This example adds 10px of space between the borders of adjacent cells. This is useful for creating a more spaced-out and visually distinct table layout.</p>
+
+<h3><u>4. Empty Cells:</u></h3>
+<p>The <strong>empty-cells</strong> property controls whether or not borders and background colors are applied to empty cells in a table. This can be useful for tables that have missing data and want to either show or hide borders and background in empty cells.</p>
+<p><strong>Syntax:</strong></p>
+<pre><code>empty-cells: show | hide;</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code>
+table {
+    empty-cells: hide; /* Hides the borders in empty cells */
+}
+td, th {
+    border: 1px solid black;
+}
+</code></pre>
+<p>This example hides the borders in any empty cells, providing a cleaner look when some cells in the table do not contain any data.</p>
+
+<h3><u>Combining Table Properties:</u></h3>
+<p>You can combine multiple table properties to create a unified table design. For example, you can control the border style, caption position, spacing, and cell visibility in a single block of CSS.</p>
+<p><strong>Syntax:</strong></p>
+<pre><code>
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table caption {
+    caption-side: top;
+}
+
+td, th {
+    border: 1px solid black;
+    padding: 8px;
+}
+
+table {
+    border-spacing: 10px;
+    empty-cells: hide;
+}
+</code></pre>
+
+<p><strong>Example:</strong></p>
+<pre><code>
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table caption {
+    caption-side: top;
+}
+
+td, th {
+    border: 1px solid black;
+    padding: 8px;
+}
+
+table {
+    border-spacing: 10px;
+    empty-cells: hide;
+}
+</code></pre>
+
+<h3><u>Conclusion:</u></h3>
+<p>CSS table properties like <strong>caption-side</strong>, <strong>border-collapse</strong>, <strong>border-spacing</strong>, and <strong>empty-cells</strong> provide flexibility and control over the table layout and design. These properties are especially useful for improving the clarity, structure, and presentation of data in tabular form, and can be combined with other CSS properties to create professional-looking tables that are both functional and visually appealing.</p>
+
+        
+
+`}
+
+    
+    else if(topic === 'media') {
+    
+                
+    text = `
+  
+           <h2><center><u>Tables</u></center></h2>
+    <p>CSS provides a set of properties to style and layout tables. Below are some important properties that help control how a table is displayed.</p>
+
+    <h3><u>1. Caption Side:</u></h3>
+    <p>The <strong>caption-side</strong> property controls the position of the table's caption. It can be positioned either at the top or bottom of the table.</p>
+    <pre><code>
+        table {
+            caption-side: bottom; /* Moves the caption to the bottom of the table */
+        }
+    </code></pre>
+
+    <h3><u>2. Border Collapse:</u></h3>
+    <p>The <strong>border-collapse</strong> property is used to collapse the borders between table cells into a single border, which is useful for cleaner designs.</p>
+    <pre><code>
+        table {
+            border-collapse: collapse; /* Collapses the borders into a single border */
+        }
+        td, th {
+            border: 1px solid black; /* Adds border to the cells */
+        }
+    </code></pre>
+
+    <h3><u>3. Border Spacing:</u></h3>
+    <p>The <strong>border-spacing</strong> property sets the distance between the borders of adjacent cells. This is applied only when <code>border-collapse</code> is set to <code>separate</code>.</p>
+    <pre><code>
+        table {
+            border-spacing: 10px; /* Adds space between table cells */
+        }
+    </code></pre>
+
+    <h3><u>4. Empty Cells:</u></h3>
+    <p>The <strong>empty-cells</strong> property controls whether or not to display borders and background for empty cells in the table. Use <code>hide</code> to remove styling from empty cells.</p>
+    <pre><code>
+        table {
+            empty-cells: hide; /* Hides borders and background for empty cells */
+        }
+        td, th {
+            border: 1px solid black;
+        }
+    </code></pre>
+
+    <h3><u>5. Table Layout:</u></h3>
+    <p>The <strong>table-layout</strong> property controls the layout algorithm used by the table. It can be set to <code>auto</code> or <code>fixed</code> to either allow the browser to determine the column widths or fix the width based on the first row.</p>
+    <pre><code>
+        table {
+            table-layout: fixed; /* Fixes the column width based on the first row */
+            width: 100%;
+        }
+    </code></pre>
+
+    <h3><u>6. Border Radius:</u></h3>
+    <p>The <strong>border-radius</strong> property allows you to round the corners of the table or individual table cells for a smoother, modern look.</p>
+    <pre><code>
+        table {
+            border-radius: 10px;
+            overflow: hidden; /* Prevents content from spilling over the rounded corners */
+        }
+        td, th {
+            border-radius: 5px;
+        }
+    </code></pre>
+
+    <h3><u>7. Table Row Hover Effects:</u></h3>
+    <p>The <strong>:hover</strong> pseudo-class can be used to add a hover effect on table rows or cells, making it easier for users to interact with tables.</p>
+    <pre><code>
+        tr:hover {
+            background-color: #ddd; /* Changes row background color on hover */
+        }
+    </code></pre>
+
+    <h3><u>8. Vertical Alignment in Cells:</u></h3>
+    <p>The <strong>vertical-align</strong> property controls how the content inside table cells is aligned vertically. It can be set to <code>top</code>, <code>middle</code>, or <code>bottom</code>.</p>
+    <pre><code>
+        td, th {
+            vertical-align: middle; /* Aligns the content vertically in the middle */
+        }
+    </code></pre>
+
+    <h3><u>9. Word Wrapping:</u></h3>
+    <p>The <strong>word-wrap</strong> property ensures that long words or URLs inside table cells break and wrap properly instead of overflowing.</p>
+    <pre><code>
+        td, th {
+            word-wrap: break-word; /* Wraps long words inside the cells */
+        }
+    </code></pre>
+
+    <h3><u>Conclusion:</u></h3>
+    <p>By combining the above table properties, you can create clean, responsive, and visually appealing tables for your web pages. CSS table properties such as <strong>caption-side</strong>, <strong>border-collapse</strong>, and <strong>empty-cells</strong> provide flexibility to control how your tables display content. Always consider accessibility and interactivity when styling your tables for a better user experience.</p>
+
+    
+    
+    `}
+    
+            else {
+                text = `<p>Content for ${topic} is not available yet.</p>`;
+            }
+
+            document.querySelector('.display').innerHTML = text;
+        }
+
+
+            
+               
+
+// Functions for scrolling the navbar
+function scrollContentLeft() {
+    console.log("saite");
+    navbar.scrollBy({
+        top: 0,
+        left: -100, 
+        behavior: 'smooth'
+    });
+}
+
+
+
+
+function scrollContentRight() {
+    content.scrollBy({
+        top: 0,
+        left: 150, // Adjust this value for the scroll distance
+        behavior: 'smooth'
+    });
+}
+
+</script>
+</body>
+</html>

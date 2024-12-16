@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Project Apeksha</title>
+    <style>
+      
+        
+      body {
+            margin: 0;
+            background-color: black;
+            /* color: white; */
+            font-family: Arial, sans-serif;
+        }
+
+        nav {
+            background-color: black;
+            padding: 15px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
+        .contact-btn {
+            background-color: #ffd700;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-btn:hover {
+            background-color: #ffed4a;
+        }
+
+        .social-icon {
+            height: 36px;
+            transition: transform 0.3s ease;
+        }
+       .social-icon1s{
+        height: 100px;
+        transition: transform 0.3s ease;
+       }
+        .social-icon:hover {
+            transform: scale(1.1);
+        }
+        .griid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 40px;
+            margin-top: 50px; /* Move the grid down */
+        }
+
+        .box {
+            color: white;
+            border: 4px solid gold;
+            border-radius: 10px;
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.3s ease;
+            height: 530px;
+        }
+
+        .box:hover {
+            transform: scale(1.05);
+        }
+
+        .box img {
+            width: 80%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .box p {
+            font-size: 23px;
+            color: gold; /* Gold-colored captions */
+        }
+
+        .middleheading {
+            font-style: Perpetua;
+            color: yellow;
+            margin-left: 40px;
+            margin-top: 30px;
+            font-size: 2.5rem;
+        }
+        .social-icon1{
+            height: 130px;
+            word-break: 130px;
+        }
+        /* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* Container for centralizing content */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Styling */
+header {
+    background-color: #000; /* Black background */
+    color: #FFEB3B; /* Yellow text */
+    padding: 20px 0;
+    text-align: center;
+}
+
+header .logo img {
+    width: 150px;
+    height: auto;
+}
+
+/* Main Section Styling */
+h1, h2 {
+color: gold;
+    margin-bottom: 20px;
+}
+p,li{
+    color: white;
+}
+section {
+    padding: 80px 20px; /* Adjusted padding to add some horizontal space */
+    margin: 20px auto;  /* Automatically centers the section with a top/bottom margin */
+    border-radius: 8px;
+    box-shadow: 0 0 10px gold;
+    width: 90%; /* The section will take up 90% of the parent container's width */
+    max-width: 1200px; /* Limits the width to 1200px on larger screens */
+    margin-left: auto; /* Automatically centers the section horizontally */
+    margin-right: auto; /* Automatically centers the section horizontally */
+}
+@media (max-width: 768px) {
+    .griid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+        padding: 0 10px; /* Less padding on smaller devices */
+    }
+
+    .middleheading {
+        font-size: 1.8rem; /* Smaller font size for headings */
+    }
+
+    .box p {
+        font-size: 0.95rem; /* Slightly smaller text for mobile */
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 480px) {
+    .griid {
+        grid-template-columns: 1fr; /* 1 column on mobile */
+    }
+
+    .middleheading {
+        font-size: 1.5rem; /* Smaller font size for mobile */
+    }
+
+    .box p {
+        font-size: 0.9rem; /* Even smaller text on mobile */
+    }
+}
+
+h1, h2 {
+    font-size: 2.6rem; /* Larger font size for main headings */
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.4rem; /* Slightly larger text for readability */
+    line-height: 1.6; /* Better line height for paragraphs */
+    margin-bottom: 15px;
+}
+
+ul {
+    font-size: 1.3rem; /* Standard font size for lists */
+    margin-left: 20px;
+}
+
+
+ul {
+    list-style: disc;
+    margin-left: 20px;
+}
+/* Step 1: Define the fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* Start fully transparent */
+        transform: translateY(20px); /* Slightly below the original position */
+    }
+    100% {
+        opacity: 1; /* Fully visible */
+        transform: translateY(0); /* Back to the original position */
+    }
+}
+
+/* Step 2: Apply the animation to the section */
+section {
+    padding: 80px 20px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px gold;
+    width: 90%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+
+    /* Animation properties */
+    animation: fadeIn 1s ease-out forwards; /* Apply the animation */
+    animation-delay: 0.5s; /* Delay the animation by 0.5 seconds */
+}
+
+/* Optional: For better cross-browser compatibility */
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@media (max-width: 768px) {
+    /* Center everything vertically and horizontally */
+    nav img.social-icon1s {
+        margin-right: 14px;
+        width: 100px;  /* Set the width to 100px */
+        height: 100px; /* Set the height to 100px */
+    }
+    nav {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Logo remains at the top */
+    /* First two links on one row */
+    nav a:nth-child(2), nav a:nth-child(3) {
+        width: 48%; /* Two links on the same row */
+        margin-right: 4%; /* Space between them */
+    }
+
+    /* Second two links on the next row */
+    nav a:nth-child(4), nav a:nth-child(5) {
+        width: 48%;
+        margin-right: 4%;
+    }
+
+    /* Remove right margin for the last link */
+    nav a:last-child {
+        margin-right: 0;
+    }
+
+    /* Ensure the Join Button spans full width */
+    nav .contact-btn {
+        width: 100%;
+    }
+
+    /* Social media icons below the button */
+    nav .social-icon {
+        width: 25px;
+        height: 25px;
+        margin: 10px;
+    }
+    nav .lll{
+    display: flex;
+}
+}
+footer {
+    background-color: #000; /* Black background */
+    color: #FFEB3B; /* Yellow text */
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Highlighted sections for buttons or emphasis */
+button, .btn {
+    background-color: #FFEB3B; /* Yellow background */
+    color: #000; /* Black text */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover, .btn:hover {
+    background-color: #FFC107; /* Darker yellow on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    section {
+        padding: 20px;
+    }
+
+    h1, h2 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .container {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    footer {
+        padding: 20px 0;
+    }
+}
+
+
+
+        
+    </style>
+</head>
+<body>
+    <nav>
+        <img src="vyuhamain-Photoroom.jpg" alt="" class="social-icon1s">
+
+        <a href="index.html">Home</a>
+        <a href="services.html">My Courses</a>
+        <a href="contactus.html">Contact</a>
+        <a href="project apeksha.html">About Us</a>
+        <button class="contact-btn" onclick="window.location.href='joinourcommunity.html'">
+            Join our community
+        </button>
+        
+          <div class="lll"><img src="instagram.png" alt="Instagram" class="social-icon" onclick="window.location.href='https://www.instagram.com/kl_apeksha/';">
+            <img src="telegram.png" alt="Telegram" class="social-icon" >
+          <img src="linkedin.png" alt="LinkedIn" class="social-icon"></div>
+    </nav>
+    <section id="about">
+        <div class="container">
+            <h1>Welcome to Programming Hub</h1>
+            <p>
+                At Programming Hub, we are dedicated to helping students learn and master programming languages. Our courses are designed to help you not only understand programming but also build real-world applications.
+            </p>
+            <p>
+                We offer interactive online classes for the Y24 batch, and our Y23 batch students have successfully completed their courses with excellent results. Whether you're starting from scratch or looking to improve your skills, Programming Hub is the place for you.
+            </p>
+        </div>
+    </section>
+
+    <!-- Online Classes Section -->
+    <section id="classes">
+        <div class="container">
+            <h2>Online Classes for Y24 Batch</h2>
+            <p>
+                Our live, instructor-led online classes offer a comprehensive learning experience for the Y24 batch. Courses include languages like Python, Java, C++, JavaScript, and more.
+            </p>
+            <ul>
+                <li>Live classes with expert instructors</li>
+                <li>Interactive sessions and doubt clearing</li>
+                <li>Assignments and hands-on projects</li>
+                <li>Access to recorded lectures</li>
+            </ul>
+            <p>Enroll now to start learning with us!</p>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources">
+        <div class="container">
+            <h2>Resources for Learning</h2>
+            <p>
+                We provide a rich set of resources to help you learn programming effectively. These resources include coding challenges, tutorials, e-books, and more. Students from the Y23 batch have greatly benefited from these resources.
+            </p>
+            <ul>
+                <li>Free coding challenges</li>
+                <li>Access to tutorials on various programming languages</li>
+                <li>Downloadable e-books and study materials</li>
+                <li>Collaborative coding platforms for peer learning</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Placements Section -->
+    <section id="placements">
+        <div class="container">
+            <h2>Placement Resources</h2>
+            <p>
+                We not only teach programming but also help students in their career journey. Our placement resources include interview preparation guides, coding problem sets, resume building workshops, and exclusive placement drives.
+            </p>
+            <ul>
+                <li>Mock interviews with industry experts</li>
+                <li>Resume building workshops</li>
+                <li>Job listings from top tech companies</li>
+                <li>Interview questions and answers</li>
+            </ul>
+            <p>Prepare for your dream job with our placement assistance!</p>
+        </div>
+    </section>
+    <!-- Vyuha Team Heading -->
+    <h1 class="middleheading">Vyuha Team</h1>
+    <div class="griid">
+        <!-- 1st Row -->
+        <div class="box">
+            <img src="" alt="Image 1">
+            <p>Saiteja DVS<br>Project Lead</p> <!-- Name and Role added here -->
+        </div>
+        <div class="box">
+            <img src="thanay2.jpg" alt="Image2">
+            <p>M Thanay Reddy<br>Chief Planning Officer
+
+            </p> <!-- Name and Role added here -->
+        </div>
+        <div class="box">
+            <img src="naveen.jpg" alt="Image 3">
+            <p>Naveen Ramayanapu
+                <br>Chief Financial officer
+
+            </p> <!-- Name and Role added here -->
+        </div>
+
+       
+    </div>
+
+    <!-- Apeksha Team Heading -->
+    <h1 class="middleheading">Apeksha Team</h1>
+    <div class="griid">
+        <!-- 3rd Row -->
+        <div class="box">
+            <img src="durgavijay.jpg" alt="Image 7">
+            <p>PULAVARTI DURGA VIJAY<br>Founder Apeksha            </p> 
+        </div>
+        <div class="box">
+            <img src="sai.jpg" alt="Image 7">
+            <p>DUGGANI VENKATA SAI TEJA<br>Core Developer            </p> 
+        </div>
+        <div class="box">
+            <img src="karthikeya.jpg" alt="Image 8">
+            <p>Karthikeya<br>Supporting Role</p> 
+        </div>
+        <div class="box">
+            <img src="priyanka.jpg" alt="Image 15">
+            <p>Annamareddy gouri priyanka<br>Supporting Role</p> 
+        </div>
+        <div class="box">
+            <img src="rahul.jpg" alt="Image 9">
+            <p>RAHUL KUMAR YADAV<br>Contributor</p> 
+        </div>
+
+        <!-- 4th Row -->
+        <div class="box">
+            <img src="rishitha.jpg" alt="Image 10">
+            <p>V.RISHITHA REDDY<br>Contributor</p> 
+        </div>
+        <div class="box">
+            <img src="tulasi.jpg" alt="Image 11">
+            <p>POTTI TULASI SOWMYA<br>Contributor</p> 
+        </div>
+        <div class="box">
+            <img src="navyaa.jpg" alt="Image 12">
+            <p>KOTHA DURGA NAVYA                <br>Contributor</p> 
+        </div>
+
+        <!-- 5th Row -->
+        <div class="box">
+            <img src="jyothika.jpg" alt="Image 13">
+            <p>JYOTHIKA<br>Contributor</p>
+        </div>
+        <div class="box">
+            <img src="sanjana.jpg" alt="Image 14">
+            <p>SANJANA<br>Contributor</p>
+        </div>
+       
+    </div>
+
+    
+    <h1 class="middleheading">Resource Team</h1>
+    <div class="griid">
+       
+        <div class="box">
+            <img src="saidulu.jpg " alt="Image 16">
+            <p>KODIREKKA HARI VENKATA SAIDULU<br>Resource Person</p>
+        </div>
+        <div class="box">
+            <img src="kalyani.jpg" alt="Image 17">
+            <p>Kalyani<br>Resource Person</p>
+        </div>
+        <div class="box">
+            <img src="swarna.jpg" alt="Image 18">
+            <p>S.Bhavyanka Sri<br>Resource Person</p> 
+        </div>
+        <div class="box">
+            <img src="umesh.jpg" alt="Image 16">
+            <p>UMESH CHANDRA<br>Resource Person</p>
+        </div>
+        <div class="box">
+            <img src="thanmai.jpg" alt="Image 17">
+            <p>THANMAI<br>Resource Person</p>
+        </div>
+    
+    </div>
+</body>
+<script>
+
+
+</script>
+</html>
